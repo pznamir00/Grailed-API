@@ -1,0 +1,80 @@
+[
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_PRODUCTS_URL",
+        "importPath": "settings",
+        "description": "settings",
+        "isExtraImport": true,
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "Categories",
+        "kind": 6,
+        "importPath": "client.categories",
+        "description": "client.categories",
+        "peekOfCode": "class Categories(Enum):\n    TOPS = \"tops\"\n    BOTTOMS = \"bottoms\"\n    OUTERWEAR = \"outerwear\"\n    FOOTWEAR = \"footwear\"\n    TAILORING = \"tailoring\"\n    ACCESSORIES = \"accessories\"\nclass Tops(Enum):\n    BUTTON_UPS = \"button_ups\"\n    JERSEYS = \"jerseys\"",
+        "detail": "client.categories",
+        "documentation": {}
+    },
+    {
+        "label": "Tops",
+        "kind": 6,
+        "importPath": "client.categories",
+        "description": "client.categories",
+        "peekOfCode": "class Tops(Enum):\n    BUTTON_UPS = \"button_ups\"\n    JERSEYS = \"jerseys\"\n    LONG_SLEEVE_SHIRTS = \"long_sleeve_shirts\"\n    POLOS = \"polos\"\n    SHORT_SLEEVE_SHIRTS = \"short_sleeve_shirts\"\n    SLEEVELESS = \"sleeveless\"\n    SWEATERS_KNITWEAR = \"sweaters_knitwear\"\n    SWEATSHIRTS = \"sweatshirts_hoodies\"",
+        "detail": "client.categories",
+        "documentation": {}
+    },
+    {
+        "label": "Client",
+        "kind": 6,
+        "importPath": "client.client",
+        "description": "client.client",
+        "peekOfCode": "class Client:\n    def __send_request(self, url: str, data: Any):\n        return requests.post(\n            url,\n            data=json.dumps(data),\n            headers=self.__get_request_headers(),\n        )\n    def __get_request_headers(self):\n        return {\n            \"accept\": \"*/*\",",
+        "detail": "client.client",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_PRODUCTS_URL",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "BASE_PRODUCTS_URL = \"https://mnrwefss2q-1.algolianet.com/1/indexes/*/queries?x-algolia-agent=Algolia%20for%20JavaScript%20(4.14.3)%3B%20Browser%3B%20JS%20Helper%20(3.11.3)%3B%20react%20(18.2.0)%3B%20react-instantsearch%20(6.39.1)\"",
+        "detail": "settings",
+        "documentation": {}
+    }
+]
