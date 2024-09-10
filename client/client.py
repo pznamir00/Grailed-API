@@ -1,7 +1,7 @@
 from typing import Any
 import json
 import requests  # pylint: disable=import-error
-from client.categories import Department
+from client.categories import Departments
 from settings import BASE_PRODUCTS_URL
 
 
@@ -24,16 +24,20 @@ class Client:
 
     def fetch_products(
         self,
-        categories=tuple(),
-        designers=tuple(),
         sold=True,
         non_sold=True,
-        department=Department.MENSWEAR,
+        staff_pick=False,
+        department=Departments.MENSWEAR,
         query_search="",
         page=1,
         hits_per_page=40,
         price_from=0,
         price_to=1_000_000,
+        categories=tuple(),
+        designers=tuple(),
+        conditions=tuple(),
+        markets=tuple(),
+        locations=tuple(),
         max_values_per_facet=100,
         facets=(
             "category_path",
@@ -49,12 +53,23 @@ class Client:
     ):
         category_params = [f'"category_path:{cat}"' for cat in categories]
         designer_params = [f'"designers.name:{des}"' for des in designers]
+        condition_params = [f'"condition:{con}"' for con in conditions]
+        market_params = [f'"strata:{mar}"' for mar in markets]
+        location_params = [f'"location:{loc}"' for loc in locations]
 
         params = f'analytics=true\
             &clickAnalytics=true\
             &enableABTest=false\
             &enablePersonalization=false\
-            &facetFilters=[[{",".join(category_params)}],[{",".join(designer_params)}],["department:{department}"]]\
+            &facetFilters=[\
+                [{",".join(category_params)}],\
+                [{",".join(designer_params)}],\
+                [{",".join(condition_params)}],\
+                [{",".join(market_params)}],\
+                [{",".join(location_params)}],\
+                ["department:{department}"],\
+                [{"badges:staff_pick" if staff_pick else ""}]\
+            ]\
             &facets=[{",".join(facets)}]\
             &filters=\
             &getRankingInfo=true\

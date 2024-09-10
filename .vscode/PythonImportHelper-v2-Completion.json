@@ -34,7 +34,7 @@
         "documentation": {}
     },
     {
-        "label": "Department",
+        "label": "Departments",
         "importPath": "client.categories",
         "description": "client.categories",
         "isExtraImport": true,
@@ -113,11 +113,38 @@
         "documentation": {}
     },
     {
-        "label": "Department",
+        "label": "Departments",
         "kind": 6,
         "importPath": "client.categories",
         "description": "client.categories",
-        "peekOfCode": "class Department(Enum):\n    MENSWEAR = \"menswear\"\n    WOMENSWEAR = \"womenswear\"",
+        "peekOfCode": "class Departments(Enum):\n    MENSWEAR = \"menswear\"\n    WOMENSWEAR = \"womenswear\"\nclass Conditions(Enum):\n    IS_NEW = \"is_new\"\n    IS_GENTLY_USED = \"is_gently_used\"\n    IS_USED = \"is_used\"\n    IS_WORN = \"is_worn\"\n    IS_NOT_SPECIFIED = \"is_not_specified\"\nclass Markets(Enum):",
+        "detail": "client.categories",
+        "documentation": {}
+    },
+    {
+        "label": "Conditions",
+        "kind": 6,
+        "importPath": "client.categories",
+        "description": "client.categories",
+        "peekOfCode": "class Conditions(Enum):\n    IS_NEW = \"is_new\"\n    IS_GENTLY_USED = \"is_gently_used\"\n    IS_USED = \"is_used\"\n    IS_WORN = \"is_worn\"\n    IS_NOT_SPECIFIED = \"is_not_specified\"\nclass Markets(Enum):\n    BASIC = \"basic\"\n    GRAILED = \"grailed\"\n    HYPE = \"hype\"",
+        "detail": "client.categories",
+        "documentation": {}
+    },
+    {
+        "label": "Markets",
+        "kind": 6,
+        "importPath": "client.categories",
+        "description": "client.categories",
+        "peekOfCode": "class Markets(Enum):\n    BASIC = \"basic\"\n    GRAILED = \"grailed\"\n    HYPE = \"hype\"\n    SARTORIAL = \"sartorial\"\nclass Locations(Enum):\n    AUSTRALIA_NZ = \"Australia/NZ\"\n    UK = \"United Kingdom\"\n    US = \"United States\"\n    ASIA = \"Asia\"",
+        "detail": "client.categories",
+        "documentation": {}
+    },
+    {
+        "label": "Locations",
+        "kind": 6,
+        "importPath": "client.categories",
+        "description": "client.categories",
+        "peekOfCode": "class Locations(Enum):\n    AUSTRALIA_NZ = \"Australia/NZ\"\n    UK = \"United Kingdom\"\n    US = \"United States\"\n    ASIA = \"Asia\"\n    EUROPE = \"Europe\"\n    CANADA = \"Canada\"\n    OTHER = \"Other\"",
         "detail": "client.categories",
         "documentation": {}
     },
