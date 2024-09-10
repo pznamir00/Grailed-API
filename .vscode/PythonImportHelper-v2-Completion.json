@@ -56,6 +56,14 @@
         "documentation": {}
     },
     {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
         "label": "Any",
         "importPath": "typing",
         "description": "typing",
@@ -87,6 +95,14 @@
         "description": "categories",
         "isExtraImport": true,
         "detail": "categories",
+        "documentation": {}
+    },
+    {
+        "label": "Facets",
+        "importPath": "facets",
+        "description": "facets",
+        "isExtraImport": true,
+        "detail": "facets",
         "documentation": {}
     },
     {
@@ -266,6 +282,15 @@
         "description": "client.client",
         "peekOfCode": "class Client:\n    def __send_request(self, url: str, data: Any):\n        return requests.post(\n            url,\n            data=json.dumps(data),\n            headers=self.__get_request_headers(),\n            timeout=30,\n        )\n    def __get_request_headers(self):\n        return {",
         "detail": "client.client",
+        "documentation": {}
+    },
+    {
+        "label": "Facets",
+        "kind": 6,
+        "importPath": "facets.facets",
+        "description": "facets.facets",
+        "peekOfCode": "class Facets(Enum):\n    CATEGORY_PATH = \"category_path\"\n    DEPARTMENT = \"department\"\n    CATEGORY_SIZE = \"category_size\"\n    DESIGNERS_NAME = \"designers.name\"\n    PRICE_I = \"price_i\"\n    CONDITION = \"condition\"\n    LOCATION = \"location\"\n    BADGES = \"badges\"\n    STRATA = \"strata\"",
+        "detail": "facets.facets",
         "documentation": {}
     },
     {

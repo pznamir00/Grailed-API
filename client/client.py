@@ -2,6 +2,7 @@ from typing import Any
 import json
 import requests
 from categories import Departments
+from facets import Facets
 from settings import BASE_PRODUCTS_URL
 
 
@@ -34,23 +35,23 @@ class Client:
         hits_per_page=40,
         price_from=0,
         price_to=1_000_000,
-        categories=tuple(),
-        designers=tuple(),
-        conditions=tuple(),
-        markets=tuple(),
-        locations=tuple(),
-        sizes=tuple(),
+        categories=(),
+        designers=(),
+        conditions=(),
+        markets=(),
+        locations=(),
+        sizes=(),
         max_values_per_facet=100,
         facets=(
-            "category_path",
-            "department",
-            "category_size",
-            "designers.name",
-            "price_i",
-            "condition",
-            "location",
-            "badges",
-            "strata",
+            Facets.BADGES,
+            Facets.CATEGORY_PATH,
+            Facets.CATEGORY_SIZE,
+            Facets.CONDITION,
+            Facets.DEPARTMENT,
+            Facets.DESIGNERS_NAME,
+            Facets.LOCATION,
+            Facets.PRICE_I,
+            Facets.STRATA,
         ),
     ):
         category_params = [f'"category_path:{cat}"' for cat in categories]
