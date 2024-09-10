@@ -1,6 +1,6 @@
 from typing import Any
 import json
-import requests  # pylint: disable=import-error
+import requests
 from categories import Departments
 from settings import BASE_PRODUCTS_URL
 
