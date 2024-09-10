@@ -1,15 +1,6 @@
 from enum import Enum
 
 
-class Categories(Enum):
-    TOPS = "tops"
-    BOTTOMS = "bottoms"
-    OUTERWEAR = "outerwear"
-    FOOTWEAR = "footwear"
-    TAILORING = "tailoring"
-    ACCESSORIES = "accessories"
-
-
 class Tops(Enum):
     BUTTON_UPS = "button_ups"
     JERSEYS = "jerseys"
@@ -77,33 +68,3 @@ class Accessories(Enum):
     SUPREME = "supreme"
     TIES_POCKETSQUARES = "ties_pocketsquares"
     WALLETS = "wallets"
-
-
-class Departments(Enum):
-    MENSWEAR = "menswear"
-    WOMENSWEAR = "womenswear"
-
-
-class Conditions(Enum):
-    IS_NEW = "is_new"
-    IS_GENTLY_USED = "is_gently_used"
-    IS_USED = "is_used"
-    IS_WORN = "is_worn"
-    IS_NOT_SPECIFIED = "is_not_specified"
-
-
-class Markets(Enum):
-    BASIC = "basic"
-    GRAILED = "grailed"
-    HYPE = "hype"
-    SARTORIAL = "sartorial"
-
-
-class Locations(Enum):
-    AUSTRALIA_NZ = "Australia/NZ"
-    UK = "United Kingdom"
-    US = "United States"
-    ASIA = "Asia"
-    EUROPE = "Europe"
-    CANADA = "Canada"
-    OTHER = "Other"

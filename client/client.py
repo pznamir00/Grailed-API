@@ -1,7 +1,7 @@
 from typing import Any
 import json
 import requests  # pylint: disable=import-error
-from client.categories import Departments
+from categories import Departments
 from settings import BASE_PRODUCTS_URL
 
 
@@ -11,6 +11,7 @@ class Client:
             url,
             data=json.dumps(data),
             headers=self.__get_request_headers(),
+            timeout=30,
         )
 
     def __get_request_headers(self):
@@ -38,6 +39,7 @@ class Client:
         conditions=tuple(),
         markets=tuple(),
         locations=tuple(),
+        sizes=tuple(),
         max_values_per_facet=100,
         facets=(
             "category_path",
@@ -56,6 +58,7 @@ class Client:
         condition_params = [f'"condition:{con}"' for con in conditions]
         market_params = [f'"strata:{mar}"' for mar in markets]
         location_params = [f'"location:{loc}"' for loc in locations]
+        size_params = [f'"category_size:{siz}"' for siz in sizes]
 
         params = f'analytics=true\
             &clickAnalytics=true\
@@ -67,6 +70,7 @@ class Client:
                 [{",".join(condition_params)}],\
                 [{",".join(market_params)}],\
                 [{",".join(location_params)}],\
+                [{",".join(size_params)}],\
                 ["department:{department}"],\
                 [{"badges:staff_pick" if staff_pick else ""}]\
             ]\
