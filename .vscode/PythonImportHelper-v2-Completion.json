@@ -55,7 +55,52 @@
         "kind": 6,
         "importPath": "client.categories",
         "description": "client.categories",
-        "peekOfCode": "class Tops(Enum):\n    BUTTON_UPS = \"button_ups\"\n    JERSEYS = \"jerseys\"\n    LONG_SLEEVE_SHIRTS = \"long_sleeve_shirts\"\n    POLOS = \"polos\"\n    SHORT_SLEEVE_SHIRTS = \"short_sleeve_shirts\"\n    SLEEVELESS = \"sleeveless\"\n    SWEATERS_KNITWEAR = \"sweaters_knitwear\"\n    SWEATSHIRTS = \"sweatshirts_hoodies\"",
+        "peekOfCode": "class Tops(Enum):\n    BUTTON_UPS = \"button_ups\"\n    JERSEYS = \"jerseys\"\n    LONG_SLEEVE_SHIRTS = \"long_sleeve_shirts\"\n    POLOS = \"polos\"\n    SHORT_SLEEVE_SHIRTS = \"short_sleeve_shirts\"\n    SLEEVELESS = \"sleeveless\"\n    SWEATERS_KNITWEAR = \"sweaters_knitwear\"\n    SWEATSHIRTS = \"sweatshirts_hoodies\"\nclass Bottoms(Enum):",
+        "detail": "client.categories",
+        "documentation": {}
+    },
+    {
+        "label": "Bottoms",
+        "kind": 6,
+        "importPath": "client.categories",
+        "description": "client.categories",
+        "peekOfCode": "class Bottoms(Enum):\n    CASUAL_PANTS = \"casual_pants\"\n    CROPPED_PANTS = \"cropped_pants\"\n    DENIM = \"denim\"\n    JUMPSUITS = \"jumpsuits\"\n    LEGGINGS = \"leggings\"\n    SHORTS = \"shorts\"\n    SWEATPANTS_JOGGERS = \"sweatpants_joggers\"\n    SWIMWEAR = \"swimwear\"\nclass Outerwear(Enum):",
+        "detail": "client.categories",
+        "documentation": {}
+    },
+    {
+        "label": "Outerwear",
+        "kind": 6,
+        "importPath": "client.categories",
+        "description": "client.categories",
+        "peekOfCode": "class Outerwear(Enum):\n    BOMBERS = \"bombers\"\n    CLOAKS_CAPES = \"cloaks_capes\"\n    DENIM_JACKETS = \"denim_jackets\"\n    HEAVY_COATS = \"heavy_coats\"\n    LEATHER_JACKETS = \"leather_jackets\"\n    LIGHT_JACKETS = \"light_jackets\"\n    PARKAS = \"parkas\"\n    RAINCOATS = \"raincoats\"\n    VESTS = \"vests\"",
+        "detail": "client.categories",
+        "documentation": {}
+    },
+    {
+        "label": "Footwear",
+        "kind": 6,
+        "importPath": "client.categories",
+        "description": "client.categories",
+        "peekOfCode": "class Footwear(Enum):\n    BOOTS = \"boots\"\n    FORMAL_SHOES = \"formal_shoes\"\n    HITOP_SNEAKERS = \"hitop_sneakers\"\n    LEATHER = \"leather\"\n    LOWTOP_SNEAKERS = \"lowtop_sneakers\"\n    SANDALS = \"sandals\"\n    SLIP_ONS = \"slip_ons\"\nclass Tailoring(Enum):\n    BLAZERS = \"blazers\"",
+        "detail": "client.categories",
+        "documentation": {}
+    },
+    {
+        "label": "Tailoring",
+        "kind": 6,
+        "importPath": "client.categories",
+        "description": "client.categories",
+        "peekOfCode": "class Tailoring(Enum):\n    BLAZERS = \"blazers\"\n    FORMAL_SHIRTING = \"formal_shirting\"\n    FORMAL_TROUSERS = \"formal_trousers\"\n    SUITS = \"suits\"\n    TUXEDOS = \"tuxedos\"\n    VESTS = \"vests\"\nclass Accessories(Enum):\n    BAGS_LUGGAGE = \"bags_luggage\"\n    BELTS = \"belts\"",
+        "detail": "client.categories",
+        "documentation": {}
+    },
+    {
+        "label": "Accessories",
+        "kind": 6,
+        "importPath": "client.categories",
+        "description": "client.categories",
+        "peekOfCode": "class Accessories(Enum):\n    BAGS_LUGGAGE = \"bags_luggage\"\n    BELTS = \"belts\"\n    GLASSES = \"glasses\"\n    GLOVES_SCARVES = \"gloves_scarves\"\n    HATS = \"hats\"\n    JEWELRY_WATCHES = \"jewelry_watches\"\n    MISC = \"misc\"\n    PERIODICALS = \"periodicals\"\n    SOCKS_UNDERWEAR = \"socks_underwear\"",
         "detail": "client.categories",
         "documentation": {}
     },
