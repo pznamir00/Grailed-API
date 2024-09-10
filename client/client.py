@@ -1,6 +1,7 @@
 from typing import Any
 import json
-import requests
+import requests  # pylint: disable=import-error
+from client.categories import Department
 from settings import BASE_PRODUCTS_URL
 
 
@@ -21,20 +22,59 @@ class Client:
             "x-algolia-application-id": "MNRWEFSS2Q",
         }
 
-    def fetch_products(self):
-        data = {
-            "requests": [
-                {
-                    "indexName": "Listing_production",
-                    "params": "analytics=true&clickAnalytics=true&enableABTest=false&enablePersonalization=false&facetFilters=%5B%5B%22category_path%3Atops.button_ups%22%2C%22category_path%3Atops.jerseys%22%2C%22category_path%3Atops.long_sleeve_shirts%22%2C%22category_path%3Atops.polos%22%2C%22category_path%3Atops.short_sleeve_shirts%22%2C%22category_path%3Atops.sleeveless%22%2C%22category_path%3Atops.sweaters_knitwear%22%2C%22category_path%3Atops.sweatshirts_hoodies%22%5D%2C%5B%22department%3Amenswear%22%5D%5D&facets=%5B%22category_path%22%2C%22department%22%2C%22category_size%22%2C%22designers.name%22%2C%22price_i%22%2C%22condition%22%2C%22location%22%2C%22badges%22%2C%22strata%22%5D&filters=&getRankingInfo=true&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&highlightPreTag=%3Cais-highlight-0000000000%3E&hitsPerPage=40&maxValuesPerFacet=100&numericFilters=%5B%22price_i%3E%3D0%22%2C%22price_i%3C%3D1000000%22%5D&page=3&personalizationImpact=0&query=&tagFilters=&userToken=1ebfc4e8-199c-45e7-aaff-d3749b169ea1",
-                },
-                {
-                    "indexName": "Listing_sold_production",
-                    "params": "analytics=true&clickAnalytics=true&enableABTest=false&enablePersonalization=false&facetFilters=%5B%5B%22category_path%3Atops.button_ups%22%2C%22category_path%3Atops.jerseys%22%2C%22category_path%3Atops.long_sleeve_shirts%22%2C%22category_path%3Atops.polos%22%2C%22category_path%3Atops.short_sleeve_shirts%22%2C%22category_path%3Atops.sleeveless%22%2C%22category_path%3Atops.sweaters_knitwear%22%2C%22category_path%3Atops.sweatshirts_hoodies%22%5D%2C%5B%22department%3Amenswear%22%5D%5D&facets=%5B%22category_path%22%2C%22department%22%2C%22category_size%22%2C%22designers.name%22%2C%22price_i%22%2C%22condition%22%2C%22location%22%2C%22badges%22%2C%22strata%22%5D&filters=&getRankingInfo=true&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&highlightPreTag=%3Cais-highlight-0000000000%3E&hitsPerPage=40&maxValuesPerFacet=100&numericFilters=%5B%22price_i%3E%3D0%22%2C%22price_i%3C%3D1000000%22%5D&page=3&personalizationImpact=0&query=&tagFilters=&userToken=1ebfc4e8-199c-45e7-aaff-d3749b169ea1",
-                },
-            ],
-        }
-        result = self.__send_request(BASE_PRODUCTS_URL, data)
+    def fetch_products(
+        self,
+        categories=tuple(),
+        designers=tuple(),
+        sold=True,
+        non_sold=True,
+        department=Department.MENSWEAR,
+        query_search="",
+        page=1,
+        hits_per_page=40,
+        price_from=0,
+        price_to=1_000_000,
+        max_values_per_facet=100,
+        facets=(
+            "category_path",
+            "department",
+            "category_size",
+            "designers.name",
+            "price_i",
+            "condition",
+            "location",
+            "badges",
+            "strata",
+        ),
+    ):
+        category_params = [f'"category_path:{cat}"' for cat in categories]
+        designer_params = [f'"designers.name:{des}"' for des in designers]
+
+        params = f'analytics=true\
+            &clickAnalytics=true\
+            &enableABTest=false\
+            &enablePersonalization=false\
+            &facetFilters=[[{",".join(category_params)}],[{",".join(designer_params)}],["department:{department}"]]\
+            &facets=[{",".join(facets)}]\
+            &filters=\
+            &getRankingInfo=true\
+            &highlightPostTag=</ais-highlight-0000000000>\
+            &highlightPreTag=<ais-highlight-0000000000>\
+            &hitsPerPage={hits_per_page}\
+            &maxValuesPerFacet={max_values_per_facet}\
+            &numericFilters=["price_i>={price_from}","price_i<={price_to}"]\
+            &page={page}\
+            &personalizationImpact=0\
+            &query={query_search}\
+            &tagFilters='
+
+        reqs = []
+        if non_sold:
+            reqs.append({"indexName": "Listing_production", "params": params})
+        if sold:
+            reqs.append({"indexName": "Listing_sold_production", "params": params})
+
+        result = self.__send_request(BASE_PRODUCTS_URL, {"requests": reqs})
         data = json.loads(result.content)
         items = [j for i in data["results"] for j in i["hits"]]
         return items

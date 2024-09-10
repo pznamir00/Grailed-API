@@ -34,6 +34,14 @@
         "documentation": {}
     },
     {
+        "label": "Department",
+        "importPath": "client.categories",
+        "description": "client.categories",
+        "isExtraImport": true,
+        "detail": "client.categories",
+        "documentation": {}
+    },
+    {
         "label": "BASE_PRODUCTS_URL",
         "importPath": "settings",
         "description": "settings",
@@ -101,6 +109,15 @@
         "importPath": "client.categories",
         "description": "client.categories",
         "peekOfCode": "class Accessories(Enum):\n    BAGS_LUGGAGE = \"bags_luggage\"\n    BELTS = \"belts\"\n    GLASSES = \"glasses\"\n    GLOVES_SCARVES = \"gloves_scarves\"\n    HATS = \"hats\"\n    JEWELRY_WATCHES = \"jewelry_watches\"\n    MISC = \"misc\"\n    PERIODICALS = \"periodicals\"\n    SOCKS_UNDERWEAR = \"socks_underwear\"",
+        "detail": "client.categories",
+        "documentation": {}
+    },
+    {
+        "label": "Department",
+        "kind": 6,
+        "importPath": "client.categories",
+        "description": "client.categories",
+        "peekOfCode": "class Department(Enum):\n    MENSWEAR = \"menswear\"\n    WOMENSWEAR = \"womenswear\"",
         "detail": "client.categories",
         "documentation": {}
     },

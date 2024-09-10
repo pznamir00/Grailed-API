@@ -77,3 +77,8 @@ class Accessories(Enum):
     SUPREME = "supreme"
     TIES_POCKETSQUARES = "ties_pocketsquares"
     WALLETS = "wallets"
+
+
+class Department(Enum):
+    MENSWEAR = "menswear"
+    WOMENSWEAR = "womenswear"
