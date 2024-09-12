@@ -1,7 +1,9 @@
-from enum import Enum
+from aenum import Enum, nonmember
+from categories import CategoryLabels
+from .base_size import BaseSize
 
 
-class _TopClothingSizes:
+class TopSizes(BaseSize, Enum):  # type: ignore
     XXS = "xxs"
     XS = "xs"
     S = "s"
@@ -10,16 +12,22 @@ class _TopClothingSizes:
     XL = "xl"
     XXL = "xxl"
 
-
-class TopSizes(Enum, _TopClothingSizes):
-    pass
+    category_label = nonmember(CategoryLabels.TOPS)
 
 
-class OuterwearSizes(Enum, _TopClothingSizes):
-    pass
+class OuterwearSizes(BaseSize, Enum):  # type: ignore
+    XXS = "xxs"
+    XS = "xs"
+    S = "s"
+    M = "m"
+    L = "l"
+    XL = "xl"
+    XXL = "xxl"
+
+    category_label = nonmember(CategoryLabels.OUTERWEAR)
 
 
-class BottomSizes(Enum):
+class BottomSizes(BaseSize, Enum):  # type: ignore
     _26 = "26"
     _27 = "27"
     _28 = "28"
@@ -40,8 +48,10 @@ class BottomSizes(Enum):
     _43 = "43"
     _44 = "44"
 
+    category_label = nonmember(CategoryLabels.BOTTOMS)
 
-class FootwearSizes(Enum):
+
+class FootwearSizes(BaseSize, Enum):  # type: ignore
     _5 = "5"
     _5_5 = "5.5"
     _6 = "6"
@@ -62,8 +72,10 @@ class FootwearSizes(Enum):
     _14 = "14"
     _15 = "15"
 
+    category_label = nonmember(CategoryLabels.FOOTWEAR)
 
-class TailoringSizes(Enum):
+
+class TailoringSizes(BaseSize, Enum):  # type: ignore
     _34S = "34s"
     _34R = "34r"
     _36S = "36s"
@@ -95,8 +107,10 @@ class TailoringSizes(Enum):
     _54R = "54r"
     _54L = "54l"
 
+    category_label = nonmember(CategoryLabels.TAILORING)
 
-class AccessorySizes(Enum):
+
+class AccessorySizes(BaseSize, Enum):  # type: ignore
     OS = "os"
     _26 = "26"
     _28 = "28"
@@ -109,3 +123,5 @@ class AccessorySizes(Enum):
     _42 = "42"
     _44 = "44"
     _46 = "46"
+
+    category_label = nonmember(CategoryLabels.ACCESSORIES)

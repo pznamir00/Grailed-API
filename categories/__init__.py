@@ -1,5 +1,5 @@
-from .categories import Categories
-from .subcategories import Tops, Bottoms, Outerwear, Footwear, Tailoring, Accessories
+from .labels import CategoryLabels
+from .categories import Tops, Bottoms, Outerwear, Footwear, Tailoring, Accessories
 from .conditions import Conditions
 from .departments import Departments
 from .locations import Locations
