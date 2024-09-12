@@ -1,12 +1,8 @@
 from typing import Tuple
-import requests
-from categories import Departments
-from categories.conditions import Conditions
-from categories.locations import Locations
-from categories.markets import Markets
-from client.list_service import ListService
-from client.retrieve_service import RetrieveService
+from categories import Departments, Conditions, Locations, Markets
 from facets import Facets
+from .list_service import ListService
+from .retrieve_service import RetrieveService
 
 
 class Client:

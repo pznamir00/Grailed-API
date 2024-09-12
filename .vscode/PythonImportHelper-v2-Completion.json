@@ -160,6 +160,54 @@
         "documentation": {}
     },
     {
+        "label": "Conditions",
+        "importPath": "categories",
+        "description": "categories",
+        "isExtraImport": true,
+        "detail": "categories",
+        "documentation": {}
+    },
+    {
+        "label": "Locations",
+        "importPath": "categories",
+        "description": "categories",
+        "isExtraImport": true,
+        "detail": "categories",
+        "documentation": {}
+    },
+    {
+        "label": "Markets",
+        "importPath": "categories",
+        "description": "categories",
+        "isExtraImport": true,
+        "detail": "categories",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Tuple",
         "importPath": "typing",
         "description": "typing",
@@ -209,43 +257,11 @@
         "documentation": {}
     },
     {
-        "label": "Conditions",
-        "importPath": "categories.conditions",
-        "description": "categories.conditions",
+        "label": "Response",
+        "importPath": "requests",
+        "description": "requests",
         "isExtraImport": true,
-        "detail": "categories.conditions",
-        "documentation": {}
-    },
-    {
-        "label": "Locations",
-        "importPath": "categories.locations",
-        "description": "categories.locations",
-        "isExtraImport": true,
-        "detail": "categories.locations",
-        "documentation": {}
-    },
-    {
-        "label": "Markets",
-        "importPath": "categories.markets",
-        "description": "categories.markets",
-        "isExtraImport": true,
-        "detail": "categories.markets",
-        "documentation": {}
-    },
-    {
-        "label": "ListService",
-        "importPath": "client.list_service",
-        "description": "client.list_service",
-        "isExtraImport": true,
-        "detail": "client.list_service",
-        "documentation": {}
-    },
-    {
-        "label": "RetrieveService",
-        "importPath": "client.retrieve_service",
-        "description": "client.retrieve_service",
-        "isExtraImport": true,
-        "detail": "client.retrieve_service",
+        "detail": "requests",
         "documentation": {}
     },
     {
@@ -478,6 +494,15 @@
         "documentation": {}
     },
     {
+        "label": "ApiService",
+        "kind": 6,
+        "importPath": "client.api_service",
+        "description": "client.api_service",
+        "peekOfCode": "class ApiService(ABC):\n    @abstractmethod\n    def send_request(self, *args, **kwargs) -> Response:\n        pass\n    @abstractmethod\n    def parse_response(self, response: Response) -> Any:\n        return response.json()",
+        "detail": "client.api_service",
+        "documentation": {}
+    },
+    {
         "label": "Client",
         "kind": 6,
         "importPath": "client.client",
@@ -491,7 +516,7 @@
         "kind": 6,
         "importPath": "client.list_service",
         "description": "client.list_service",
-        "peekOfCode": "class ListService:\n    def send_request(self, data: Any):\n        return requests.post(\n            SEARCH_URL,\n            data=json.dumps(data),\n            headers={\n                \"accept\": \"*/*\",\n                \"accept-language\": \"en-GB,en-US;q=0.9,en;q=0.8\",\n                \"content-type\": \"application/x-www-form-urlencoded\",\n                \"x-algolia-api-key\": \"bc9ee1c014521ccf312525a4ef324a16\",",
+        "peekOfCode": "class ListService(ApiService):\n    def send_request(self, data: Any):  # pylint: disable=arguments-differ\n        return requests.post(\n            SEARCH_URL,\n            data=json.dumps(data),\n            headers={\n                \"accept\": \"*/*\",\n                \"accept-language\": \"en-GB,en-US;q=0.9,en;q=0.8\",\n                \"content-type\": \"application/x-www-form-urlencoded\",\n                \"x-algolia-api-key\": \"bc9ee1c014521ccf312525a4ef324a16\",",
         "detail": "client.list_service",
         "documentation": {}
     },
@@ -500,7 +525,7 @@
         "kind": 6,
         "importPath": "client.retrieve_service",
         "description": "client.retrieve_service",
-        "peekOfCode": "class RetrieveService:\n    def send_request(self, key: str):\n        return requests.get(\n            f\"{LISTINGS_API}/{key}\",\n            headers={\n                \"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36\"\n            },\n            timeout=30,\n        )\n    def parse_response(self, response: requests.Response):",
+        "peekOfCode": "class RetrieveService(ApiService):\n    def send_request(self, key: str):  # pylint: disable=arguments-differ\n        return requests.get(\n            f\"{LISTINGS_API}/{key}\",\n            headers={\n                \"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64)\\\n                      AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36\"\n            },\n            timeout=30,\n        )",
         "detail": "client.retrieve_service",
         "documentation": {}
     },

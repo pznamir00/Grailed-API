@@ -4,10 +4,11 @@ from typing import Any, Dict, List, Tuple
 import requests
 from facets import Facets
 from settings import SEARCH_URL
+from .api_service import ApiService
 
 
-class ListService:
-    def send_request(self, data: Any):
+class ListService(ApiService):
+    def send_request(self, data: Any):  # pylint: disable=arguments-differ
         return requests.post(
             SEARCH_URL,
             data=json.dumps(data),
@@ -20,6 +21,10 @@ class ListService:
             },
             timeout=30,
         )
+
+    def parse_response(self, response: requests.Response):
+        content = super().parse_response(response)
+        return [j for i in content["results"] for j in i["hits"]]
 
     def get_all_facets(self):
         return (
@@ -62,10 +67,6 @@ provided category, so they won't be considered in the query"
         if sold:
             _requests.append({"indexName": "Listing_sold_production", "params": params})
         return _requests
-
-    def parse_response(self, response: requests.Response):
-        content = json.loads(response.content)
-        return [j for i in content["results"] for j in i["hits"]]
 
     def create_list_params(
         self,
