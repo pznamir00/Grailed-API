@@ -1,28 +1,25 @@
-from typing import Any
+from typing import Any, Tuple
 import json
 import requests
 from categories import Departments
+from categories.conditions import Conditions
+from categories.locations import Locations
+from categories.markets import Markets
+from client.list_service import ListService
 from facets import Facets
 from settings import BASE_PRODUCTS_URL
 
 
 class Client:
+    list_service = ListService()
+
     def __send_request(self, url: str, data: Any):
         return requests.post(
             url,
             data=json.dumps(data),
-            headers=self.__get_request_headers(),
+            headers=self.list_service.get_request_headers(),
             timeout=30,
         )
-
-    def __get_request_headers(self):
-        return {
-            "accept": "*/*",
-            "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
-            "content-type": "application/x-www-form-urlencoded",
-            "x-algolia-api-key": "bc9ee1c014521ccf312525a4ef324a16",
-            "x-algolia-application-id": "MNRWEFSS2Q",
-        }
 
     def fetch_products(
         self,
@@ -35,66 +32,46 @@ class Client:
         hits_per_page=40,
         price_from=0,
         price_to=1_000_000,
-        categories=(),
-        designers=(),
-        conditions=(),
-        markets=(),
-        locations=(),
-        sizes=(),
+        categories: Tuple = (),
+        sizes: Tuple = (),
+        designers: Tuple[str, ...] = (),
+        conditions: Tuple[Conditions, ...] = (),
+        markets: Tuple[Markets, ...] = (),
+        locations: Tuple[Locations, ...] = (),
         max_values_per_facet=100,
-        facets=(
-            Facets.BADGES,
-            Facets.CATEGORY_PATH,
-            Facets.CATEGORY_SIZE,
-            Facets.CONDITION,
-            Facets.DEPARTMENT,
-            Facets.DESIGNERS_NAME,
-            Facets.LOCATION,
-            Facets.PRICE_I,
-            Facets.STRATA,
-        ),
+        facets: Tuple[Facets, ...] = list_service.get_all_facets(),
+        verbose=False,
     ):
-        category_params = [f'"category_path:{cat}"' for cat in categories]
-        designer_params = [f'"designers.name:{des}"' for des in designers]
-        condition_params = [f'"condition:{con}"' for con in conditions]
-        market_params = [f'"strata:{mar}"' for mar in markets]
-        location_params = [f'"location:{loc}"' for loc in locations]
-        size_params = [f'"category_size:{siz}"' for siz in sizes]
+        facet_names = self.list_service.enums_to_params("{}", facets)
+        cat_params = self.list_service.enums_to_params("category_path:{}", categories)
+        des_params = self.list_service.enums_to_params("designers.name:{}", designers)
+        cond_params = self.list_service.enums_to_params("condition:{}", conditions)
+        mar_params = self.list_service.enums_to_params("strata:{}", markets)
+        loc_params = self.list_service.enums_to_params("location:{}", locations)
+        siz_params = self.list_service.enums_to_params("category_size:{}", sizes)
 
-        params = f'analytics=true\
-            &clickAnalytics=true\
-            &enableABTest=false\
-            &enablePersonalization=false\
-            &facetFilters=[\
-                [{",".join(category_params)}],\
-                [{",".join(designer_params)}],\
-                [{",".join(condition_params)}],\
-                [{",".join(market_params)}],\
-                [{",".join(location_params)}],\
-                [{",".join(size_params)}],\
-                ["department:{department}"],\
-                [{"badges:staff_pick" if staff_pick else ""}]\
-            ]\
-            &facets=[{",".join(facets)}]\
-            &filters=\
-            &getRankingInfo=true\
-            &highlightPostTag=</ais-highlight-0000000000>\
-            &highlightPreTag=<ais-highlight-0000000000>\
-            &hitsPerPage={hits_per_page}\
-            &maxValuesPerFacet={max_values_per_facet}\
-            &numericFilters=["price_i>={price_from}","price_i<={price_to}"]\
-            &page={page}\
-            &personalizationImpact=0\
-            &query={query_search}\
-            &tagFilters='
+        params = self.list_service.create_list_params(
+            cat_params,
+            des_params,
+            cond_params,
+            mar_params,
+            loc_params,
+            siz_params,
+            facet_names,
+            department.value,
+            staff_pick,
+            hits_per_page,
+            max_values_per_facet,
+            price_from,
+            price_to,
+            page,
+            query_search,
+        )
 
-        reqs = []
-        if non_sold:
-            reqs.append({"indexName": "Listing_production", "params": params})
-        if sold:
-            reqs.append({"indexName": "Listing_sold_production", "params": params})
+        if verbose:
+            print("Params", params)
 
-        result = self.__send_request(BASE_PRODUCTS_URL, {"requests": reqs})
-        data = json.loads(result.content)
-        items = [j for i in data["results"] for j in i["hits"]]
+        _requests = self.list_service.get_payload_requests(sold, non_sold, params)
+        response = self.__send_request(BASE_PRODUCTS_URL, {"requests": _requests})
+        items = self.list_service.get_items_from_response(response)
         return items
