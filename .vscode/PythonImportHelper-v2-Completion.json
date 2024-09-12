@@ -160,6 +160,14 @@
         "documentation": {}
     },
     {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Any",
         "importPath": "typing",
         "description": "typing",
@@ -168,7 +176,7 @@
         "documentation": {}
     },
     {
-        "label": "Tuple",
+        "label": "Dict",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -192,28 +200,11 @@
         "documentation": {}
     },
     {
-        "label": "json",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "json",
-        "description": "json",
-        "detail": "json",
-        "documentation": {}
-    },
-    {
         "label": "requests",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "requests",
         "description": "requests",
-        "detail": "requests",
-        "documentation": {}
-    },
-    {
-        "label": "Response",
-        "importPath": "requests",
-        "description": "requests",
-        "isExtraImport": true,
         "detail": "requests",
         "documentation": {}
     },
@@ -250,11 +241,11 @@
         "documentation": {}
     },
     {
-        "label": "Facets",
-        "importPath": "facets",
-        "description": "facets",
+        "label": "RetrieveService",
+        "importPath": "client.retrieve_service",
+        "description": "client.retrieve_service",
         "isExtraImport": true,
-        "detail": "facets",
+        "detail": "client.retrieve_service",
         "documentation": {}
     },
     {
@@ -266,11 +257,20 @@
         "documentation": {}
     },
     {
-        "label": "BASE_PRODUCTS_URL",
-        "importPath": "settings",
-        "description": "settings",
+        "label": "Facets",
+        "importPath": "facets",
+        "description": "facets",
         "isExtraImport": true,
-        "detail": "settings",
+        "detail": "facets",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
         "documentation": {}
     },
     {
@@ -279,6 +279,22 @@
         "description": "warnings",
         "isExtraImport": true,
         "detail": "warnings",
+        "documentation": {}
+    },
+    {
+        "label": "SEARCH_URL",
+        "importPath": "settings",
+        "description": "settings",
+        "isExtraImport": true,
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "LISTINGS_API",
+        "importPath": "settings",
+        "description": "settings",
+        "isExtraImport": true,
+        "detail": "settings",
         "documentation": {}
     },
     {
@@ -466,7 +482,7 @@
         "kind": 6,
         "importPath": "client.client",
         "description": "client.client",
-        "peekOfCode": "class Client:\n    list_service = ListService()\n    def __send_request(self, url: str, data: Any):\n        return requests.post(\n            url,\n            data=json.dumps(data),\n            headers=self.list_service.get_request_headers(),\n            timeout=30,\n        )\n    def fetch_products(",
+        "peekOfCode": "class Client:\n    list_service = ListService()\n    retrieve_service = RetrieveService()\n    def retrieve(self, key: str):\n        response = self.retrieve_service.send_request(key)\n        data = self.retrieve_service.parse_response(response)\n        return data\n    def list(\n        self,\n        sold=True,",
         "detail": "client.client",
         "documentation": {}
     },
@@ -475,8 +491,17 @@
         "kind": 6,
         "importPath": "client.list_service",
         "description": "client.list_service",
-        "peekOfCode": "class ListService:\n    def get_all_facets(self):\n        return (\n            Facets.BADGES,\n            Facets.CATEGORY_PATH,\n            Facets.CATEGORY_SIZE,\n            Facets.CONDITION,\n            Facets.DEPARTMENT,\n            Facets.DESIGNERS_NAME,\n            Facets.LOCATION,",
+        "peekOfCode": "class ListService:\n    def send_request(self, data: Any):\n        return requests.post(\n            SEARCH_URL,\n            data=json.dumps(data),\n            headers={\n                \"accept\": \"*/*\",\n                \"accept-language\": \"en-GB,en-US;q=0.9,en;q=0.8\",\n                \"content-type\": \"application/x-www-form-urlencoded\",\n                \"x-algolia-api-key\": \"bc9ee1c014521ccf312525a4ef324a16\",",
         "detail": "client.list_service",
+        "documentation": {}
+    },
+    {
+        "label": "RetrieveService",
+        "kind": 6,
+        "importPath": "client.retrieve_service",
+        "description": "client.retrieve_service",
+        "peekOfCode": "class RetrieveService:\n    def send_request(self, key: str):\n        return requests.get(\n            f\"{LISTINGS_API}/{key}\",\n            headers={\n                \"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36\"\n            },\n            timeout=30,\n        )\n    def parse_response(self, response: requests.Response):",
+        "detail": "client.retrieve_service",
         "documentation": {}
     },
     {
@@ -489,11 +514,20 @@
         "documentation": {}
     },
     {
-        "label": "BASE_PRODUCTS_URL",
+        "label": "SEARCH_URL",
         "kind": 5,
         "importPath": "settings",
         "description": "settings",
-        "peekOfCode": "BASE_PRODUCTS_URL = \"https://mnrwefss2q-1.algolianet.com/1/indexes/*/queries?x-algolia-agent=Algolia%20for%20JavaScript%20(4.14.3)%3B%20Browser%3B%20JS%20Helper%20(3.11.3)%3B%20react%20(18.2.0)%3B%20react-instantsearch%20(6.39.1)\"",
+        "peekOfCode": "SEARCH_URL = \"https://mnrwefss2q-1.algolianet.com/1/indexes/*/queries?x-algolia-agent=Algolia%20for%20JavaScript%20(4.14.3)%3B%20Browser%3B%20JS%20Helper%20(3.11.3)%3B%20react%20(18.2.0)%3B%20react-instantsearch%20(6.39.1)\"\nLISTINGS_API = \"https://www.grailed.com/api/listings\"",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "LISTINGS_API",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "LISTINGS_API = \"https://www.grailed.com/api/listings\"",
         "detail": "settings",
         "documentation": {}
     }

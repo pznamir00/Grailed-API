@@ -1,11 +1,26 @@
 import json
 from warnings import warn
-from typing import List, Tuple
-from requests import Response
+from typing import Any, Dict, List, Tuple
+import requests
 from facets import Facets
+from settings import SEARCH_URL
 
 
 class ListService:
+    def send_request(self, data: Any):
+        return requests.post(
+            SEARCH_URL,
+            data=json.dumps(data),
+            headers={
+                "accept": "*/*",
+                "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+                "content-type": "application/x-www-form-urlencoded",
+                "x-algolia-api-key": "bc9ee1c014521ccf312525a4ef324a16",
+                "x-algolia-application-id": "MNRWEFSS2Q",
+            },
+            timeout=30,
+        )
+
     def get_all_facets(self):
         return (
             Facets.BADGES,
@@ -30,7 +45,8 @@ class ListService:
 
         if non_matching_sizes:
             warn(
-                f"Sizes {','.join(non_matching_sizes)} don't match any provided category, so they won't be considered in the query"
+                f"Sizes {','.join(non_matching_sizes)} don't match any \
+provided category, so they won't be considered in the query"
             )
 
     def enums_to_params(self, label: str, objects: Tuple):
@@ -40,25 +56,16 @@ class ListService:
         ]
 
     def get_payload_requests(self, sold: bool, non_sold: bool, params: str):
-        requests = []
+        _requests: List[Dict] = []
         if non_sold:
-            requests.append({"indexName": "Listing_production", "params": params})
+            _requests.append({"indexName": "Listing_production", "params": params})
         if sold:
-            requests.append({"indexName": "Listing_sold_production", "params": params})
-        return requests
+            _requests.append({"indexName": "Listing_sold_production", "params": params})
+        return _requests
 
-    def get_items_from_response(self, response: Response):
-        data = json.loads(response.content)
-        return [j for i in data["results"] for j in i["hits"]]
-
-    def get_request_headers(self):
-        return {
-            "accept": "*/*",
-            "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
-            "content-type": "application/x-www-form-urlencoded",
-            "x-algolia-api-key": "bc9ee1c014521ccf312525a4ef324a16",
-            "x-algolia-application-id": "MNRWEFSS2Q",
-        }
+    def parse_response(self, response: requests.Response):
+        content = json.loads(response.content)
+        return [j for i in content["results"] for j in i["hits"]]
 
     def create_list_params(
         self,

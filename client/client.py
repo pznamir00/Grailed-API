@@ -1,27 +1,24 @@
-from typing import Any, Tuple
-import json
+from typing import Tuple
 import requests
 from categories import Departments
 from categories.conditions import Conditions
 from categories.locations import Locations
 from categories.markets import Markets
 from client.list_service import ListService
+from client.retrieve_service import RetrieveService
 from facets import Facets
-from settings import BASE_PRODUCTS_URL
 
 
 class Client:
     list_service = ListService()
+    retrieve_service = RetrieveService()
 
-    def __send_request(self, url: str, data: Any):
-        return requests.post(
-            url,
-            data=json.dumps(data),
-            headers=self.list_service.get_request_headers(),
-            timeout=30,
-        )
+    def retrieve(self, key: str):
+        response = self.retrieve_service.send_request(key)
+        data = self.retrieve_service.parse_response(response)
+        return data
 
-    def fetch_products(
+    def list(
         self,
         sold=True,
         non_sold=True,
@@ -74,6 +71,6 @@ class Client:
             print("Params", params)
 
         _requests = self.list_service.get_payload_requests(sold, non_sold, params)
-        response = self.__send_request(BASE_PRODUCTS_URL, {"requests": _requests})
-        items = self.list_service.get_items_from_response(response)
+        response = self.list_service.send_request({"requests": _requests})
+        items = self.list_service.parse_response(response)
         return items
