@@ -184,23 +184,7 @@
         "documentation": {}
     },
     {
-        "label": "ABC",
-        "importPath": "abc",
-        "description": "abc",
-        "isExtraImport": true,
-        "detail": "abc",
-        "documentation": {}
-    },
-    {
-        "label": "abstractmethod",
-        "importPath": "abc",
-        "description": "abc",
-        "isExtraImport": true,
-        "detail": "abc",
-        "documentation": {}
-    },
-    {
-        "label": "Any",
+        "label": "Tuple",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -208,7 +192,7 @@
         "documentation": {}
     },
     {
-        "label": "Tuple",
+        "label": "Any",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -248,6 +232,54 @@
         "documentation": {}
     },
     {
+        "label": "Facets",
+        "importPath": "facets",
+        "description": "facets",
+        "isExtraImport": true,
+        "detail": "facets",
+        "documentation": {}
+    },
+    {
+        "label": "Facets",
+        "importPath": "facets",
+        "description": "facets",
+        "isExtraImport": true,
+        "detail": "facets",
+        "documentation": {}
+    },
+    {
+        "label": "ListService",
+        "importPath": "services",
+        "description": "services",
+        "isExtraImport": true,
+        "detail": "services",
+        "documentation": {}
+    },
+    {
+        "label": "RetrieveService",
+        "importPath": "services",
+        "description": "services",
+        "isExtraImport": true,
+        "detail": "services",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
         "label": "requests",
         "kind": 6,
         "isExtraImport": true,
@@ -262,22 +294,6 @@
         "description": "requests",
         "isExtraImport": true,
         "detail": "requests",
-        "documentation": {}
-    },
-    {
-        "label": "Facets",
-        "importPath": "facets",
-        "description": "facets",
-        "isExtraImport": true,
-        "detail": "facets",
-        "documentation": {}
-    },
-    {
-        "label": "Facets",
-        "importPath": "facets",
-        "description": "facets",
-        "isExtraImport": true,
-        "detail": "facets",
         "documentation": {}
     },
     {
@@ -494,15 +510,6 @@
         "documentation": {}
     },
     {
-        "label": "ApiService",
-        "kind": 6,
-        "importPath": "client.api_service",
-        "description": "client.api_service",
-        "peekOfCode": "class ApiService(ABC):\n    @abstractmethod\n    def send_request(self, *args, **kwargs) -> Response:\n        pass\n    @abstractmethod\n    def parse_response(self, response: Response) -> Any:\n        return response.json()",
-        "detail": "client.api_service",
-        "documentation": {}
-    },
-    {
         "label": "Client",
         "kind": 6,
         "importPath": "client.client",
@@ -512,30 +519,39 @@
         "documentation": {}
     },
     {
-        "label": "ListService",
-        "kind": 6,
-        "importPath": "client.list_service",
-        "description": "client.list_service",
-        "peekOfCode": "class ListService(ApiService):\n    def send_request(self, data: Any):  # pylint: disable=arguments-differ\n        return requests.post(\n            SEARCH_URL,\n            data=json.dumps(data),\n            headers={\n                \"accept\": \"*/*\",\n                \"accept-language\": \"en-GB,en-US;q=0.9,en;q=0.8\",\n                \"content-type\": \"application/x-www-form-urlencoded\",\n                \"x-algolia-api-key\": \"bc9ee1c014521ccf312525a4ef324a16\",",
-        "detail": "client.list_service",
-        "documentation": {}
-    },
-    {
-        "label": "RetrieveService",
-        "kind": 6,
-        "importPath": "client.retrieve_service",
-        "description": "client.retrieve_service",
-        "peekOfCode": "class RetrieveService(ApiService):\n    def send_request(self, key: str):  # pylint: disable=arguments-differ\n        return requests.get(\n            f\"{LISTINGS_API}/{key}\",\n            headers={\n                \"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64)\\\n                      AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36\"\n            },\n            timeout=30,\n        )",
-        "detail": "client.retrieve_service",
-        "documentation": {}
-    },
-    {
         "label": "Facets",
         "kind": 6,
         "importPath": "facets.facets",
         "description": "facets.facets",
         "peekOfCode": "class Facets(Enum):\n    CATEGORY_PATH = \"category_path\"\n    DEPARTMENT = \"department\"\n    CATEGORY_SIZE = \"category_size\"\n    DESIGNERS_NAME = \"designers.name\"\n    PRICE_I = \"price_i\"\n    CONDITION = \"condition\"\n    LOCATION = \"location\"\n    BADGES = \"badges\"\n    STRATA = \"strata\"",
         "detail": "facets.facets",
+        "documentation": {}
+    },
+    {
+        "label": "ApiService",
+        "kind": 6,
+        "importPath": "services.api_service",
+        "description": "services.api_service",
+        "peekOfCode": "class ApiService(ABC):\n    @abstractmethod\n    def send_request(self, *args, **kwargs) -> Response:\n        pass\n    @abstractmethod\n    def parse_response(self, response: Response) -> Any:\n        return response.json()",
+        "detail": "services.api_service",
+        "documentation": {}
+    },
+    {
+        "label": "ListService",
+        "kind": 6,
+        "importPath": "services.list_service",
+        "description": "services.list_service",
+        "peekOfCode": "class ListService(ApiService):\n    def send_request(self, data: Any):  # pylint: disable=arguments-differ\n        return requests.post(\n            SEARCH_URL,\n            data=json.dumps(data),\n            headers={\n                \"accept\": \"*/*\",\n                \"accept-language\": \"en-GB,en-US;q=0.9,en;q=0.8\",\n                \"content-type\": \"application/x-www-form-urlencoded\",\n                \"x-algolia-api-key\": \"bc9ee1c014521ccf312525a4ef324a16\",",
+        "detail": "services.list_service",
+        "documentation": {}
+    },
+    {
+        "label": "RetrieveService",
+        "kind": 6,
+        "importPath": "services.retrieve_service",
+        "description": "services.retrieve_service",
+        "peekOfCode": "class RetrieveService(ApiService):\n    def send_request(self, key: str):  # pylint: disable=arguments-differ\n        return requests.get(\n            f\"{LISTINGS_API}/{key}\",\n            headers={\n                \"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64)\\\n                      AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36\"\n            },\n            timeout=30,\n        )",
+        "detail": "services.retrieve_service",
         "documentation": {}
     },
     {

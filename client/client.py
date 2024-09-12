@@ -1,8 +1,7 @@
 from typing import Tuple
 from categories import Departments, Conditions, Locations, Markets
 from facets import Facets
-from .list_service import ListService
-from .retrieve_service import RetrieveService
+from services import ListService, RetrieveService
 
 
 class Client:
