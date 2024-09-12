@@ -1,4 +1,5 @@
 import json
+from warnings import warn
 from typing import List, Tuple
 from requests import Response
 from facets import Facets
@@ -17,6 +18,20 @@ class ListService:
             Facets.PRICE_I,
             Facets.STRATA,
         )
+
+    def validate_categories_and_sizes(self, categories: Tuple, sizes: Tuple):
+        if not categories or not sizes:
+            return
+
+        cat_prefixes = [cat.value.split(".")[0] for cat in categories]
+        non_matching_sizes = [
+            size.value for size in sizes if size.value.split(".")[0] not in cat_prefixes
+        ]
+
+        if non_matching_sizes:
+            warn(
+                f"Sizes {','.join(non_matching_sizes)} don't match any provided category, so they won't be considered in the query"
+            )
 
     def enums_to_params(self, label: str, objects: Tuple):
         return [

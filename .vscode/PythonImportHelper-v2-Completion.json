@@ -274,6 +274,14 @@
         "documentation": {}
     },
     {
+        "label": "warn",
+        "importPath": "warnings",
+        "description": "warnings",
+        "isExtraImport": true,
+        "detail": "warnings",
+        "documentation": {}
+    },
+    {
         "label": "BaseCategory",
         "kind": 6,
         "importPath": "categories.base_category",

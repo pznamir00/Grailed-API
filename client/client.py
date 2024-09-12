@@ -42,6 +42,8 @@ class Client:
         facets: Tuple[Facets, ...] = list_service.get_all_facets(),
         verbose=False,
     ):
+        self.list_service.validate_categories_and_sizes(categories, sizes)
+
         facet_names = self.list_service.enums_to_params("{}", facets)
         cat_params = self.list_service.enums_to_params("category_path:{}", categories)
         des_params = self.list_service.enums_to_params("designers.name:{}", designers)
