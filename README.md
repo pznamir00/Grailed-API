@@ -3,6 +3,10 @@
 This repository provides most important features when it comes to Grailed API.
 This is only for searching objects, since there is no official API, or API key.
 
+## How to install
+
+To install the API, just run `pip install -r requirements.txt` command.
+
 ## How to use
 
 In order to use the features, just import `Client` as in following code
@@ -79,3 +83,6 @@ Then you are ready to use searching functions
         brands = client.find_brands(query='levis')
         ```
 
+## How to test
+
+To test the API, just run `pytest .` command.
