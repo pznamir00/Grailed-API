@@ -442,6 +442,22 @@
         "documentation": {}
     },
     {
+        "label": "X_ALGOLIA_API_KEY",
+        "importPath": "settings",
+        "description": "settings",
+        "isExtraImport": true,
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "X_ALGOLIA_APPLICATION_ID",
+        "importPath": "settings",
+        "description": "settings",
+        "isExtraImport": true,
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
         "label": "warn",
         "importPath": "warnings",
         "description": "warnings",
@@ -722,7 +738,7 @@
         "kind": 5,
         "importPath": "settings",
         "description": "settings",
-        "peekOfCode": "SEARCH_URL = \"https://mnrwefss2q-1.algolianet.com/1/indexes/*/queries?x-algolia-agent=Algolia%20for%20JavaScript%20(4.14.3)%3B%20Browser%3B%20JS%20Helper%20(3.11.3)%3B%20react%20(18.2.0)%3B%20react-instantsearch%20(6.39.1)\"\nBRANDS_URL = \"https://mnrwefss2q-1.algolianet.com/1/indexes/Listing_production/facets/designers.name/query?x-algolia-agent=Algolia%20for%20JavaScript%20(4.14.3)%3B%20Browser%3B%20JS%20Helper%20(3.11.3)%3B%20react%20(18.2.0)%3B%20react-instantsearch%20(6.39.1)\"\nLISTINGS_API = \"https://www.grailed.com/api/listings\"",
+        "peekOfCode": "SEARCH_URL = \"https://mnrwefss2q-1.algolianet.com/1/indexes/*/queries?x-algolia-agent=Algolia%20for%20JavaScript%20(4.14.3)%3B%20Browser%3B%20JS%20Helper%20(3.11.3)%3B%20react%20(18.2.0)%3B%20react-instantsearch%20(6.39.1)\"\nBRANDS_URL = \"https://mnrwefss2q-1.algolianet.com/1/indexes/Listing_production/facets/designers.name/query?x-algolia-agent=Algolia%20for%20JavaScript%20(4.14.3)%3B%20Browser%3B%20JS%20Helper%20(3.11.3)%3B%20react%20(18.2.0)%3B%20react-instantsearch%20(6.39.1)\"\nLISTINGS_API = \"https://www.grailed.com/api/listings\"\nX_ALGOLIA_API_KEY = \"bc9ee1c014521ccf312525a4ef324a16\"\nX_ALGOLIA_APPLICATION_ID = \"MNRWEFSS2Q\"",
         "detail": "settings",
         "documentation": {}
     },
@@ -731,7 +747,7 @@
         "kind": 5,
         "importPath": "settings",
         "description": "settings",
-        "peekOfCode": "BRANDS_URL = \"https://mnrwefss2q-1.algolianet.com/1/indexes/Listing_production/facets/designers.name/query?x-algolia-agent=Algolia%20for%20JavaScript%20(4.14.3)%3B%20Browser%3B%20JS%20Helper%20(3.11.3)%3B%20react%20(18.2.0)%3B%20react-instantsearch%20(6.39.1)\"\nLISTINGS_API = \"https://www.grailed.com/api/listings\"",
+        "peekOfCode": "BRANDS_URL = \"https://mnrwefss2q-1.algolianet.com/1/indexes/Listing_production/facets/designers.name/query?x-algolia-agent=Algolia%20for%20JavaScript%20(4.14.3)%3B%20Browser%3B%20JS%20Helper%20(3.11.3)%3B%20react%20(18.2.0)%3B%20react-instantsearch%20(6.39.1)\"\nLISTINGS_API = \"https://www.grailed.com/api/listings\"\nX_ALGOLIA_API_KEY = \"bc9ee1c014521ccf312525a4ef324a16\"\nX_ALGOLIA_APPLICATION_ID = \"MNRWEFSS2Q\"",
         "detail": "settings",
         "documentation": {}
     },
@@ -740,7 +756,25 @@
         "kind": 5,
         "importPath": "settings",
         "description": "settings",
-        "peekOfCode": "LISTINGS_API = \"https://www.grailed.com/api/listings\"",
+        "peekOfCode": "LISTINGS_API = \"https://www.grailed.com/api/listings\"\nX_ALGOLIA_API_KEY = \"bc9ee1c014521ccf312525a4ef324a16\"\nX_ALGOLIA_APPLICATION_ID = \"MNRWEFSS2Q\"",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "X_ALGOLIA_API_KEY",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "X_ALGOLIA_API_KEY = \"bc9ee1c014521ccf312525a4ef324a16\"\nX_ALGOLIA_APPLICATION_ID = \"MNRWEFSS2Q\"",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "X_ALGOLIA_APPLICATION_ID",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "X_ALGOLIA_APPLICATION_ID = \"MNRWEFSS2Q\"",
         "detail": "settings",
         "documentation": {}
     }
