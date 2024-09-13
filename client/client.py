@@ -9,17 +9,17 @@ class Client:
     __retrieve_service = RetrieveService()
     __brands_service = BrandsService()
 
-    def search_brands(self, query: str):
+    def find_brands(self, query: str):
         response = self.__brands_service.send_request(query)
         brands = self.__brands_service.parse_response(response)
         print(brands)
 
-    def retrieve(self, key: str):
-        response = self.__retrieve_service.send_request(key)
+    def find_product_by_id(self, id: str):  # pylint: disable=redefined-builtin
+        response = self.__retrieve_service.send_request(id)
         data = self.__retrieve_service.parse_response(response)
         return data
 
-    def list(
+    def find_products(
         self,
         sold=True,
         non_sold=True,

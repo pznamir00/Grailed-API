@@ -546,7 +546,7 @@
         "kind": 6,
         "importPath": "client.client",
         "description": "client.client",
-        "peekOfCode": "class Client:\n    __list_service = ListService()\n    __retrieve_service = RetrieveService()\n    __brands_service = BrandsService()\n    def search_brands(self, query: str):\n        response = self.__brands_service.send_request(query)\n        brands = self.__brands_service.parse_response(response)\n        print(brands)\n    def retrieve(self, key: str):\n        response = self.__retrieve_service.send_request(key)",
+        "peekOfCode": "class Client:\n    __list_service = ListService()\n    __retrieve_service = RetrieveService()\n    __brands_service = BrandsService()\n    def find_brands(self, query: str):\n        response = self.__brands_service.send_request(query)\n        brands = self.__brands_service.parse_response(response)\n        print(brands)\n    def find_product_by_id(self, id: str):  # pylint: disable=redefined-builtin\n        response = self.__retrieve_service.send_request(id)",
         "detail": "client.client",
         "documentation": {}
     },
