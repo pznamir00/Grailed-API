@@ -1,7 +1,7 @@
 from warnings import warn
 from typing import Any, Dict, Iterable, List
 import requests
-from categories import Markets, Conditions, Locations, Departments
+from enums import Markets, Conditions, Locations, Departments
 from facets import Facets
 from settings import SEARCH_URL
 from .api_service import ApiService

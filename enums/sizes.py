@@ -1,5 +1,5 @@
 from aenum import Enum, nonmember
-from categories import CategoryLabels
+from enums import CategoryLabels
 from .base_size import BaseSize
 
 

@@ -1,221 +1,5 @@
 [
     {
-        "label": "nonmember",
-        "importPath": "aenum",
-        "description": "aenum",
-        "isExtraImport": true,
-        "detail": "aenum",
-        "documentation": {}
-    },
-    {
-        "label": "nonmember",
-        "importPath": "aenum",
-        "description": "aenum",
-        "isExtraImport": true,
-        "detail": "aenum",
-        "documentation": {}
-    },
-    {
-        "label": "Enum",
-        "importPath": "aenum",
-        "description": "aenum",
-        "isExtraImport": true,
-        "detail": "aenum",
-        "documentation": {}
-    },
-    {
-        "label": "nonmember",
-        "importPath": "aenum",
-        "description": "aenum",
-        "isExtraImport": true,
-        "detail": "aenum",
-        "documentation": {}
-    },
-    {
-        "label": "Enum",
-        "importPath": "aenum",
-        "description": "aenum",
-        "isExtraImport": true,
-        "detail": "aenum",
-        "documentation": {}
-    },
-    {
-        "label": "nonmember",
-        "importPath": "aenum",
-        "description": "aenum",
-        "isExtraImport": true,
-        "detail": "aenum",
-        "documentation": {}
-    },
-    {
-        "label": "AccessorySizes",
-        "importPath": "categories.sizes",
-        "description": "categories.sizes",
-        "isExtraImport": true,
-        "detail": "categories.sizes",
-        "documentation": {}
-    },
-    {
-        "label": "BottomSizes",
-        "importPath": "categories.sizes",
-        "description": "categories.sizes",
-        "isExtraImport": true,
-        "detail": "categories.sizes",
-        "documentation": {}
-    },
-    {
-        "label": "FootwearSizes",
-        "importPath": "categories.sizes",
-        "description": "categories.sizes",
-        "isExtraImport": true,
-        "detail": "categories.sizes",
-        "documentation": {}
-    },
-    {
-        "label": "OuterwearSizes",
-        "importPath": "categories.sizes",
-        "description": "categories.sizes",
-        "isExtraImport": true,
-        "detail": "categories.sizes",
-        "documentation": {}
-    },
-    {
-        "label": "TailoringSizes",
-        "importPath": "categories.sizes",
-        "description": "categories.sizes",
-        "isExtraImport": true,
-        "detail": "categories.sizes",
-        "documentation": {}
-    },
-    {
-        "label": "TopSizes",
-        "importPath": "categories.sizes",
-        "description": "categories.sizes",
-        "isExtraImport": true,
-        "detail": "categories.sizes",
-        "documentation": {}
-    },
-    {
-        "label": "Enum",
-        "importPath": "enum",
-        "description": "enum",
-        "isExtraImport": true,
-        "detail": "enum",
-        "documentation": {}
-    },
-    {
-        "label": "Enum",
-        "importPath": "enum",
-        "description": "enum",
-        "isExtraImport": true,
-        "detail": "enum",
-        "documentation": {}
-    },
-    {
-        "label": "Enum",
-        "importPath": "enum",
-        "description": "enum",
-        "isExtraImport": true,
-        "detail": "enum",
-        "documentation": {}
-    },
-    {
-        "label": "Enum",
-        "importPath": "enum",
-        "description": "enum",
-        "isExtraImport": true,
-        "detail": "enum",
-        "documentation": {}
-    },
-    {
-        "label": "Enum",
-        "importPath": "enum",
-        "description": "enum",
-        "isExtraImport": true,
-        "detail": "enum",
-        "documentation": {}
-    },
-    {
-        "label": "Enum",
-        "importPath": "enum",
-        "description": "enum",
-        "isExtraImport": true,
-        "detail": "enum",
-        "documentation": {}
-    },
-    {
-        "label": "CategoryLabels",
-        "importPath": "categories",
-        "description": "categories",
-        "isExtraImport": true,
-        "detail": "categories",
-        "documentation": {}
-    },
-    {
-        "label": "Departments",
-        "importPath": "categories",
-        "description": "categories",
-        "isExtraImport": true,
-        "detail": "categories",
-        "documentation": {}
-    },
-    {
-        "label": "Conditions",
-        "importPath": "categories",
-        "description": "categories",
-        "isExtraImport": true,
-        "detail": "categories",
-        "documentation": {}
-    },
-    {
-        "label": "Locations",
-        "importPath": "categories",
-        "description": "categories",
-        "isExtraImport": true,
-        "detail": "categories",
-        "documentation": {}
-    },
-    {
-        "label": "Markets",
-        "importPath": "categories",
-        "description": "categories",
-        "isExtraImport": true,
-        "detail": "categories",
-        "documentation": {}
-    },
-    {
-        "label": "Markets",
-        "importPath": "categories",
-        "description": "categories",
-        "isExtraImport": true,
-        "detail": "categories",
-        "documentation": {}
-    },
-    {
-        "label": "Conditions",
-        "importPath": "categories",
-        "description": "categories",
-        "isExtraImport": true,
-        "detail": "categories",
-        "documentation": {}
-    },
-    {
-        "label": "Locations",
-        "importPath": "categories",
-        "description": "categories",
-        "isExtraImport": true,
-        "detail": "categories",
-        "documentation": {}
-    },
-    {
-        "label": "Departments",
-        "importPath": "categories",
-        "description": "categories",
-        "isExtraImport": true,
-        "detail": "categories",
-        "documentation": {}
-    },
-    {
         "label": "Iterable",
         "importPath": "typing",
         "description": "typing",
@@ -288,6 +72,78 @@
         "documentation": {}
     },
     {
+        "label": "Departments",
+        "importPath": "enums",
+        "description": "enums",
+        "isExtraImport": true,
+        "detail": "enums",
+        "documentation": {}
+    },
+    {
+        "label": "Conditions",
+        "importPath": "enums",
+        "description": "enums",
+        "isExtraImport": true,
+        "detail": "enums",
+        "documentation": {}
+    },
+    {
+        "label": "Locations",
+        "importPath": "enums",
+        "description": "enums",
+        "isExtraImport": true,
+        "detail": "enums",
+        "documentation": {}
+    },
+    {
+        "label": "Markets",
+        "importPath": "enums",
+        "description": "enums",
+        "isExtraImport": true,
+        "detail": "enums",
+        "documentation": {}
+    },
+    {
+        "label": "CategoryLabels",
+        "importPath": "enums",
+        "description": "enums",
+        "isExtraImport": true,
+        "detail": "enums",
+        "documentation": {}
+    },
+    {
+        "label": "Markets",
+        "importPath": "enums",
+        "description": "enums",
+        "isExtraImport": true,
+        "detail": "enums",
+        "documentation": {}
+    },
+    {
+        "label": "Conditions",
+        "importPath": "enums",
+        "description": "enums",
+        "isExtraImport": true,
+        "detail": "enums",
+        "documentation": {}
+    },
+    {
+        "label": "Locations",
+        "importPath": "enums",
+        "description": "enums",
+        "isExtraImport": true,
+        "detail": "enums",
+        "documentation": {}
+    },
+    {
+        "label": "Departments",
+        "importPath": "enums",
+        "description": "enums",
+        "isExtraImport": true,
+        "detail": "enums",
+        "documentation": {}
+    },
+    {
         "label": "Facets",
         "importPath": "facets",
         "description": "facets",
@@ -325,6 +181,150 @@
         "description": "services",
         "isExtraImport": true,
         "detail": "services",
+        "documentation": {}
+    },
+    {
+        "label": "nonmember",
+        "importPath": "aenum",
+        "description": "aenum",
+        "isExtraImport": true,
+        "detail": "aenum",
+        "documentation": {}
+    },
+    {
+        "label": "nonmember",
+        "importPath": "aenum",
+        "description": "aenum",
+        "isExtraImport": true,
+        "detail": "aenum",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "aenum",
+        "description": "aenum",
+        "isExtraImport": true,
+        "detail": "aenum",
+        "documentation": {}
+    },
+    {
+        "label": "nonmember",
+        "importPath": "aenum",
+        "description": "aenum",
+        "isExtraImport": true,
+        "detail": "aenum",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "aenum",
+        "description": "aenum",
+        "isExtraImport": true,
+        "detail": "aenum",
+        "documentation": {}
+    },
+    {
+        "label": "nonmember",
+        "importPath": "aenum",
+        "description": "aenum",
+        "isExtraImport": true,
+        "detail": "aenum",
+        "documentation": {}
+    },
+    {
+        "label": "AccessorySizes",
+        "importPath": "enums.sizes",
+        "description": "enums.sizes",
+        "isExtraImport": true,
+        "detail": "enums.sizes",
+        "documentation": {}
+    },
+    {
+        "label": "BottomSizes",
+        "importPath": "enums.sizes",
+        "description": "enums.sizes",
+        "isExtraImport": true,
+        "detail": "enums.sizes",
+        "documentation": {}
+    },
+    {
+        "label": "FootwearSizes",
+        "importPath": "enums.sizes",
+        "description": "enums.sizes",
+        "isExtraImport": true,
+        "detail": "enums.sizes",
+        "documentation": {}
+    },
+    {
+        "label": "OuterwearSizes",
+        "importPath": "enums.sizes",
+        "description": "enums.sizes",
+        "isExtraImport": true,
+        "detail": "enums.sizes",
+        "documentation": {}
+    },
+    {
+        "label": "TailoringSizes",
+        "importPath": "enums.sizes",
+        "description": "enums.sizes",
+        "isExtraImport": true,
+        "detail": "enums.sizes",
+        "documentation": {}
+    },
+    {
+        "label": "TopSizes",
+        "importPath": "enums.sizes",
+        "description": "enums.sizes",
+        "isExtraImport": true,
+        "detail": "enums.sizes",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
         "documentation": {}
     },
     {
@@ -482,192 +482,192 @@
         "documentation": {}
     },
     {
-        "label": "BaseCategory",
-        "kind": 6,
-        "importPath": "categories.base_category",
-        "description": "categories.base_category",
-        "peekOfCode": "class BaseCategory(BaseEntity):\n    sizes = nonmember(None)",
-        "detail": "categories.base_category",
-        "documentation": {}
-    },
-    {
-        "label": "BaseEntity",
-        "kind": 6,
-        "importPath": "categories.base_entity",
-        "description": "categories.base_entity",
-        "peekOfCode": "class BaseEntity:\n    category_label = nonmember(None)\n    def __new__(cls, value):\n        obj = object.__new__(cls)\n        obj._value_ = f\"{cls.category_label.value}.{value}\"  # type: ignore\n        return obj",
-        "detail": "categories.base_entity",
-        "documentation": {}
-    },
-    {
-        "label": "BaseSize",
-        "kind": 6,
-        "importPath": "categories.base_size",
-        "description": "categories.base_size",
-        "peekOfCode": "class BaseSize(BaseEntity):\n    pass",
-        "detail": "categories.base_size",
-        "documentation": {}
-    },
-    {
-        "label": "Tops",
-        "kind": 6,
-        "importPath": "categories.categories",
-        "description": "categories.categories",
-        "peekOfCode": "class Tops(BaseCategory, Enum):  # type: ignore\n    BUTTON_UPS = \"button_ups\"\n    JERSEYS = \"jerseys\"\n    LONG_SLEEVE_SHIRTS = \"long_sleeve_shirts\"\n    POLOS = \"polos\"\n    SHORT_SLEEVE_SHIRTS = \"short_sleeve_shirts\"\n    SLEEVELESS = \"sleeveless\"\n    SWEATERS_KNITWEAR = \"sweaters_knitwear\"\n    SWEATSHIRTS = \"sweatshirts_hoodies\"\n    category_label = nonmember(CategoryLabels.TOPS)",
-        "detail": "categories.categories",
-        "documentation": {}
-    },
-    {
-        "label": "Bottoms",
-        "kind": 6,
-        "importPath": "categories.categories",
-        "description": "categories.categories",
-        "peekOfCode": "class Bottoms(BaseCategory, Enum):  # type: ignore\n    CASUAL_PANTS = \"casual_pants\"\n    CROPPED_PANTS = \"cropped_pants\"\n    DENIM = \"denim\"\n    JUMPSUITS = \"jumpsuits\"\n    LEGGINGS = \"leggings\"\n    SHORTS = \"shorts\"\n    SWEATPANTS_JOGGERS = \"sweatpants_joggers\"\n    SWIMWEAR = \"swimwear\"\n    category_label = nonmember(CategoryLabels.BOTTOMS)",
-        "detail": "categories.categories",
-        "documentation": {}
-    },
-    {
-        "label": "Outerwear",
-        "kind": 6,
-        "importPath": "categories.categories",
-        "description": "categories.categories",
-        "peekOfCode": "class Outerwear(BaseCategory, Enum):  # type: ignore\n    BOMBERS = \"bombers\"\n    CLOAKS_CAPES = \"cloaks_capes\"\n    DENIM_JACKETS = \"denim_jackets\"\n    HEAVY_COATS = \"heavy_coats\"\n    LEATHER_JACKETS = \"leather_jackets\"\n    LIGHT_JACKETS = \"light_jackets\"\n    PARKAS = \"parkas\"\n    RAINCOATS = \"raincoats\"\n    VESTS = \"vests\"",
-        "detail": "categories.categories",
-        "documentation": {}
-    },
-    {
-        "label": "Footwear",
-        "kind": 6,
-        "importPath": "categories.categories",
-        "description": "categories.categories",
-        "peekOfCode": "class Footwear(BaseCategory, Enum):  # type: ignore\n    BOOTS = \"boots\"\n    FORMAL_SHOES = \"formal_shoes\"\n    HITOP_SNEAKERS = \"hitop_sneakers\"\n    LEATHER = \"leather\"\n    LOWTOP_SNEAKERS = \"lowtop_sneakers\"\n    SANDALS = \"sandals\"\n    SLIP_ONS = \"slip_ons\"\n    category_label = nonmember(CategoryLabels.FOOTWEAR)\n    sizes = nonmember(FootwearSizes)",
-        "detail": "categories.categories",
-        "documentation": {}
-    },
-    {
-        "label": "Tailoring",
-        "kind": 6,
-        "importPath": "categories.categories",
-        "description": "categories.categories",
-        "peekOfCode": "class Tailoring(BaseCategory, Enum):  # type: ignore\n    BLAZERS = \"blazers\"\n    FORMAL_SHIRTING = \"formal_shirting\"\n    FORMAL_TROUSERS = \"formal_trousers\"\n    SUITS = \"suits\"\n    TUXEDOS = \"tuxedos\"\n    VESTS = \"vests\"\n    category_label = nonmember(CategoryLabels.TAILORING)\n    sizes = nonmember(TailoringSizes)\nclass Accessories(BaseCategory, Enum):  # type: ignore",
-        "detail": "categories.categories",
-        "documentation": {}
-    },
-    {
-        "label": "Accessories",
-        "kind": 6,
-        "importPath": "categories.categories",
-        "description": "categories.categories",
-        "peekOfCode": "class Accessories(BaseCategory, Enum):  # type: ignore\n    BAGS_LUGGAGE = \"bags_luggage\"\n    BELTS = \"belts\"\n    GLASSES = \"glasses\"\n    GLOVES_SCARVES = \"gloves_scarves\"\n    HATS = \"hats\"\n    JEWELRY_WATCHES = \"jewelry_watches\"\n    MISC = \"misc\"\n    PERIODICALS = \"periodicals\"\n    SOCKS_UNDERWEAR = \"socks_underwear\"",
-        "detail": "categories.categories",
-        "documentation": {}
-    },
-    {
-        "label": "Conditions",
-        "kind": 6,
-        "importPath": "categories.conditions",
-        "description": "categories.conditions",
-        "peekOfCode": "class Conditions(Enum):\n    IS_NEW = \"is_new\"\n    IS_GENTLY_USED = \"is_gently_used\"\n    IS_USED = \"is_used\"\n    IS_WORN = \"is_worn\"\n    IS_NOT_SPECIFIED = \"is_not_specified\"",
-        "detail": "categories.conditions",
-        "documentation": {}
-    },
-    {
-        "label": "Departments",
-        "kind": 6,
-        "importPath": "categories.departments",
-        "description": "categories.departments",
-        "peekOfCode": "class Departments(Enum):\n    MENSWEAR = \"menswear\"\n    WOMENSWEAR = \"womenswear\"",
-        "detail": "categories.departments",
-        "documentation": {}
-    },
-    {
-        "label": "CategoryLabels",
-        "kind": 6,
-        "importPath": "categories.labels",
-        "description": "categories.labels",
-        "peekOfCode": "class CategoryLabels(Enum):\n    TOPS = \"tops\"\n    BOTTOMS = \"bottoms\"\n    OUTERWEAR = \"outerwear\"\n    FOOTWEAR = \"footwear\"\n    TAILORING = \"tailoring\"\n    ACCESSORIES = \"accessories\"",
-        "detail": "categories.labels",
-        "documentation": {}
-    },
-    {
-        "label": "Locations",
-        "kind": 6,
-        "importPath": "categories.locations",
-        "description": "categories.locations",
-        "peekOfCode": "class Locations(Enum):\n    AUSTRALIA_NZ = \"Australia/NZ\"\n    UK = \"United Kingdom\"\n    US = \"United States\"\n    ASIA = \"Asia\"\n    EUROPE = \"Europe\"\n    CANADA = \"Canada\"\n    OTHER = \"Other\"",
-        "detail": "categories.locations",
-        "documentation": {}
-    },
-    {
-        "label": "Markets",
-        "kind": 6,
-        "importPath": "categories.markets",
-        "description": "categories.markets",
-        "peekOfCode": "class Markets(Enum):\n    BASIC = \"basic\"\n    GRAILED = \"grailed\"\n    HYPE = \"hype\"\n    SARTORIAL = \"sartorial\"",
-        "detail": "categories.markets",
-        "documentation": {}
-    },
-    {
-        "label": "TopSizes",
-        "kind": 6,
-        "importPath": "categories.sizes",
-        "description": "categories.sizes",
-        "peekOfCode": "class TopSizes(BaseSize, Enum):  # type: ignore\n    XXS = \"xxs\"\n    XS = \"xs\"\n    S = \"s\"\n    M = \"m\"\n    L = \"l\"\n    XL = \"xl\"\n    XXL = \"xxl\"\n    category_label = nonmember(CategoryLabels.TOPS)\nclass OuterwearSizes(BaseSize, Enum):  # type: ignore",
-        "detail": "categories.sizes",
-        "documentation": {}
-    },
-    {
-        "label": "OuterwearSizes",
-        "kind": 6,
-        "importPath": "categories.sizes",
-        "description": "categories.sizes",
-        "peekOfCode": "class OuterwearSizes(BaseSize, Enum):  # type: ignore\n    XXS = \"xxs\"\n    XS = \"xs\"\n    S = \"s\"\n    M = \"m\"\n    L = \"l\"\n    XL = \"xl\"\n    XXL = \"xxl\"\n    category_label = nonmember(CategoryLabels.OUTERWEAR)\nclass BottomSizes(BaseSize, Enum):  # type: ignore",
-        "detail": "categories.sizes",
-        "documentation": {}
-    },
-    {
-        "label": "BottomSizes",
-        "kind": 6,
-        "importPath": "categories.sizes",
-        "description": "categories.sizes",
-        "peekOfCode": "class BottomSizes(BaseSize, Enum):  # type: ignore\n    _26 = \"26\"\n    _27 = \"27\"\n    _28 = \"28\"\n    _29 = \"29\"\n    _30 = \"30\"\n    _31 = \"31\"\n    _32 = \"32\"\n    _33 = \"33\"\n    _34 = \"34\"",
-        "detail": "categories.sizes",
-        "documentation": {}
-    },
-    {
-        "label": "FootwearSizes",
-        "kind": 6,
-        "importPath": "categories.sizes",
-        "description": "categories.sizes",
-        "peekOfCode": "class FootwearSizes(BaseSize, Enum):  # type: ignore\n    _5 = \"5\"\n    _5_5 = \"5.5\"\n    _6 = \"6\"\n    _6_5 = \"6.5\"\n    _7 = \"7\"\n    _7_5 = \"7.5\"\n    _8 = \"8\"\n    _8_5 = \"8.5\"\n    _9 = \"9\"",
-        "detail": "categories.sizes",
-        "documentation": {}
-    },
-    {
-        "label": "TailoringSizes",
-        "kind": 6,
-        "importPath": "categories.sizes",
-        "description": "categories.sizes",
-        "peekOfCode": "class TailoringSizes(BaseSize, Enum):  # type: ignore\n    _34S = \"34s\"\n    _34R = \"34r\"\n    _36S = \"36s\"\n    _36R = \"36r\"\n    _38S = \"38s\"\n    _38R = \"38r\"\n    _38L = \"38l\"\n    _40S = \"40s\"\n    _40R = \"40r\"",
-        "detail": "categories.sizes",
-        "documentation": {}
-    },
-    {
-        "label": "AccessorySizes",
-        "kind": 6,
-        "importPath": "categories.sizes",
-        "description": "categories.sizes",
-        "peekOfCode": "class AccessorySizes(BaseSize, Enum):  # type: ignore\n    OS = \"os\"\n    _26 = \"26\"\n    _28 = \"28\"\n    _30 = \"30\"\n    _32 = \"32\"\n    _34 = \"34\"\n    _36 = \"36\"\n    _38 = \"38\"\n    _40 = \"40\"",
-        "detail": "categories.sizes",
-        "documentation": {}
-    },
-    {
         "label": "Client",
         "kind": 6,
         "importPath": "client.client",
         "description": "client.client",
         "peekOfCode": "class Client:\n    \"\"\"\n    Main Client class that is interface of whole system. It\n    provides all functionalities for looking for products and brands\n    \"\"\"\n    __products_list_service = ProductsListService()\n    __products_retrieve_service = ProductsRetrieveService()\n    __brands_list_service = BrandsListService()\n    def find_brands(self, query: str, verbose=False):\n        \"\"\"Finds brands by provided query keyword",
         "detail": "client.client",
+        "documentation": {}
+    },
+    {
+        "label": "BaseCategory",
+        "kind": 6,
+        "importPath": "enums.base_category",
+        "description": "enums.base_category",
+        "peekOfCode": "class BaseCategory(BaseEntity):\n    sizes = nonmember(None)",
+        "detail": "enums.base_category",
+        "documentation": {}
+    },
+    {
+        "label": "BaseEntity",
+        "kind": 6,
+        "importPath": "enums.base_entity",
+        "description": "enums.base_entity",
+        "peekOfCode": "class BaseEntity:\n    category_label = nonmember(None)\n    def __new__(cls, value):\n        obj = object.__new__(cls)\n        obj._value_ = f\"{cls.category_label.value}.{value}\"  # type: ignore\n        return obj",
+        "detail": "enums.base_entity",
+        "documentation": {}
+    },
+    {
+        "label": "BaseSize",
+        "kind": 6,
+        "importPath": "enums.base_size",
+        "description": "enums.base_size",
+        "peekOfCode": "class BaseSize(BaseEntity):\n    pass",
+        "detail": "enums.base_size",
+        "documentation": {}
+    },
+    {
+        "label": "Tops",
+        "kind": 6,
+        "importPath": "enums.categories",
+        "description": "enums.categories",
+        "peekOfCode": "class Tops(BaseCategory, Enum):  # type: ignore\n    BUTTON_UPS = \"button_ups\"\n    JERSEYS = \"jerseys\"\n    LONG_SLEEVE_SHIRTS = \"long_sleeve_shirts\"\n    POLOS = \"polos\"\n    SHORT_SLEEVE_SHIRTS = \"short_sleeve_shirts\"\n    SLEEVELESS = \"sleeveless\"\n    SWEATERS_KNITWEAR = \"sweaters_knitwear\"\n    SWEATSHIRTS = \"sweatshirts_hoodies\"\n    category_label = nonmember(CategoryLabels.TOPS)",
+        "detail": "enums.categories",
+        "documentation": {}
+    },
+    {
+        "label": "Bottoms",
+        "kind": 6,
+        "importPath": "enums.categories",
+        "description": "enums.categories",
+        "peekOfCode": "class Bottoms(BaseCategory, Enum):  # type: ignore\n    CASUAL_PANTS = \"casual_pants\"\n    CROPPED_PANTS = \"cropped_pants\"\n    DENIM = \"denim\"\n    JUMPSUITS = \"jumpsuits\"\n    LEGGINGS = \"leggings\"\n    SHORTS = \"shorts\"\n    SWEATPANTS_JOGGERS = \"sweatpants_joggers\"\n    SWIMWEAR = \"swimwear\"\n    category_label = nonmember(CategoryLabels.BOTTOMS)",
+        "detail": "enums.categories",
+        "documentation": {}
+    },
+    {
+        "label": "Outerwear",
+        "kind": 6,
+        "importPath": "enums.categories",
+        "description": "enums.categories",
+        "peekOfCode": "class Outerwear(BaseCategory, Enum):  # type: ignore\n    BOMBERS = \"bombers\"\n    CLOAKS_CAPES = \"cloaks_capes\"\n    DENIM_JACKETS = \"denim_jackets\"\n    HEAVY_COATS = \"heavy_coats\"\n    LEATHER_JACKETS = \"leather_jackets\"\n    LIGHT_JACKETS = \"light_jackets\"\n    PARKAS = \"parkas\"\n    RAINCOATS = \"raincoats\"\n    VESTS = \"vests\"",
+        "detail": "enums.categories",
+        "documentation": {}
+    },
+    {
+        "label": "Footwear",
+        "kind": 6,
+        "importPath": "enums.categories",
+        "description": "enums.categories",
+        "peekOfCode": "class Footwear(BaseCategory, Enum):  # type: ignore\n    BOOTS = \"boots\"\n    FORMAL_SHOES = \"formal_shoes\"\n    HITOP_SNEAKERS = \"hitop_sneakers\"\n    LEATHER = \"leather\"\n    LOWTOP_SNEAKERS = \"lowtop_sneakers\"\n    SANDALS = \"sandals\"\n    SLIP_ONS = \"slip_ons\"\n    category_label = nonmember(CategoryLabels.FOOTWEAR)\n    sizes = nonmember(FootwearSizes)",
+        "detail": "enums.categories",
+        "documentation": {}
+    },
+    {
+        "label": "Tailoring",
+        "kind": 6,
+        "importPath": "enums.categories",
+        "description": "enums.categories",
+        "peekOfCode": "class Tailoring(BaseCategory, Enum):  # type: ignore\n    BLAZERS = \"blazers\"\n    FORMAL_SHIRTING = \"formal_shirting\"\n    FORMAL_TROUSERS = \"formal_trousers\"\n    SUITS = \"suits\"\n    TUXEDOS = \"tuxedos\"\n    VESTS = \"vests\"\n    category_label = nonmember(CategoryLabels.TAILORING)\n    sizes = nonmember(TailoringSizes)\nclass Accessories(BaseCategory, Enum):  # type: ignore",
+        "detail": "enums.categories",
+        "documentation": {}
+    },
+    {
+        "label": "Accessories",
+        "kind": 6,
+        "importPath": "enums.categories",
+        "description": "enums.categories",
+        "peekOfCode": "class Accessories(BaseCategory, Enum):  # type: ignore\n    BAGS_LUGGAGE = \"bags_luggage\"\n    BELTS = \"belts\"\n    GLASSES = \"glasses\"\n    GLOVES_SCARVES = \"gloves_scarves\"\n    HATS = \"hats\"\n    JEWELRY_WATCHES = \"jewelry_watches\"\n    MISC = \"misc\"\n    PERIODICALS = \"periodicals\"\n    SOCKS_UNDERWEAR = \"socks_underwear\"",
+        "detail": "enums.categories",
+        "documentation": {}
+    },
+    {
+        "label": "Conditions",
+        "kind": 6,
+        "importPath": "enums.conditions",
+        "description": "enums.conditions",
+        "peekOfCode": "class Conditions(Enum):\n    IS_NEW = \"is_new\"\n    IS_GENTLY_USED = \"is_gently_used\"\n    IS_USED = \"is_used\"\n    IS_WORN = \"is_worn\"\n    IS_NOT_SPECIFIED = \"is_not_specified\"",
+        "detail": "enums.conditions",
+        "documentation": {}
+    },
+    {
+        "label": "Departments",
+        "kind": 6,
+        "importPath": "enums.departments",
+        "description": "enums.departments",
+        "peekOfCode": "class Departments(Enum):\n    MENSWEAR = \"menswear\"\n    WOMENSWEAR = \"womenswear\"",
+        "detail": "enums.departments",
+        "documentation": {}
+    },
+    {
+        "label": "CategoryLabels",
+        "kind": 6,
+        "importPath": "enums.labels",
+        "description": "enums.labels",
+        "peekOfCode": "class CategoryLabels(Enum):\n    TOPS = \"tops\"\n    BOTTOMS = \"bottoms\"\n    OUTERWEAR = \"outerwear\"\n    FOOTWEAR = \"footwear\"\n    TAILORING = \"tailoring\"\n    ACCESSORIES = \"accessories\"",
+        "detail": "enums.labels",
+        "documentation": {}
+    },
+    {
+        "label": "Locations",
+        "kind": 6,
+        "importPath": "enums.locations",
+        "description": "enums.locations",
+        "peekOfCode": "class Locations(Enum):\n    AUSTRALIA_NZ = \"Australia/NZ\"\n    UK = \"United Kingdom\"\n    US = \"United States\"\n    ASIA = \"Asia\"\n    EUROPE = \"Europe\"\n    CANADA = \"Canada\"\n    OTHER = \"Other\"",
+        "detail": "enums.locations",
+        "documentation": {}
+    },
+    {
+        "label": "Markets",
+        "kind": 6,
+        "importPath": "enums.markets",
+        "description": "enums.markets",
+        "peekOfCode": "class Markets(Enum):\n    BASIC = \"basic\"\n    GRAILED = \"grailed\"\n    HYPE = \"hype\"\n    SARTORIAL = \"sartorial\"",
+        "detail": "enums.markets",
+        "documentation": {}
+    },
+    {
+        "label": "TopSizes",
+        "kind": 6,
+        "importPath": "enums.sizes",
+        "description": "enums.sizes",
+        "peekOfCode": "class TopSizes(BaseSize, Enum):  # type: ignore\n    XXS = \"xxs\"\n    XS = \"xs\"\n    S = \"s\"\n    M = \"m\"\n    L = \"l\"\n    XL = \"xl\"\n    XXL = \"xxl\"\n    category_label = nonmember(CategoryLabels.TOPS)\nclass OuterwearSizes(BaseSize, Enum):  # type: ignore",
+        "detail": "enums.sizes",
+        "documentation": {}
+    },
+    {
+        "label": "OuterwearSizes",
+        "kind": 6,
+        "importPath": "enums.sizes",
+        "description": "enums.sizes",
+        "peekOfCode": "class OuterwearSizes(BaseSize, Enum):  # type: ignore\n    XXS = \"xxs\"\n    XS = \"xs\"\n    S = \"s\"\n    M = \"m\"\n    L = \"l\"\n    XL = \"xl\"\n    XXL = \"xxl\"\n    category_label = nonmember(CategoryLabels.OUTERWEAR)\nclass BottomSizes(BaseSize, Enum):  # type: ignore",
+        "detail": "enums.sizes",
+        "documentation": {}
+    },
+    {
+        "label": "BottomSizes",
+        "kind": 6,
+        "importPath": "enums.sizes",
+        "description": "enums.sizes",
+        "peekOfCode": "class BottomSizes(BaseSize, Enum):  # type: ignore\n    _26 = \"26\"\n    _27 = \"27\"\n    _28 = \"28\"\n    _29 = \"29\"\n    _30 = \"30\"\n    _31 = \"31\"\n    _32 = \"32\"\n    _33 = \"33\"\n    _34 = \"34\"",
+        "detail": "enums.sizes",
+        "documentation": {}
+    },
+    {
+        "label": "FootwearSizes",
+        "kind": 6,
+        "importPath": "enums.sizes",
+        "description": "enums.sizes",
+        "peekOfCode": "class FootwearSizes(BaseSize, Enum):  # type: ignore\n    _5 = \"5\"\n    _5_5 = \"5.5\"\n    _6 = \"6\"\n    _6_5 = \"6.5\"\n    _7 = \"7\"\n    _7_5 = \"7.5\"\n    _8 = \"8\"\n    _8_5 = \"8.5\"\n    _9 = \"9\"",
+        "detail": "enums.sizes",
+        "documentation": {}
+    },
+    {
+        "label": "TailoringSizes",
+        "kind": 6,
+        "importPath": "enums.sizes",
+        "description": "enums.sizes",
+        "peekOfCode": "class TailoringSizes(BaseSize, Enum):  # type: ignore\n    _34S = \"34s\"\n    _34R = \"34r\"\n    _36S = \"36s\"\n    _36R = \"36r\"\n    _38S = \"38s\"\n    _38R = \"38r\"\n    _38L = \"38l\"\n    _40S = \"40s\"\n    _40R = \"40r\"",
+        "detail": "enums.sizes",
+        "documentation": {}
+    },
+    {
+        "label": "AccessorySizes",
+        "kind": 6,
+        "importPath": "enums.sizes",
+        "description": "enums.sizes",
+        "peekOfCode": "class AccessorySizes(BaseSize, Enum):  # type: ignore\n    OS = \"os\"\n    _26 = \"26\"\n    _28 = \"28\"\n    _30 = \"30\"\n    _32 = \"32\"\n    _34 = \"34\"\n    _36 = \"36\"\n    _38 = \"38\"\n    _40 = \"40\"",
+        "detail": "enums.sizes",
         "documentation": {}
     },
     {

@@ -1,5 +1,5 @@
 from typing import Iterable
-from categories import Departments, Conditions, Locations, Markets
+from enums import Departments, Conditions, Locations, Markets
 from facets import Facets
 from services import ProductsListService, ProductsRetrieveService, BrandsListService
 

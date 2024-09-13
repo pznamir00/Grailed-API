@@ -1,5 +1,5 @@
 from aenum import Enum, nonmember
-from categories.sizes import (
+from enums.sizes import (
     AccessorySizes,
     BottomSizes,
     FootwearSizes,
