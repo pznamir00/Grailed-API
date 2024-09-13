@@ -2,6 +2,9 @@ import json
 from warnings import warn
 from typing import Any, Dict, List, Tuple
 import requests
+from categories.conditions import Conditions
+from categories.locations import Locations
+from categories.markets import Markets
 from facets import Facets
 from settings import SEARCH_URL
 from .api_service import ApiService
@@ -54,7 +57,7 @@ class ListService(ApiService):
 provided category, so they won't be considered in the query"
             )
 
-    def enums_to_params(self, label: str, objects: Tuple):
+    def __enums_to_params(self, label: str, objects: Tuple):
         return [
             f'"{label.format(obj if isinstance(obj, str) else obj.value)}"'
             for obj in objects
@@ -68,15 +71,15 @@ provided category, so they won't be considered in the query"
             _requests.append({"indexName": "Listing_sold_production", "params": params})
         return _requests
 
-    def create_list_params(
+    def create_list_params(  # pylint: disable=too-many-locals, disable=too-many-arguments
         self,
-        category_params: List[str],
-        designer_params,
-        condition_params,
-        market_params,
-        location_params,
-        size_params,
-        facet_names: List[str],
+        categories: Tuple,
+        sizes: Tuple,
+        designers: Tuple[str, ...],
+        conditions: Tuple[Conditions, ...],
+        markets: Tuple[Markets, ...],
+        locations: Tuple[Locations, ...],
+        facets: Tuple[Facets, ...],
         department: str,
         staff_pick: bool,
         hits_per_page: int,
@@ -86,17 +89,25 @@ provided category, so they won't be considered in the query"
         page: int,
         query_search: str,
     ):
+        facet_names = self.__enums_to_params("{}", facets)
+        cat_params = self.__enums_to_params("category_path:{}", categories)
+        des_params = self.__enums_to_params("designers.name:{}", designers)
+        cond_params = self.__enums_to_params("condition:{}", conditions)
+        mar_params = self.__enums_to_params("strata:{}", markets)
+        loc_params = self.__enums_to_params("location:{}", locations)
+        siz_params = self.__enums_to_params("category_size:{}", sizes)
+
         return f'analytics=true\
 &clickAnalytics=true\
 &enableABTest=false\
 &enablePersonalization=false\
 &facetFilters=[\
-[{",".join(category_params)}],\
-[{",".join(designer_params)}],\
-[{",".join(condition_params)}],\
-[{",".join(market_params)}],\
-[{",".join(location_params)}],\
-[{",".join(size_params)}],\
+[{",".join(cat_params)}],\
+[{",".join(des_params)}],\
+[{",".join(cond_params)}],\
+[{",".join(mar_params)}],\
+[{",".join(loc_params)}],\
+[{",".join(siz_params)}],\
 ["department:{department}"],\
 [{"badges:staff_pick" if staff_pick else ""}]\
 ]\

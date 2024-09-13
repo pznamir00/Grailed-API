@@ -362,6 +362,30 @@
         "documentation": {}
     },
     {
+        "label": "Conditions",
+        "importPath": "categories.conditions",
+        "description": "categories.conditions",
+        "isExtraImport": true,
+        "detail": "categories.conditions",
+        "documentation": {}
+    },
+    {
+        "label": "Locations",
+        "importPath": "categories.locations",
+        "description": "categories.locations",
+        "isExtraImport": true,
+        "detail": "categories.locations",
+        "documentation": {}
+    },
+    {
+        "label": "Markets",
+        "importPath": "categories.markets",
+        "description": "categories.markets",
+        "isExtraImport": true,
+        "detail": "categories.markets",
+        "documentation": {}
+    },
+    {
         "label": "BaseCategory",
         "kind": 6,
         "importPath": "categories.base_category",

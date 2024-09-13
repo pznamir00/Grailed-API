@@ -19,7 +19,7 @@ class Client:
         data = self.__retrieve_service.parse_response(response)
         return data
 
-    def find_products(
+    def find_products(  # pylint: disable=too-many-locals, disable=too-many-arguments
         self,
         sold=True,
         non_sold=True,
@@ -41,23 +41,14 @@ class Client:
         verbose=False,
     ):
         self.__list_service.validate_categories_and_sizes(categories, sizes)
-
-        facet_names = self.__list_service.enums_to_params("{}", facets)
-        cat_params = self.__list_service.enums_to_params("category_path:{}", categories)
-        des_params = self.__list_service.enums_to_params("designers.name:{}", designers)
-        cond_params = self.__list_service.enums_to_params("condition:{}", conditions)
-        mar_params = self.__list_service.enums_to_params("strata:{}", markets)
-        loc_params = self.__list_service.enums_to_params("location:{}", locations)
-        siz_params = self.__list_service.enums_to_params("category_size:{}", sizes)
-
         params = self.__list_service.create_list_params(
-            cat_params,
-            des_params,
-            cond_params,
-            mar_params,
-            loc_params,
-            siz_params,
-            facet_names,
+            categories,
+            sizes,
+            designers,
+            conditions,
+            markets,
+            locations,
+            facets,
             department.value,
             staff_pick,
             hits_per_page,
