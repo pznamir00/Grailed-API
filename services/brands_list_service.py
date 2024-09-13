@@ -1,13 +1,17 @@
 import json
-from typing import Any
+from typing import List
 from requests import Response
 import requests
 from settings import BRANDS_URL
 from .api_service import ApiService
 
 
-class BrandsService(ApiService):
-    def parse_response(self, response: Response) -> Any:
+class BrandsListService(ApiService):
+    """
+    Brands service that provides brands list http lookup utils
+    """
+
+    def parse_response(self, response: Response) -> List:
         return super().parse_response(response)["facetHits"]
 
     def send_request(self, query: str) -> Response:  # pylint: disable=arguments-differ

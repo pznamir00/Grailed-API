@@ -1,3 +1,3 @@
-from .list_service import ListService
-from .retrieve_service import RetrieveService
-from .brands_service import BrandsService
+from .products_list_service import ProductsListService
+from .products_retrieve_service import ProductsRetrieveService
+from .brands_list_service import BrandsListService

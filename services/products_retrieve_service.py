@@ -3,7 +3,11 @@ from settings import LISTINGS_API
 from .api_service import ApiService
 
 
-class RetrieveService(ApiService):
+class ProductsRetrieveService(ApiService):
+    """
+    Retrieve service that provides single product lookup utils
+    """
+
     def send_request(self, key: str):  # pylint: disable=arguments-differ
         return requests.get(
             f"{LISTINGS_API}/{key}",

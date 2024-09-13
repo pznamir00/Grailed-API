@@ -1,28 +1,50 @@
-from typing import Tuple
+from typing import Iterable
 from categories import Departments, Conditions, Locations, Markets
 from facets import Facets
-from services import ListService, RetrieveService, BrandsService
+from services import ProductsListService, ProductsRetrieveService, BrandsListService
 
 
 class Client:
-    __list_service = ListService()
-    __retrieve_service = RetrieveService()
-    __brands_service = BrandsService()
+    """
+    Main Client class that is interface of whole system. It
+    provides all functionalities for looking for products and brands
+    """
+
+    __products_list_service = ProductsListService()
+    __products_retrieve_service = ProductsRetrieveService()
+    __brands_list_service = BrandsListService()
 
     def find_brands(self, query: str):
-        response = self.__brands_service.send_request(query)
-        brands = self.__brands_service.parse_response(response)
-        print(brands)
+        """Finds brands by provided query keyword
+        and returns them in a list
+
+        Args:
+            query (str): keyword to search a brand for
+
+        Returns:
+            List: list with brand objects
+        """
+        response = self.__brands_list_service.send_request(query)
+        brands = self.__brands_list_service.parse_response(response)
+        return brands
 
     def find_product_by_id(self, id: str):  # pylint: disable=redefined-builtin
-        response = self.__retrieve_service.send_request(id)
-        data = self.__retrieve_service.parse_response(response)
+        """searches a product by provided id
+
+        Args:
+            id (str): product id
+
+        Returns:
+            Object: product object
+        """
+        response = self.__products_retrieve_service.send_request(id)
+        data = self.__products_retrieve_service.parse_response(response)
         return data
 
     def find_products(  # pylint: disable=too-many-locals, disable=too-many-arguments
         self,
         sold=True,
-        non_sold=True,
+        on_sale=True,
         staff_pick=False,
         department=Departments.MENSWEAR,
         query_search="",
@@ -30,18 +52,44 @@ class Client:
         hits_per_page=40,
         price_from=0,
         price_to=1_000_000,
-        categories: Tuple = (),
-        sizes: Tuple = (),
-        designers: Tuple[str, ...] = (),
-        conditions: Tuple[Conditions, ...] = (),
-        markets: Tuple[Markets, ...] = (),
-        locations: Tuple[Locations, ...] = (),
+        categories: Iterable = (),
+        sizes: Iterable = (),
+        designers: Iterable[str] = (),
+        conditions: Iterable[Conditions] = (),
+        markets: Iterable[Markets] = (),
+        locations: Iterable[Locations] = (),
         max_values_per_facet=100,
-        facets: Tuple[Facets, ...] = __list_service.get_all_facets(),
+        facets: Iterable[Facets] = __products_list_service.get_all_facets(),
         verbose=False,
     ):
-        self.__list_service.validate_categories_and_sizes(categories, sizes)
-        params = self.__list_service.create_list_params(
+        """Searches list of products with specified filters. Returns a list
+        of this products.
+
+        Args:
+            sold (bool, optional): include sold products. Defaults to True.
+            on_sale (bool, optional): include products on sale. Defaults to True.
+            staff_pick (bool, optional): get only products that have been marked by staff. Defaults to False.
+            department (Departments, optional): department, menswear or womenwear. Defaults to Departments.MENSWEAR.
+            query_search (str, optional): filter by keyword. Defaults to "".
+            page (int, optional): page index. Defaults to 1.
+            hits_per_page (int, optional): products number in one page. Defaults to 40.
+            price_from (int, optional): filter by min price. Defaults to 0.
+            price_to (int, optional): filter by max price. Defaults to 1_000_000.
+            categories (Iterable[Category], optional): filter by categories. Defaults to ().
+            sizes (Iterable[Size], optional): filter by sizes. Defaults to ().
+            designers (Iterable[str], optional): filter by designer names. Defaults to ().
+            conditions (Iterable[Condition], optional): filter by conditions. Defaults to ().
+            markets (Iterable[Markets], optional): filter by markets. Defaults to ().
+            locations (Iterable[Locations], optional): filter by locations. Defaults to ().
+            max_values_per_facet (int, optional): Defaults to 100.
+            facets (Iterable[Facets], optional): Defaults to all facets.
+            verbose (bool, optional): show htp request. Defaults to False.
+
+        Returns:
+            List: found products
+        """
+        self.__products_list_service.validate_categories_and_sizes(categories, sizes)
+        params = self.__products_list_service.create_params_string(
             categories,
             sizes,
             designers,
@@ -49,7 +97,7 @@ class Client:
             markets,
             locations,
             facets,
-            department.value,
+            department,
             staff_pick,
             hits_per_page,
             max_values_per_facet,
@@ -62,7 +110,9 @@ class Client:
         if verbose:
             print("Params", params)
 
-        _requests = self.__list_service.get_payload_requests(sold, non_sold, params)
-        response = self.__list_service.send_request({"requests": _requests})
-        items = self.__list_service.parse_response(response)
-        return items
+        _requests = self.__products_list_service.get_payload_requests(
+            sold, on_sale, params
+        )
+        response = self.__products_list_service.send_request({"requests": _requests})
+        products = self.__products_list_service.parse_response(response)
+        return products

@@ -184,7 +184,39 @@
         "documentation": {}
     },
     {
-        "label": "Tuple",
+        "label": "Markets",
+        "importPath": "categories",
+        "description": "categories",
+        "isExtraImport": true,
+        "detail": "categories",
+        "documentation": {}
+    },
+    {
+        "label": "Conditions",
+        "importPath": "categories",
+        "description": "categories",
+        "isExtraImport": true,
+        "detail": "categories",
+        "documentation": {}
+    },
+    {
+        "label": "Locations",
+        "importPath": "categories",
+        "description": "categories",
+        "isExtraImport": true,
+        "detail": "categories",
+        "documentation": {}
+    },
+    {
+        "label": "Departments",
+        "importPath": "categories",
+        "description": "categories",
+        "isExtraImport": true,
+        "detail": "categories",
+        "documentation": {}
+    },
+    {
+        "label": "Iterable",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -200,7 +232,7 @@
         "documentation": {}
     },
     {
-        "label": "Any",
+        "label": "List",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -224,6 +256,14 @@
         "documentation": {}
     },
     {
+        "label": "Iterable",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "List",
         "importPath": "typing",
         "description": "typing",
@@ -232,14 +272,6 @@
         "documentation": {}
     },
     {
-        "label": "Tuple",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
         "label": "Facets",
         "importPath": "facets",
         "description": "facets",
@@ -256,7 +288,7 @@
         "documentation": {}
     },
     {
-        "label": "ListService",
+        "label": "ProductsListService",
         "importPath": "services",
         "description": "services",
         "isExtraImport": true,
@@ -264,7 +296,7 @@
         "documentation": {}
     },
     {
-        "label": "RetrieveService",
+        "label": "ProductsRetrieveService",
         "importPath": "services",
         "description": "services",
         "isExtraImport": true,
@@ -272,7 +304,7 @@
         "documentation": {}
     },
     {
-        "label": "BrandsService",
+        "label": "BrandsListService",
         "importPath": "services",
         "description": "services",
         "isExtraImport": true,
@@ -359,30 +391,6 @@
         "description": "warnings",
         "isExtraImport": true,
         "detail": "warnings",
-        "documentation": {}
-    },
-    {
-        "label": "Conditions",
-        "importPath": "categories.conditions",
-        "description": "categories.conditions",
-        "isExtraImport": true,
-        "detail": "categories.conditions",
-        "documentation": {}
-    },
-    {
-        "label": "Locations",
-        "importPath": "categories.locations",
-        "description": "categories.locations",
-        "isExtraImport": true,
-        "detail": "categories.locations",
-        "documentation": {}
-    },
-    {
-        "label": "Markets",
-        "importPath": "categories.markets",
-        "description": "categories.markets",
-        "isExtraImport": true,
-        "detail": "categories.markets",
         "documentation": {}
     },
     {
@@ -570,7 +578,7 @@
         "kind": 6,
         "importPath": "client.client",
         "description": "client.client",
-        "peekOfCode": "class Client:\n    __list_service = ListService()\n    __retrieve_service = RetrieveService()\n    __brands_service = BrandsService()\n    def find_brands(self, query: str):\n        response = self.__brands_service.send_request(query)\n        brands = self.__brands_service.parse_response(response)\n        print(brands)\n    def find_product_by_id(self, id: str):  # pylint: disable=redefined-builtin\n        response = self.__retrieve_service.send_request(id)",
+        "peekOfCode": "class Client:\n    \"\"\"\n    Main Client class that is interface of whole system. It\n    provides all functionalities for looking for products and brands\n    \"\"\"\n    __products_list_service = ProductsListService()\n    __products_retrieve_service = ProductsRetrieveService()\n    __brands_list_service = BrandsListService()\n    def find_brands(self, query: str):\n        \"\"\"Finds brands by provided query keyword",
         "detail": "client.client",
         "documentation": {}
     },
@@ -588,35 +596,35 @@
         "kind": 6,
         "importPath": "services.api_service",
         "description": "services.api_service",
-        "peekOfCode": "class ApiService(ABC):\n    @abstractmethod\n    def send_request(self, *args, **kwargs) -> Response:\n        pass\n    @abstractmethod\n    def parse_response(self, response: Response) -> Any:\n        return response.json()",
+        "peekOfCode": "class ApiService(ABC):\n    \"\"\"\n    Base Service class that defines http utils\n    \"\"\"\n    @abstractmethod\n    def send_request(self, *args, **kwargs) -> Response:\n        \"\"\"Sends http requests and returns Response object\n        Returns:\n            Response: request result\n        \"\"\"",
         "detail": "services.api_service",
         "documentation": {}
     },
     {
-        "label": "BrandsService",
+        "label": "BrandsListService",
         "kind": 6,
-        "importPath": "services.brands_service",
-        "description": "services.brands_service",
-        "peekOfCode": "class BrandsService(ApiService):\n    def parse_response(self, response: Response) -> Any:\n        return super().parse_response(response)[\"facetHits\"]\n    def send_request(self, query: str) -> Response:  # pylint: disable=arguments-differ\n        return requests.post(\n            BRANDS_URL,\n            data=json.dumps({\"facetQuery\": query}),\n            headers={\n                \"accept\": \"*/*\",\n                \"accept-language\": \"en-GB,en-US;q=0.9,en;q=0.8\",",
-        "detail": "services.brands_service",
+        "importPath": "services.brands_list_service",
+        "description": "services.brands_list_service",
+        "peekOfCode": "class BrandsListService(ApiService):\n    \"\"\"\n    Brands service that provides brands list http lookup utils\n    \"\"\"\n    def parse_response(self, response: Response) -> List:\n        return super().parse_response(response)[\"facetHits\"]\n    def send_request(self, query: str) -> Response:  # pylint: disable=arguments-differ\n        return requests.post(\n            BRANDS_URL,\n            data=json.dumps({\"facetQuery\": query}),",
+        "detail": "services.brands_list_service",
         "documentation": {}
     },
     {
-        "label": "ListService",
+        "label": "ProductsListService",
         "kind": 6,
-        "importPath": "services.list_service",
-        "description": "services.list_service",
-        "peekOfCode": "class ListService(ApiService):\n    def send_request(self, data: Any):  # pylint: disable=arguments-differ\n        return requests.post(\n            SEARCH_URL,\n            data=json.dumps(data),\n            headers={\n                \"accept\": \"*/*\",\n                \"accept-language\": \"en-GB,en-US;q=0.9,en;q=0.8\",\n                \"content-type\": \"application/x-www-form-urlencoded\",\n                \"x-algolia-api-key\": \"bc9ee1c014521ccf312525a4ef324a16\",",
-        "detail": "services.list_service",
+        "importPath": "services.products_list_service",
+        "description": "services.products_list_service",
+        "peekOfCode": "class ProductsListService(ApiService):\n    \"\"\"\n    List service that provides products list http lookup utils\n    \"\"\"\n    def send_request(self, data: Any):  # pylint: disable=arguments-differ\n        return requests.post(\n            SEARCH_URL,\n            data=json.dumps(data),\n            headers={\n                \"accept\": \"*/*\",",
+        "detail": "services.products_list_service",
         "documentation": {}
     },
     {
-        "label": "RetrieveService",
+        "label": "ProductsRetrieveService",
         "kind": 6,
-        "importPath": "services.retrieve_service",
-        "description": "services.retrieve_service",
-        "peekOfCode": "class RetrieveService(ApiService):\n    def send_request(self, key: str):  # pylint: disable=arguments-differ\n        return requests.get(\n            f\"{LISTINGS_API}/{key}\",\n            headers={\n                \"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64)\\\n                      AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36\"\n            },\n            timeout=30,\n        )",
-        "detail": "services.retrieve_service",
+        "importPath": "services.products_retrieve_service",
+        "description": "services.products_retrieve_service",
+        "peekOfCode": "class ProductsRetrieveService(ApiService):\n    \"\"\"\n    Retrieve service that provides single product lookup utils\n    \"\"\"\n    def send_request(self, key: str):  # pylint: disable=arguments-differ\n        return requests.get(\n            f\"{LISTINGS_API}/{key}\",\n            headers={\n                \"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64)\\\n                      AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36\"",
+        "detail": "services.products_retrieve_service",
         "documentation": {}
     },
     {

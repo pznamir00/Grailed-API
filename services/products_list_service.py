@@ -1,16 +1,18 @@
 import json
 from warnings import warn
-from typing import Any, Dict, List, Tuple
+from typing import Any, Dict, Iterable, List
 import requests
-from categories.conditions import Conditions
-from categories.locations import Locations
-from categories.markets import Markets
+from categories import Markets, Conditions, Locations, Departments
 from facets import Facets
 from settings import SEARCH_URL
 from .api_service import ApiService
 
 
-class ListService(ApiService):
+class ProductsListService(ApiService):
+    """
+    List service that provides products list http lookup utils
+    """
+
     def send_request(self, data: Any):  # pylint: disable=arguments-differ
         return requests.post(
             SEARCH_URL,
@@ -30,6 +32,11 @@ class ListService(ApiService):
         return [j for i in content["results"] for j in i["hits"]]
 
     def get_all_facets(self):
+        """Returns all available facets to http request
+
+        Returns:
+            Iterable[Facets]: facets list
+        """
         return (
             Facets.BADGES,
             Facets.CATEGORY_PATH,
@@ -42,7 +49,15 @@ class ListService(ApiService):
             Facets.STRATA,
         )
 
-    def validate_categories_and_sizes(self, categories: Tuple, sizes: Tuple):
+    def validate_categories_and_sizes(self, categories: Iterable, sizes: Iterable):
+        """Checks if user provided sizes that match to categories and shows a warning.
+        If some size's category is not found in provided categories,
+        this size won't be affected.
+
+        Args:
+            categories (Iterable[Category]): categories list
+            sizes (Iterable[Size]): sizes list
+        """
         if not categories or not sizes:
             return
 
@@ -57,30 +72,51 @@ class ListService(ApiService):
 provided category, so they won't be considered in the query"
             )
 
-    def __enums_to_params(self, label: str, objects: Tuple):
+    def __enums_to_params(self, label: str, objects: Iterable[Any]):
+        """Converts objects list to facet parameters format
+
+        Args:
+            label (str): field format. Should include place to put object,
+                since it will be replaced (e.g. "label:{}")
+                objects (Iterable[Any]): objects that are gonna be put to label
+
+        Returns:
+            List[str]: list of final labels
+        """
         return [
             f'"{label.format(obj if isinstance(obj, str) else obj.value)}"'
             for obj in objects
         ]
 
-    def get_payload_requests(self, sold: bool, non_sold: bool, params: str):
+    def get_payload_requests(self, sold: bool, on_sale: bool, params: str):
+        """Returns parameters requests object (custom Grailed object) that is gonna
+            be included to http request. This is limited to products on sale and sold
+
+        Args:
+            sold (bool): include sold products
+            on_sale (bool): include products on sale
+            params (str): Grailed params string
+
+        Returns:
+            List[Dict[str, str]]: requests list
+        """
         _requests: List[Dict] = []
-        if non_sold:
+        if on_sale:
             _requests.append({"indexName": "Listing_production", "params": params})
         if sold:
             _requests.append({"indexName": "Listing_sold_production", "params": params})
         return _requests
 
-    def create_list_params(  # pylint: disable=too-many-locals, disable=too-many-arguments
+    def create_params_string(  # pylint: disable=too-many-locals, disable=too-many-arguments
         self,
-        categories: Tuple,
-        sizes: Tuple,
-        designers: Tuple[str, ...],
-        conditions: Tuple[Conditions, ...],
-        markets: Tuple[Markets, ...],
-        locations: Tuple[Locations, ...],
-        facets: Tuple[Facets, ...],
-        department: str,
+        categories: Iterable,
+        sizes: Iterable,
+        designers: Iterable[str],
+        conditions: Iterable[Conditions],
+        markets: Iterable[Markets],
+        locations: Iterable[Locations],
+        facets: Iterable[Facets],
+        department: Departments,
         staff_pick: bool,
         hits_per_page: int,
         max_values_per_facet: int,
@@ -89,6 +125,28 @@ provided category, so they won't be considered in the query"
         page: int,
         query_search: str,
     ):
+        """Created Grailed params string base on provided filters
+
+        Args:
+            categories (Iterable[Category], optional): filter by categories.
+            sizes (Iterable[Size], optional): filter by sizes.
+            designers (Iterable[str], optional): filter by designer names.
+            conditions (Iterable[Condition], optional): filter by conditions.
+            markets (Iterable[Markets], optional): filter by markets.
+            locations (Iterable[Locations], optional): filter by locations.
+            facets (Iterable[Facets], optional):
+            department (Department): department, menswear or womenwear.
+            staff_pick (bool): get only products that have been marked by staff.
+            hits_per_page (int): products number in one page.
+            max_values_per_facet (int):
+            price_from (int): filter by min price.
+            price_to (int): filter by max price.
+            page (int): page index.
+            query_search (str): filter by keyword.
+
+        Returns:
+            str: Grailed params string
+        """
         facet_names = self.__enums_to_params("{}", facets)
         cat_params = self.__enums_to_params("category_path:{}", categories)
         des_params = self.__enums_to_params("designers.name:{}", designers)
@@ -108,7 +166,7 @@ provided category, so they won't be considered in the query"
 [{",".join(mar_params)}],\
 [{",".join(loc_params)}],\
 [{",".join(siz_params)}],\
-["department:{department}"],\
+["department:{department.value}"],\
 [{"badges:staff_pick" if staff_pick else ""}]\
 ]\
 &facets=[{",".join(facet_names)}]\
