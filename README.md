@@ -6,6 +6,18 @@ This is only for searching objects, since there is no official API, or API key.
 ## How to install
 
 To install the API, just run `pip install -r requirements.txt` command.
+Then you have to provide both `X_ALGOLIA_API_KEY` and `X_ALGOLIA_APPLICATION_ID` keys.
+Define them in `settings.py` file. You can get those keys from your browser.
+
+### How to get access keys:
+
+In order to have `X_ALGOLIA_API_KEY` and `X_ALGOLIA_APPLICATION_ID`, do following steps:
+- go to https://www.grailed.com/
+- click right mouse button
+- click "inspect"
+- in sidebar, click "Network"
+- find keywords "objects?x-algolia-agent" (if you can't find it, refresh the browser)
+- in headers of the request, you should find both keys
 
 ## How to use
 
