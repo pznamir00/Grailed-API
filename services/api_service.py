@@ -1,15 +1,18 @@
 from abc import ABC, abstractmethod
 from typing import Any
 from requests import Response
+from session import GrailedSession
 
 
 class ApiService(ABC):
+    _session = GrailedSession()
+
     """
     Base Service class that defines http utils
     """
 
     @abstractmethod
-    def send_request(self, *args, **kwargs) -> Response:
+    def send_request(self, *args, verbose: bool, **kwargs) -> Response:
         """Sends http requests and returns Response object
 
         Returns:

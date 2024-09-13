@@ -1,4 +1,3 @@
-import json
 from warnings import warn
 from typing import Any, Dict, Iterable, List
 import requests
@@ -13,19 +12,10 @@ class ProductsListService(ApiService):
     List service that provides products list http lookup utils
     """
 
-    def send_request(self, data: Any):  # pylint: disable=arguments-differ
-        return requests.post(
-            SEARCH_URL,
-            data=json.dumps(data),
-            headers={
-                "accept": "*/*",
-                "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
-                "content-type": "application/x-www-form-urlencoded",
-                "x-algolia-api-key": "bc9ee1c014521ccf312525a4ef324a16",
-                "x-algolia-application-id": "MNRWEFSS2Q",
-            },
-            timeout=30,
-        )
+    def send_request(
+        self, data: Any, verbose: bool
+    ):  # pylint: disable=arguments-differ
+        return self._session.post(SEARCH_URL, data=data, verbose=verbose)
 
     def parse_response(self, response: requests.Response):
         content = super().parse_response(response)

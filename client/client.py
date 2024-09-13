@@ -14,30 +14,34 @@ class Client:
     __products_retrieve_service = ProductsRetrieveService()
     __brands_list_service = BrandsListService()
 
-    def find_brands(self, query: str):
+    def find_brands(self, query: str, verbose=False):
         """Finds brands by provided query keyword
         and returns them in a list
 
         Args:
             query (str): keyword to search a brand for
+            verbose (bool, optional): show htp request. Defaults to False.
 
         Returns:
             List: list with brand objects
         """
-        response = self.__brands_list_service.send_request(query)
+        response = self.__brands_list_service.send_request(query, verbose)
         brands = self.__brands_list_service.parse_response(response)
         return brands
 
-    def find_product_by_id(self, id: str):  # pylint: disable=redefined-builtin
+    def find_product_by_id(
+        self, id: str, verbose=False
+    ):  # pylint: disable=redefined-builtin
         """searches a product by provided id
 
         Args:
             id (str): product id
+            verbose (bool, optional): show htp request. Defaults to False.
 
         Returns:
             Object: product object
         """
-        response = self.__products_retrieve_service.send_request(id)
+        response = self.__products_retrieve_service.send_request(id, verbose)
         data = self.__products_retrieve_service.parse_response(response)
         return data
 
@@ -88,6 +92,7 @@ class Client:
         Returns:
             List: found products
         """
+
         self.__products_list_service.validate_categories_and_sizes(categories, sizes)
         params = self.__products_list_service.create_params_string(
             categories,
@@ -107,12 +112,11 @@ class Client:
             query_search,
         )
 
-        if verbose:
-            print("Params", params)
-
         _requests = self.__products_list_service.get_payload_requests(
             sold, on_sale, params
         )
-        response = self.__products_list_service.send_request({"requests": _requests})
+        response = self.__products_list_service.send_request(
+            {"requests": _requests}, verbose
+        )
         products = self.__products_list_service.parse_response(response)
         return products

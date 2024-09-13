@@ -272,6 +272,22 @@
         "documentation": {}
     },
     {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Facets",
         "importPath": "facets",
         "description": "facets",
@@ -312,19 +328,20 @@
         "documentation": {}
     },
     {
-        "label": "ABC",
-        "importPath": "abc",
-        "description": "abc",
+        "label": "json",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "abc",
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
         "documentation": {}
     },
     {
-        "label": "abstractmethod",
-        "importPath": "abc",
-        "description": "abc",
+        "label": "JSONDecodeError",
+        "importPath": "json",
+        "description": "json",
         "isExtraImport": true,
-        "detail": "abc",
+        "detail": "json",
         "documentation": {}
     },
     {
@@ -353,12 +370,51 @@
         "documentation": {}
     },
     {
-        "label": "json",
-        "kind": 6,
+        "label": "Response",
+        "importPath": "requests",
+        "description": "requests",
         "isExtraImport": true,
-        "importPath": "json",
-        "description": "json",
-        "detail": "json",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "requests",
+        "description": "requests",
+        "isExtraImport": true,
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "requests",
+        "description": "requests",
+        "isExtraImport": true,
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "GrailedSession",
+        "importPath": "session",
+        "description": "session",
+        "isExtraImport": true,
+        "detail": "session",
         "documentation": {}
     },
     {
@@ -391,6 +447,22 @@
         "description": "warnings",
         "isExtraImport": true,
         "detail": "warnings",
+        "documentation": {}
+    },
+    {
+        "label": "pprint",
+        "importPath": "pprint",
+        "description": "pprint",
+        "isExtraImport": true,
+        "detail": "pprint",
+        "documentation": {}
+    },
+    {
+        "label": "HttpError",
+        "importPath": "exceptions",
+        "description": "exceptions",
+        "isExtraImport": true,
+        "detail": "exceptions",
         "documentation": {}
     },
     {
@@ -578,8 +650,17 @@
         "kind": 6,
         "importPath": "client.client",
         "description": "client.client",
-        "peekOfCode": "class Client:\n    \"\"\"\n    Main Client class that is interface of whole system. It\n    provides all functionalities for looking for products and brands\n    \"\"\"\n    __products_list_service = ProductsListService()\n    __products_retrieve_service = ProductsRetrieveService()\n    __brands_list_service = BrandsListService()\n    def find_brands(self, query: str):\n        \"\"\"Finds brands by provided query keyword",
+        "peekOfCode": "class Client:\n    \"\"\"\n    Main Client class that is interface of whole system. It\n    provides all functionalities for looking for products and brands\n    \"\"\"\n    __products_list_service = ProductsListService()\n    __products_retrieve_service = ProductsRetrieveService()\n    __brands_list_service = BrandsListService()\n    def find_brands(self, query: str, verbose=False):\n        \"\"\"Finds brands by provided query keyword",
         "detail": "client.client",
+        "documentation": {}
+    },
+    {
+        "label": "HttpError",
+        "kind": 6,
+        "importPath": "exceptions.http_error",
+        "description": "exceptions.http_error",
+        "peekOfCode": "class HttpError(Exception):\n    def __init__(self, response: Response):\n        code = response.status_code\n        try:\n            # format content string as json object if possible\n            content = json.dumps(response.json(), indent=4)\n        except JSONDecodeError:\n            content = response.content\n        super().__init__(f\"Http returned an error. Status {code}; Content: {content}\")",
+        "detail": "exceptions.http_error",
         "documentation": {}
     },
     {
@@ -596,7 +677,7 @@
         "kind": 6,
         "importPath": "services.api_service",
         "description": "services.api_service",
-        "peekOfCode": "class ApiService(ABC):\n    \"\"\"\n    Base Service class that defines http utils\n    \"\"\"\n    @abstractmethod\n    def send_request(self, *args, **kwargs) -> Response:\n        \"\"\"Sends http requests and returns Response object\n        Returns:\n            Response: request result\n        \"\"\"",
+        "peekOfCode": "class ApiService(ABC):\n    _session = GrailedSession()\n    \"\"\"\n    Base Service class that defines http utils\n    \"\"\"\n    @abstractmethod\n    def send_request(self, *args, verbose: bool, **kwargs) -> Response:\n        \"\"\"Sends http requests and returns Response object\n        Returns:\n            Response: request result",
         "detail": "services.api_service",
         "documentation": {}
     },
@@ -605,7 +686,7 @@
         "kind": 6,
         "importPath": "services.brands_list_service",
         "description": "services.brands_list_service",
-        "peekOfCode": "class BrandsListService(ApiService):\n    \"\"\"\n    Brands service that provides brands list http lookup utils\n    \"\"\"\n    def parse_response(self, response: Response) -> List:\n        return super().parse_response(response)[\"facetHits\"]\n    def send_request(self, query: str) -> Response:  # pylint: disable=arguments-differ\n        return requests.post(\n            BRANDS_URL,\n            data=json.dumps({\"facetQuery\": query}),",
+        "peekOfCode": "class BrandsListService(ApiService):\n    \"\"\"\n    Brands service that provides brands list http lookup utils\n    \"\"\"\n    def parse_response(self, response: Response) -> List:\n        return super().parse_response(response)[\"facetHits\"]\n    def send_request(  # pylint: disable=arguments-differ\n        self, query: str, verbose: bool\n    ) -> Response:\n        return self._session.post(",
         "detail": "services.brands_list_service",
         "documentation": {}
     },
@@ -614,7 +695,7 @@
         "kind": 6,
         "importPath": "services.products_list_service",
         "description": "services.products_list_service",
-        "peekOfCode": "class ProductsListService(ApiService):\n    \"\"\"\n    List service that provides products list http lookup utils\n    \"\"\"\n    def send_request(self, data: Any):  # pylint: disable=arguments-differ\n        return requests.post(\n            SEARCH_URL,\n            data=json.dumps(data),\n            headers={\n                \"accept\": \"*/*\",",
+        "peekOfCode": "class ProductsListService(ApiService):\n    \"\"\"\n    List service that provides products list http lookup utils\n    \"\"\"\n    def send_request(\n        self, data: Any, verbose: bool\n    ):  # pylint: disable=arguments-differ\n        return self._session.post(SEARCH_URL, data=data, verbose=verbose)\n    def parse_response(self, response: requests.Response):\n        content = super().parse_response(response)",
         "detail": "services.products_list_service",
         "documentation": {}
     },
@@ -623,8 +704,17 @@
         "kind": 6,
         "importPath": "services.products_retrieve_service",
         "description": "services.products_retrieve_service",
-        "peekOfCode": "class ProductsRetrieveService(ApiService):\n    \"\"\"\n    Retrieve service that provides single product lookup utils\n    \"\"\"\n    def send_request(self, key: str):  # pylint: disable=arguments-differ\n        return requests.get(\n            f\"{LISTINGS_API}/{key}\",\n            headers={\n                \"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64)\\\n                      AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36\"",
+        "peekOfCode": "class ProductsRetrieveService(ApiService):\n    \"\"\"\n    Retrieve service that provides single product lookup utils\n    \"\"\"\n    def send_request(self, key: str, verbose: bool):  # pylint: disable=arguments-differ\n        return self._session.get(f\"{LISTINGS_API}/{key}\", verbose=verbose)\n    def parse_response(self, response: requests.Response):\n        return super().parse_response(response)[\"data\"]",
         "detail": "services.products_retrieve_service",
+        "documentation": {}
+    },
+    {
+        "label": "GrailedSession",
+        "kind": 6,
+        "importPath": "session.session",
+        "description": "session.session",
+        "peekOfCode": "class GrailedSession(Session):\n    def get(self, *args, verbose=False, **kwargs):\n        kwargs[\"verbose\"] = verbose\n        return super().get(*args, **kwargs)\n    def post(self, *args, verbose=False, **kwargs):\n        kwargs[\"verbose\"] = verbose\n        return super().post(*args, **kwargs)\n    def request(self, method, url, *args, **kwargs):\n        headers, data = kwargs.get(\"headers\", {}), kwargs.get(\"data\")\n        kwargs.update(",
+        "detail": "session.session",
         "documentation": {}
     },
     {
