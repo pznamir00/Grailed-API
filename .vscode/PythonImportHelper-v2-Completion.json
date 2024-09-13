@@ -208,6 +208,14 @@
         "documentation": {}
     },
     {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Dict",
         "importPath": "typing",
         "description": "typing",
@@ -264,6 +272,14 @@
         "documentation": {}
     },
     {
+        "label": "BrandsService",
+        "importPath": "services",
+        "description": "services",
+        "isExtraImport": true,
+        "detail": "services",
+        "documentation": {}
+    },
+    {
         "label": "ABC",
         "importPath": "abc",
         "description": "abc",
@@ -297,6 +313,14 @@
         "documentation": {}
     },
     {
+        "label": "Response",
+        "importPath": "requests",
+        "description": "requests",
+        "isExtraImport": true,
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
         "label": "json",
         "kind": 6,
         "isExtraImport": true,
@@ -306,11 +330,11 @@
         "documentation": {}
     },
     {
-        "label": "warn",
-        "importPath": "warnings",
-        "description": "warnings",
+        "label": "BRANDS_URL",
+        "importPath": "settings",
+        "description": "settings",
         "isExtraImport": true,
-        "detail": "warnings",
+        "detail": "settings",
         "documentation": {}
     },
     {
@@ -327,6 +351,14 @@
         "description": "settings",
         "isExtraImport": true,
         "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "warn",
+        "importPath": "warnings",
+        "description": "warnings",
+        "isExtraImport": true,
+        "detail": "warnings",
         "documentation": {}
     },
     {
@@ -514,7 +546,7 @@
         "kind": 6,
         "importPath": "client.client",
         "description": "client.client",
-        "peekOfCode": "class Client:\n    list_service = ListService()\n    retrieve_service = RetrieveService()\n    def retrieve(self, key: str):\n        response = self.retrieve_service.send_request(key)\n        data = self.retrieve_service.parse_response(response)\n        return data\n    def list(\n        self,\n        sold=True,",
+        "peekOfCode": "class Client:\n    __list_service = ListService()\n    __retrieve_service = RetrieveService()\n    __brands_service = BrandsService()\n    def search_brands(self, query: str):\n        response = self.__brands_service.send_request(query)\n        brands = self.__brands_service.parse_response(response)\n        print(brands)\n    def retrieve(self, key: str):\n        response = self.__retrieve_service.send_request(key)",
         "detail": "client.client",
         "documentation": {}
     },
@@ -534,6 +566,15 @@
         "description": "services.api_service",
         "peekOfCode": "class ApiService(ABC):\n    @abstractmethod\n    def send_request(self, *args, **kwargs) -> Response:\n        pass\n    @abstractmethod\n    def parse_response(self, response: Response) -> Any:\n        return response.json()",
         "detail": "services.api_service",
+        "documentation": {}
+    },
+    {
+        "label": "BrandsService",
+        "kind": 6,
+        "importPath": "services.brands_service",
+        "description": "services.brands_service",
+        "peekOfCode": "class BrandsService(ApiService):\n    def parse_response(self, response: Response) -> Any:\n        return super().parse_response(response)[\"facetHits\"]\n    def send_request(self, query: str) -> Response:  # pylint: disable=arguments-differ\n        return requests.post(\n            BRANDS_URL,\n            data=json.dumps({\"facetQuery\": query}),\n            headers={\n                \"accept\": \"*/*\",\n                \"accept-language\": \"en-GB,en-US;q=0.9,en;q=0.8\",",
+        "detail": "services.brands_service",
         "documentation": {}
     },
     {
@@ -559,7 +600,16 @@
         "kind": 5,
         "importPath": "settings",
         "description": "settings",
-        "peekOfCode": "SEARCH_URL = \"https://mnrwefss2q-1.algolianet.com/1/indexes/*/queries?x-algolia-agent=Algolia%20for%20JavaScript%20(4.14.3)%3B%20Browser%3B%20JS%20Helper%20(3.11.3)%3B%20react%20(18.2.0)%3B%20react-instantsearch%20(6.39.1)\"\nLISTINGS_API = \"https://www.grailed.com/api/listings\"",
+        "peekOfCode": "SEARCH_URL = \"https://mnrwefss2q-1.algolianet.com/1/indexes/*/queries?x-algolia-agent=Algolia%20for%20JavaScript%20(4.14.3)%3B%20Browser%3B%20JS%20Helper%20(3.11.3)%3B%20react%20(18.2.0)%3B%20react-instantsearch%20(6.39.1)\"\nBRANDS_URL = \"https://mnrwefss2q-1.algolianet.com/1/indexes/Listing_production/facets/designers.name/query?x-algolia-agent=Algolia%20for%20JavaScript%20(4.14.3)%3B%20Browser%3B%20JS%20Helper%20(3.11.3)%3B%20react%20(18.2.0)%3B%20react-instantsearch%20(6.39.1)\"\nLISTINGS_API = \"https://www.grailed.com/api/listings\"",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "BRANDS_URL",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "BRANDS_URL = \"https://mnrwefss2q-1.algolianet.com/1/indexes/Listing_production/facets/designers.name/query?x-algolia-agent=Algolia%20for%20JavaScript%20(4.14.3)%3B%20Browser%3B%20JS%20Helper%20(3.11.3)%3B%20react%20(18.2.0)%3B%20react-instantsearch%20(6.39.1)\"\nLISTINGS_API = \"https://www.grailed.com/api/listings\"",
         "detail": "settings",
         "documentation": {}
     },
