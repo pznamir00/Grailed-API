@@ -1,4 +1,4 @@
-from warnings import warn
+import warnings
 from typing import Any, Dict, Iterable, List
 import requests
 from enums import Markets, Conditions, Locations, Departments
@@ -48,7 +48,7 @@ class ProductsListService(ApiService):
             categories (Iterable[Category]): categories list
             sizes (Iterable[Size]): sizes list
         """
-        if not categories or not sizes:
+        if not sizes:
             return
 
         cat_prefixes = [cat.value.split(".")[0] for cat in categories]
@@ -57,7 +57,7 @@ class ProductsListService(ApiService):
         ]
 
         if non_matching_sizes:
-            warn(
+            warnings.warn(
                 f"Sizes {','.join(non_matching_sizes)} don't match any \
 provided category, so they won't be considered in the query"
             )
