@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "grailed-api"
+version = "0.1.0"
+description = "API exposes most important Grailed API endpoints"
+authors = ["pznamir00 <pznamir00@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+aenum = "3.1.15"
+requests = "2.32.3"
+
+[tool.poetry.dev-dependencies]
+pytest = "8.3.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
