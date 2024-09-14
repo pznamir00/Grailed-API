@@ -1,7 +1,11 @@
 from typing import Iterable
 from grailed_api.enums import Departments, Conditions, Locations, Markets
 from grailed_api.facets import Facets
-from grailed_api.services import ProductsListService, ProductsRetrieveService, BrandsListService
+from grailed_api.services import (
+    ProductsListService,
+    ProductsRetrieveService,
+    BrandsListService,
+)
 
 
 class Client:

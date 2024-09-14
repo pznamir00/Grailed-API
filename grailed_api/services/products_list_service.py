@@ -45,7 +45,9 @@ class ProductsListService(ApiService):
         self.__validate_categories_and_sizes_are_enum_props(categories, sizes)
         self.__validate_categories_and_sizes_match(categories, sizes)
 
-    def __validate_categories_and_sizes_are_enum_props(self, categories: Iterable, sizes: Iterable):
+    def __validate_categories_and_sizes_are_enum_props(
+        self, categories: Iterable, sizes: Iterable
+    ):
         """Checks if categories and sizes are fields of enums rather than just enums.
         This validation is needed for prevent a user provide categories e.g just 'Tops'
 
@@ -60,9 +62,10 @@ class ProductsListService(ApiService):
         for size in sizes:
             if type(size) is EnumType:
                 raise WrongSizeTypeError(type(size))
-            
 
-    def __validate_categories_and_sizes_match(self, categories: Iterable, sizes: Iterable):
+    def __validate_categories_and_sizes_match(
+        self, categories: Iterable, sizes: Iterable
+    ):
         """Checks if user provided sizes that match to categories and shows a warning.
         If some size's category is not found in provided categories,
         this size won't be affected.

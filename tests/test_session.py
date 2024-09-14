@@ -5,19 +5,28 @@ from grailed_api.session.session import GrailedSession
 
 
 class TestSession:
-    @patch("grailed_api.session.session.Session.request", return_value=MagicMock(status_code=200))
+    @patch(
+        "grailed_api.session.session.Session.request",
+        return_value=MagicMock(status_code=200),
+    )
     def test_request_calls_super_request(self, super_request: MagicMock):
         session = GrailedSession()
         session.request("POST", "https://url", verbose=False)
         super_request.assert_called_once()
 
-    @patch("grailed_api.session.session.Session.request", return_value=MagicMock(status_code=200))
+    @patch(
+        "grailed_api.session.session.Session.request",
+        return_value=MagicMock(status_code=200),
+    )
     def test_request_adds_headers(self, super_request: MagicMock):
         session = GrailedSession()
         session.request("POST", "https://url", verbose=False)
         assert len(super_request.call_args.kwargs["headers"]) == 11
 
-    @patch("grailed_api.session.session.Session.request", return_value=MagicMock(status_code=200))
+    @patch(
+        "grailed_api.session.session.Session.request",
+        return_value=MagicMock(status_code=200),
+    )
     @patch("grailed_api.session.session.pprint")
     def test_request_shows_request_on_verbose(self, _: MagicMock, pprint: MagicMock):
         session = GrailedSession()
@@ -33,7 +42,10 @@ class TestSession:
             session = GrailedSession()
             session.request("POST", "https://url", verbose=False)
 
-    @patch("grailed_api.session.session.Session.request", return_value=MagicMock(status_code=200))
+    @patch(
+        "grailed_api.session.session.Session.request",
+        return_value=MagicMock(status_code=200),
+    )
     def test_request_stringifies_data(self, super_request: MagicMock):
         session = GrailedSession()
         session.request("POST", "https://url", data={"data": True}, verbose=False)

@@ -1,5 +1,8 @@
 from grailed_api.exceptions.http_error import HttpError
-from grailed_api.exceptions.wrong_enum_type_error import WrongCategoryTypeError, WrongSizeTypeError
+from grailed_api.exceptions.wrong_enum_type_error import (
+    WrongCategoryTypeError,
+    WrongSizeTypeError,
+)
 import pytest
 from grailed_api.client import Client
 from grailed_api.enums.categories import Tops
@@ -29,9 +32,7 @@ class TestClient:
             client = Client()
             client.find_products(sizes=(Tops.sizes,))
 
-    def test_find_products_returns_products_matching_filters(
-        self
-    ):
+    def test_find_products_returns_products_matching_filters(self):
         client = Client()
         products = client.find_products(
             sold=False,
