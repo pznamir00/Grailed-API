@@ -3,6 +3,7 @@ from typing import Any, Dict, Iterable, List
 import requests
 from aenum._enum import EnumType
 from grailed_api.enums import Markets, Conditions, Locations, Departments
+from grailed_api.exceptions import WrongCategoryTypeError, WrongSizeTypeError
 from grailed_api.facets import Facets
 from grailed_api.settings import SEARCH_URL
 from .api_service import ApiService
@@ -54,11 +55,11 @@ class ProductsListService(ApiService):
         """
         for category in categories:
             if type(category) is EnumType:
-                raise TypeError(f"All categories must be fields of category enums, not {type(category)}")
+                raise WrongCategoryTypeError(type(category))
 
         for size in sizes:
             if type(size) is EnumType:
-                raise TypeError(f"All sizes must be fields of size enums, not {type(size)}")
+                raise WrongSizeTypeError(type(size))
             
 
     def __validate_categories_and_sizes_match(self, categories: Iterable, sizes: Iterable):

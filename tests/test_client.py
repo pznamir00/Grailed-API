@@ -1,3 +1,5 @@
+from grailed_api.exceptions.http_error import HttpError
+from grailed_api.exceptions.wrong_enum_type_error import WrongCategoryTypeError, WrongSizeTypeError
 import pytest
 from grailed_api.client import Client
 from grailed_api.enums.categories import Tops
@@ -28,6 +30,21 @@ class TestClient:
         client = Client(x_alg_api_key, x_alg_app_id)
         product = client.find_product_by_id(id="66849368")
         assert product["id"] == 66849368
+
+    def test_find_products_throws_error_if_algolia_credentials_are_invalid(self, x_alg_api_key: str, x_alg_app_id: str):
+        with pytest.raises(HttpError):
+            client = Client('invalid-api-key', 'invalid-app-id')
+            client.find_products()
+
+    def test_find_products_throws_error_if_wrong_category_is_provided(self, x_alg_api_key: str, x_alg_app_id: str):
+        with pytest.raises(WrongCategoryTypeError):
+            client = Client(x_alg_api_key, x_alg_app_id)
+            client.find_products(categories=(Tops,))
+
+    def test_find_products_throws_error_if_wrong_size_is_provided(self, x_alg_api_key: str, x_alg_app_id: str):
+        with pytest.raises(WrongSizeTypeError):
+            client = Client(x_alg_api_key, x_alg_app_id)
+            client.find_products(sizes=(Tops.sizes,))
 
     def test_find_products_returns_products_matching_filters(
         self, x_alg_api_key: str, x_alg_app_id: str

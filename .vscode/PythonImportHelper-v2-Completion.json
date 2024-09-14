@@ -8,6 +8,30 @@
         "documentation": {}
     },
     {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Type",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Any",
         "importPath": "typing",
         "description": "typing",
@@ -475,11 +499,19 @@
         "documentation": {}
     },
     {
-        "label": "pprint",
-        "importPath": "pprint",
-        "description": "pprint",
+        "label": "WrongCategoryTypeError",
+        "importPath": "grailed_api.exceptions",
+        "description": "grailed_api.exceptions",
         "isExtraImport": true,
-        "detail": "pprint",
+        "detail": "grailed_api.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "WrongSizeTypeError",
+        "importPath": "grailed_api.exceptions",
+        "description": "grailed_api.exceptions",
+        "isExtraImport": true,
+        "detail": "grailed_api.exceptions",
         "documentation": {}
     },
     {
@@ -488,6 +520,14 @@
         "description": "grailed_api.exceptions",
         "isExtraImport": true,
         "detail": "grailed_api.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "pprint",
+        "importPath": "pprint",
+        "description": "pprint",
+        "isExtraImport": true,
+        "detail": "pprint",
         "documentation": {}
     },
     {
@@ -555,6 +595,38 @@
         "documentation": {}
     },
     {
+        "label": "HttpError",
+        "importPath": "grailed_api.exceptions.http_error",
+        "description": "grailed_api.exceptions.http_error",
+        "isExtraImport": true,
+        "detail": "grailed_api.exceptions.http_error",
+        "documentation": {}
+    },
+    {
+        "label": "HttpError",
+        "importPath": "grailed_api.exceptions.http_error",
+        "description": "grailed_api.exceptions.http_error",
+        "isExtraImport": true,
+        "detail": "grailed_api.exceptions.http_error",
+        "documentation": {}
+    },
+    {
+        "label": "WrongCategoryTypeError",
+        "importPath": "grailed_api.exceptions.wrong_enum_type_error",
+        "description": "grailed_api.exceptions.wrong_enum_type_error",
+        "isExtraImport": true,
+        "detail": "grailed_api.exceptions.wrong_enum_type_error",
+        "documentation": {}
+    },
+    {
+        "label": "WrongSizeTypeError",
+        "importPath": "grailed_api.exceptions.wrong_enum_type_error",
+        "description": "grailed_api.exceptions.wrong_enum_type_error",
+        "isExtraImport": true,
+        "detail": "grailed_api.exceptions.wrong_enum_type_error",
+        "documentation": {}
+    },
+    {
         "label": "pytest",
         "kind": 6,
         "isExtraImport": true,
@@ -609,14 +681,6 @@
         "description": "grailed_api.services.products_retrieve_service",
         "isExtraImport": true,
         "detail": "grailed_api.services.products_retrieve_service",
-        "documentation": {}
-    },
-    {
-        "label": "HttpError",
-        "importPath": "grailed_api.exceptions.http_error",
-        "description": "grailed_api.exceptions.http_error",
-        "isExtraImport": true,
-        "detail": "grailed_api.exceptions.http_error",
         "documentation": {}
     },
     {
@@ -821,8 +885,26 @@
         "kind": 6,
         "importPath": "grailed_api.exceptions.http_error",
         "description": "grailed_api.exceptions.http_error",
-        "peekOfCode": "class HttpError(Exception):\n    def __init__(self, response: Response):\n        code = response.status_code\n        try:\n            # format content string as json object if possible\n            content = json.dumps(response.json(), indent=4)\n        except JSONDecodeError:\n            content = response.content\n        super().__init__(f\"Http returned an error. Status {code}; Content: {content}\")",
+        "peekOfCode": "class HttpError(Exception):\n    def __init__(self, response: Response):\n        code = response.status_code\n        message = ''\n        try:\n            content = response.json()\n            if self.__are_algolia_credentials_missing_or_invalid(content):\n                # Invalid Algolia credentials error\n                message = f\"Your X_ALGOLIA_API_KEY or X_ALGOLIA_APP_ID is invalid or missing\"\n            else:",
         "detail": "grailed_api.exceptions.http_error",
+        "documentation": {}
+    },
+    {
+        "label": "WrongCategoryTypeError",
+        "kind": 6,
+        "importPath": "grailed_api.exceptions.wrong_enum_type_error",
+        "description": "grailed_api.exceptions.wrong_enum_type_error",
+        "peekOfCode": "class WrongCategoryTypeError(Exception):\n    def __init__(self, type: Type):\n        super().__init__(f\"\"\"All categories must be fields of enums, not {type}. \\\nMake sure you provided valid enum fields (e.g. Tops.BUTTON_UPS, not just Tops)\"\"\")\nclass WrongSizeTypeError(Exception):\n    def __init__(self, type: Type):\n        super().__init__(f\"\"\"All sizes must be fields of enums, not {type}. \\\nMake sure you provided valid enum fields (e.g. Tops.sizes.L, not just Tops.sizes)\"\"\")",
+        "detail": "grailed_api.exceptions.wrong_enum_type_error",
+        "documentation": {}
+    },
+    {
+        "label": "WrongSizeTypeError",
+        "kind": 6,
+        "importPath": "grailed_api.exceptions.wrong_enum_type_error",
+        "description": "grailed_api.exceptions.wrong_enum_type_error",
+        "peekOfCode": "class WrongSizeTypeError(Exception):\n    def __init__(self, type: Type):\n        super().__init__(f\"\"\"All sizes must be fields of enums, not {type}. \\\nMake sure you provided valid enum fields (e.g. Tops.sizes.L, not just Tops.sizes)\"\"\")",
+        "detail": "grailed_api.exceptions.wrong_enum_type_error",
         "documentation": {}
     },
     {
