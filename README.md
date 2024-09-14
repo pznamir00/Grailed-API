@@ -6,12 +6,9 @@ This is only for searching objects, since there is no official API, or API key.
 ## How to install
 
 To install the API, just run `pip install -r requirements.txt` command.
-Then you have to provide both `X_ALGOLIA_API_KEY` and `X_ALGOLIA_APPLICATION_ID` keys.
-Define them in `settings.py` file. You can get those keys from your browser.
 
-### How to get access keys:
-
-In order to have `X_ALGOLIA_API_KEY` and `X_ALGOLIA_APPLICATION_ID`, do following steps:
+Then you have to provide both `X_ALGOLIA_API_KEY` and `X_ALGOLIA_APPLICATION_ID` keys,
+that you can find with following steps:
 - go to https://www.grailed.com/
 - click right mouse button
 - click "inspect"
@@ -21,12 +18,12 @@ In order to have `X_ALGOLIA_API_KEY` and `X_ALGOLIA_APPLICATION_ID`, do followin
 
 ## How to use
 
-In order to use the features, just import `Client` as in following code
+In order to use the features, just import `Client` and pass algolia keys as in following code
 
 ```python
 from client import Client
 
-client = Client()
+client = Client(<X_ALGOLIA_API_KEY>, <X_ALGOLIA_APP_ID>)
 ```
 
 Then you are ready to use searching functions
@@ -97,4 +94,4 @@ Then you are ready to use searching functions
 
 ## How to test
 
-To test the API, just run `pytest .` command.
+To test the API, just run `pytest . --x_algolia_api_key <X_ALGOLIA_API_KEY> --x_algolia_app_id X_ALGOLIA_APP_ID` command.
