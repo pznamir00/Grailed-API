@@ -5,25 +5,32 @@ This is only for searching objects, since there is no official API, or API key.
 
 ## How to install
 
+In order to install the package, just run following command `pip install grailed_api`
+
+### How to install locally
 1. Install `poetry` (https://python-poetry.org/)
+2. Clone repo `git clone https://github.com/pznamir00/Grailed-API`
 2. Run `poetry install` command.
-3. Then you have to provide both `X_ALGOLIA_API_KEY` and `X_ALGOLIA_APPLICATION_ID` keys,
-that you can find with following steps:
+
+## X_ALGOLIA Credentials
+
+Once you have installed the package you have to provide both `X_ALGOLIA_API_KEY` and `X_ALGOLIA_APPLICATION_ID` keys, that you can find with following steps:
 - go to https://www.grailed.com/
 - click right mouse button
 - click "inspect"
 - in sidebar, click "Network"
 - find keywords "objects?x-algolia-agent" (if you can't find it, refresh the browser)
 - in headers of the request, you should find both keys
+Save this keys for authentication (not every method requires them)
 
 ## How to use
 
-In order to use the features, just import `Client` and pass algolia keys as in following code
+In order to use the features, just import `GrailedAPIClient` and pass algolia keys as in following code
 
 ```python
-from client import Client
+from grailed_api import GrailedAPIClient
 
-client = Client(<X_ALGOLIA_API_KEY>, <X_ALGOLIA_APP_ID>)
+client = GrailedAPIClient(<X_ALGOLIA_API_KEY>, <X_ALGOLIA_APP_ID>)
 ```
 
 Then you are ready to use searching functions
@@ -57,8 +64,8 @@ Then you are ready to use searching functions
         `sizes` parameter should contain categories' sizes that are accessible in `.sizes` properties (e.g. `Tops.sizes` or `Outerwear.sizes`). Note if you are gonna include size and won't include it's category, it won't be affected as well as including category with sizes of different categories. You can see the example below
     - Example:
         ```python
-        from enums import Conditions, Markets, Locations
-        from enums.categories import Tops
+        from grailed_api.enums import Conditions, Markets, Locations
+        from grailed_api.enums.categories import Tops
 
         products = client.find_products(
             sold=False,
