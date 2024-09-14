@@ -2,7 +2,6 @@ from typing import Iterable
 from grailed_api.enums import Departments, Conditions, Locations, Markets
 from grailed_api.facets import Facets
 from grailed_api.services import ProductsListService, ProductsRetrieveService, BrandsListService
-from grailed_api.settings import X_ALGOLIA_KEYS
 
 
 class Client:
@@ -14,14 +13,6 @@ class Client:
     __products_list_service = ProductsListService()
     __products_retrieve_service = ProductsRetrieveService()
     __brands_list_service = BrandsListService()
-
-    def __init__(self, x_algolia_api_key: str, x_algolia_app_id: str):
-        X_ALGOLIA_KEYS.update(
-            {
-                "API_KEY": x_algolia_api_key,
-                "APP_ID": x_algolia_app_id,
-            }
-        )
 
     def find_brands(self, query: str, verbose=False):
         """Finds brands by provided query keyword

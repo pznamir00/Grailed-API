@@ -3,6 +3,6 @@ BRANDS_URL = "https://mnrwefss2q-1.algolianet.com/1/indexes/Listing_production/f
 LISTINGS_API = "https://www.grailed.com/api/listings"
 
 X_ALGOLIA_KEYS = {
-    "API_KEY": "",
-    "APP_ID": "",
+    "API_KEY": "bc9ee1c014521ccf312525a4ef324a16",
+    "APP_ID": "MNRWEFSS2Q",
 }

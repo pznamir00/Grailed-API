@@ -12,26 +12,14 @@ In order to install the package, just run following command `pip install grailed
 2. Clone repo `git clone https://github.com/pznamir00/Grailed-API`
 2. Run `poetry install` command.
 
-## X_ALGOLIA Credentials
-
-Once you have installed the package you have to provide both `X_ALGOLIA_API_KEY` and `X_ALGOLIA_APPLICATION_ID` keys, that you can find with following steps:
-- go to https://www.grailed.com/
-- click right mouse button
-- click "inspect"
-- in sidebar, click "Network"
-- find keywords "objects?x-algolia-agent" (if you can't find it, refresh the browser)
-- in headers of the request, you should find both keys
-
-Save this keys for authentication (not every method requires them)
-
 ## How to use
 
-In order to use the features, just import `GrailedAPIClient` and pass algolia keys as in following code
+In order to use the features, just import `GrailedAPIClient`
 
 ```python
 from grailed_api import GrailedAPIClient
 
-client = GrailedAPIClient(<X_ALGOLIA_API_KEY>, <X_ALGOLIA_APP_ID>)
+client = GrailedAPIClient()
 ```
 
 Then you are ready to use searching functions
@@ -102,4 +90,4 @@ Then you are ready to use searching functions
 
 ## How to test
 
-To test the API, just run `poetry run pytest . --x_algolia_api_key <X_ALGOLIA_API_KEY> --x_algolia_app_id X_ALGOLIA_APP_ID` command.
+To test the API, just run `poetry run pytest` command.

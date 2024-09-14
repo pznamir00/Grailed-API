@@ -7,49 +7,32 @@ from grailed_api.enums import Locations, Conditions, Markets
 
 
 class TestClient:
-    @pytest.fixture(scope="session")
-    def x_alg_api_key(self, pytestconfig):
-        return pytestconfig.getoption("x_algolia_api_key")
-
-    @pytest.fixture(scope="session")
-    def x_alg_app_id(self, pytestconfig):
-        return pytestconfig.getoption("x_algolia_app_id")
-
-    def test_find_brands_returns_brands_matching_query(
-        self, x_alg_api_key: str, x_alg_app_id: str
-    ):
-        client = Client(x_alg_api_key, x_alg_app_id)
+    def test_find_brands_returns_brands_matching_query(self):
+        client = Client()
         brands = client.find_brands(query="elem")
         assert brands
         matching = ["e" in brand["value"].lower() for brand in brands]
         assert all(matching)
 
-    def test_find_product_by_id_returns_product_with_id(
-        self, x_alg_api_key: str, x_alg_app_id: str
-    ):
-        client = Client(x_alg_api_key, x_alg_app_id)
+    def test_find_product_by_id_returns_product_with_id(self):
+        client = Client()
         product = client.find_product_by_id(id="66849368")
         assert product["id"] == 66849368
 
-    def test_find_products_throws_error_if_algolia_credentials_are_invalid(self, x_alg_api_key: str, x_alg_app_id: str):
-        with pytest.raises(HttpError):
-            client = Client('invalid-api-key', 'invalid-app-id')
-            client.find_products()
-
-    def test_find_products_throws_error_if_wrong_category_is_provided(self, x_alg_api_key: str, x_alg_app_id: str):
+    def test_find_products_throws_error_if_wrong_category_is_provided(self):
         with pytest.raises(WrongCategoryTypeError):
-            client = Client(x_alg_api_key, x_alg_app_id)
+            client = Client()
             client.find_products(categories=(Tops,))
 
-    def test_find_products_throws_error_if_wrong_size_is_provided(self, x_alg_api_key: str, x_alg_app_id: str):
+    def test_find_products_throws_error_if_wrong_size_is_provided(self):
         with pytest.raises(WrongSizeTypeError):
-            client = Client(x_alg_api_key, x_alg_app_id)
+            client = Client()
             client.find_products(sizes=(Tops.sizes,))
 
     def test_find_products_returns_products_matching_filters(
-        self, x_alg_api_key: str, x_alg_app_id: str
+        self
     ):
-        client = Client(x_alg_api_key, x_alg_app_id)
+        client = Client()
         products = client.find_products(
             sold=False,
             query_search="xx",

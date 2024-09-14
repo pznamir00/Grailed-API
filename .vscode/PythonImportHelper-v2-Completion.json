@@ -232,70 +232,6 @@
         "documentation": {}
     },
     {
-        "label": "X_ALGOLIA_KEYS",
-        "importPath": "grailed_api.settings",
-        "description": "grailed_api.settings",
-        "isExtraImport": true,
-        "detail": "grailed_api.settings",
-        "documentation": {}
-    },
-    {
-        "label": "BRANDS_URL",
-        "importPath": "grailed_api.settings",
-        "description": "grailed_api.settings",
-        "isExtraImport": true,
-        "detail": "grailed_api.settings",
-        "documentation": {}
-    },
-    {
-        "label": "SEARCH_URL",
-        "importPath": "grailed_api.settings",
-        "description": "grailed_api.settings",
-        "isExtraImport": true,
-        "detail": "grailed_api.settings",
-        "documentation": {}
-    },
-    {
-        "label": "LISTINGS_API",
-        "importPath": "grailed_api.settings",
-        "description": "grailed_api.settings",
-        "isExtraImport": true,
-        "detail": "grailed_api.settings",
-        "documentation": {}
-    },
-    {
-        "label": "X_ALGOLIA_KEYS",
-        "importPath": "grailed_api.settings",
-        "description": "grailed_api.settings",
-        "isExtraImport": true,
-        "detail": "grailed_api.settings",
-        "documentation": {}
-    },
-    {
-        "label": "BRANDS_URL",
-        "importPath": "grailed_api.settings",
-        "description": "grailed_api.settings",
-        "isExtraImport": true,
-        "detail": "grailed_api.settings",
-        "documentation": {}
-    },
-    {
-        "label": "SEARCH_URL",
-        "importPath": "grailed_api.settings",
-        "description": "grailed_api.settings",
-        "isExtraImport": true,
-        "detail": "grailed_api.settings",
-        "documentation": {}
-    },
-    {
-        "label": "LISTINGS_API",
-        "importPath": "grailed_api.settings",
-        "description": "grailed_api.settings",
-        "isExtraImport": true,
-        "detail": "grailed_api.settings",
-        "documentation": {}
-    },
-    {
         "label": "nonmember",
         "importPath": "aenum",
         "description": "aenum",
@@ -479,6 +415,62 @@
         "description": "grailed_api.session",
         "isExtraImport": true,
         "detail": "grailed_api.session",
+        "documentation": {}
+    },
+    {
+        "label": "BRANDS_URL",
+        "importPath": "grailed_api.settings",
+        "description": "grailed_api.settings",
+        "isExtraImport": true,
+        "detail": "grailed_api.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SEARCH_URL",
+        "importPath": "grailed_api.settings",
+        "description": "grailed_api.settings",
+        "isExtraImport": true,
+        "detail": "grailed_api.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LISTINGS_API",
+        "importPath": "grailed_api.settings",
+        "description": "grailed_api.settings",
+        "isExtraImport": true,
+        "detail": "grailed_api.settings",
+        "documentation": {}
+    },
+    {
+        "label": "X_ALGOLIA_KEYS",
+        "importPath": "grailed_api.settings",
+        "description": "grailed_api.settings",
+        "isExtraImport": true,
+        "detail": "grailed_api.settings",
+        "documentation": {}
+    },
+    {
+        "label": "BRANDS_URL",
+        "importPath": "grailed_api.settings",
+        "description": "grailed_api.settings",
+        "isExtraImport": true,
+        "detail": "grailed_api.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SEARCH_URL",
+        "importPath": "grailed_api.settings",
+        "description": "grailed_api.settings",
+        "isExtraImport": true,
+        "detail": "grailed_api.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LISTINGS_API",
+        "importPath": "grailed_api.settings",
+        "description": "grailed_api.settings",
+        "isExtraImport": true,
+        "detail": "grailed_api.settings",
         "documentation": {}
     },
     {
@@ -696,7 +688,7 @@
         "kind": 6,
         "importPath": "grailed_api.client.client",
         "description": "grailed_api.client.client",
-        "peekOfCode": "class Client:\n    \"\"\"\n    Main Client class that is interface of whole system. It\n    provides all functionalities for looking for products and brands\n    \"\"\"\n    __products_list_service = ProductsListService()\n    __products_retrieve_service = ProductsRetrieveService()\n    __brands_list_service = BrandsListService()\n    def __init__(self, x_algolia_api_key: str, x_algolia_app_id: str):\n        X_ALGOLIA_KEYS.update(",
+        "peekOfCode": "class Client:\n    \"\"\"\n    Main Client class that is interface of whole system. It\n    provides all functionalities for looking for products and brands\n    \"\"\"\n    __products_list_service = ProductsListService()\n    __products_retrieve_service = ProductsRetrieveService()\n    __brands_list_service = BrandsListService()\n    def find_brands(self, query: str, verbose=False):\n        \"\"\"Finds brands by provided query keyword",
         "detail": "grailed_api.client.client",
         "documentation": {}
     },
@@ -966,7 +958,7 @@
         "kind": 5,
         "importPath": "grailed_api.settings",
         "description": "grailed_api.settings",
-        "peekOfCode": "SEARCH_URL = \"https://mnrwefss2q-1.algolianet.com/1/indexes/*/queries?x-algolia-agent=Algolia%20for%20JavaScript%20(4.14.3)%3B%20Browser%3B%20JS%20Helper%20(3.11.3)%3B%20react%20(18.2.0)%3B%20react-instantsearch%20(6.39.1)\"\nBRANDS_URL = \"https://mnrwefss2q-1.algolianet.com/1/indexes/Listing_production/facets/designers.name/query?x-algolia-agent=Algolia%20for%20JavaScript%20(4.14.3)%3B%20Browser%3B%20JS%20Helper%20(3.11.3)%3B%20react%20(18.2.0)%3B%20react-instantsearch%20(6.39.1)\"\nLISTINGS_API = \"https://www.grailed.com/api/listings\"\nX_ALGOLIA_KEYS = {\n    \"API_KEY\": \"\",\n    \"APP_ID\": \"\",\n}",
+        "peekOfCode": "SEARCH_URL = \"https://mnrwefss2q-1.algolianet.com/1/indexes/*/queries?x-algolia-agent=Algolia%20for%20JavaScript%20(4.14.3)%3B%20Browser%3B%20JS%20Helper%20(3.11.3)%3B%20react%20(18.2.0)%3B%20react-instantsearch%20(6.39.1)\"\nBRANDS_URL = \"https://mnrwefss2q-1.algolianet.com/1/indexes/Listing_production/facets/designers.name/query?x-algolia-agent=Algolia%20for%20JavaScript%20(4.14.3)%3B%20Browser%3B%20JS%20Helper%20(3.11.3)%3B%20react%20(18.2.0)%3B%20react-instantsearch%20(6.39.1)\"\nLISTINGS_API = \"https://www.grailed.com/api/listings\"\nX_ALGOLIA_KEYS = {\n    \"API_KEY\": \"bc9ee1c014521ccf312525a4ef324a16\",\n    \"APP_ID\": \"MNRWEFSS2Q\",\n}",
         "detail": "grailed_api.settings",
         "documentation": {}
     },
@@ -975,7 +967,7 @@
         "kind": 5,
         "importPath": "grailed_api.settings",
         "description": "grailed_api.settings",
-        "peekOfCode": "BRANDS_URL = \"https://mnrwefss2q-1.algolianet.com/1/indexes/Listing_production/facets/designers.name/query?x-algolia-agent=Algolia%20for%20JavaScript%20(4.14.3)%3B%20Browser%3B%20JS%20Helper%20(3.11.3)%3B%20react%20(18.2.0)%3B%20react-instantsearch%20(6.39.1)\"\nLISTINGS_API = \"https://www.grailed.com/api/listings\"\nX_ALGOLIA_KEYS = {\n    \"API_KEY\": \"\",\n    \"APP_ID\": \"\",\n}",
+        "peekOfCode": "BRANDS_URL = \"https://mnrwefss2q-1.algolianet.com/1/indexes/Listing_production/facets/designers.name/query?x-algolia-agent=Algolia%20for%20JavaScript%20(4.14.3)%3B%20Browser%3B%20JS%20Helper%20(3.11.3)%3B%20react%20(18.2.0)%3B%20react-instantsearch%20(6.39.1)\"\nLISTINGS_API = \"https://www.grailed.com/api/listings\"\nX_ALGOLIA_KEYS = {\n    \"API_KEY\": \"bc9ee1c014521ccf312525a4ef324a16\",\n    \"APP_ID\": \"MNRWEFSS2Q\",\n}",
         "detail": "grailed_api.settings",
         "documentation": {}
     },
@@ -984,7 +976,7 @@
         "kind": 5,
         "importPath": "grailed_api.settings",
         "description": "grailed_api.settings",
-        "peekOfCode": "LISTINGS_API = \"https://www.grailed.com/api/listings\"\nX_ALGOLIA_KEYS = {\n    \"API_KEY\": \"\",\n    \"APP_ID\": \"\",\n}",
+        "peekOfCode": "LISTINGS_API = \"https://www.grailed.com/api/listings\"\nX_ALGOLIA_KEYS = {\n    \"API_KEY\": \"bc9ee1c014521ccf312525a4ef324a16\",\n    \"APP_ID\": \"MNRWEFSS2Q\",\n}",
         "detail": "grailed_api.settings",
         "documentation": {}
     },
@@ -993,17 +985,8 @@
         "kind": 5,
         "importPath": "grailed_api.settings",
         "description": "grailed_api.settings",
-        "peekOfCode": "X_ALGOLIA_KEYS = {\n    \"API_KEY\": \"\",\n    \"APP_ID\": \"\",\n}",
+        "peekOfCode": "X_ALGOLIA_KEYS = {\n    \"API_KEY\": \"bc9ee1c014521ccf312525a4ef324a16\",\n    \"APP_ID\": \"MNRWEFSS2Q\",\n}",
         "detail": "grailed_api.settings",
-        "documentation": {}
-    },
-    {
-        "label": "pytest_addoption",
-        "kind": 2,
-        "importPath": "tests.conftest",
-        "description": "tests.conftest",
-        "peekOfCode": "def pytest_addoption(parser):\n    parser.addoption(\"--x_algolia_api_key\", action=\"store\")\n    parser.addoption(\"--x_algolia_app_id\", action=\"store\")",
-        "detail": "tests.conftest",
         "documentation": {}
     },
     {
@@ -1020,7 +1003,7 @@
         "kind": 6,
         "importPath": "tests.test_client",
         "description": "tests.test_client",
-        "peekOfCode": "class TestClient:\n    @pytest.fixture(scope=\"session\")\n    def x_alg_api_key(self, pytestconfig):\n        return pytestconfig.getoption(\"x_algolia_api_key\")\n    @pytest.fixture(scope=\"session\")\n    def x_alg_app_id(self, pytestconfig):\n        return pytestconfig.getoption(\"x_algolia_app_id\")\n    def test_find_brands_returns_brands_matching_query(\n        self, x_alg_api_key: str, x_alg_app_id: str\n    ):",
+        "peekOfCode": "class TestClient:\n    def test_find_brands_returns_brands_matching_query(self):\n        client = Client()\n        brands = client.find_brands(query=\"elem\")\n        assert brands\n        matching = [\"e\" in brand[\"value\"].lower() for brand in brands]\n        assert all(matching)\n    def test_find_product_by_id_returns_product_with_id(self):\n        client = Client()\n        product = client.find_product_by_id(id=\"66849368\")",
         "detail": "tests.test_client",
         "documentation": {}
     },
