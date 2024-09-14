@@ -4,6 +4,11 @@ version = "0.1.0"
 description = "API exposes most important Grailed API endpoints"
 authors = ["pznamir00 <pznamir00@gmail.com>"]
 readme = "README.md"
+keywords = ["grailed", "api", "python", "python3", "algolia"]
+
+[tool.poetry.urls]
+Homepage = "https://github.com/pznamir00/Grailed-API"
+Issues = "https://github.com/pznamir00/Grailed-API/issues"
 
 [tool.poetry.dependencies]
 python = "^3.8"
