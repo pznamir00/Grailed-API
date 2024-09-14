@@ -1,5 +1,5 @@
 from unittest.mock import MagicMock, patch
-from services.brands_list_service import BrandsListService
+from grailed_api.services.brands_list_service import BrandsListService
 from grailed_api.settings import BRANDS_URL
 
 

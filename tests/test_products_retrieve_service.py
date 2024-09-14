@@ -1,5 +1,5 @@
 from unittest.mock import MagicMock
-from services.products_retrieve_service import ProductsRetrieveService
+from grailed_api.services.products_retrieve_service import ProductsRetrieveService
 from grailed_api.settings import LISTINGS_API
 
 

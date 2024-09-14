@@ -144,6 +144,30 @@
         "documentation": {}
     },
     {
+        "label": "Locations",
+        "importPath": "grailed_api.enums",
+        "description": "grailed_api.enums",
+        "isExtraImport": true,
+        "detail": "grailed_api.enums",
+        "documentation": {}
+    },
+    {
+        "label": "Conditions",
+        "importPath": "grailed_api.enums",
+        "description": "grailed_api.enums",
+        "isExtraImport": true,
+        "detail": "grailed_api.enums",
+        "documentation": {}
+    },
+    {
+        "label": "Markets",
+        "importPath": "grailed_api.enums",
+        "description": "grailed_api.enums",
+        "isExtraImport": true,
+        "detail": "grailed_api.enums",
+        "documentation": {}
+    },
+    {
         "label": "Facets",
         "importPath": "grailed_api.facets",
         "description": "grailed_api.facets",
@@ -516,10 +540,10 @@
     },
     {
         "label": "BrandsListService",
-        "importPath": "services.brands_list_service",
-        "description": "services.brands_list_service",
+        "importPath": "grailed_api.services.brands_list_service",
+        "description": "grailed_api.services.brands_list_service",
         "isExtraImport": true,
-        "detail": "services.brands_list_service",
+        "detail": "grailed_api.services.brands_list_service",
         "documentation": {}
     },
     {
@@ -533,90 +557,66 @@
     },
     {
         "label": "Client",
-        "importPath": "client",
-        "description": "client",
+        "importPath": "grailed_api.client",
+        "description": "grailed_api.client",
         "isExtraImport": true,
-        "detail": "client",
+        "detail": "grailed_api.client",
         "documentation": {}
     },
     {
         "label": "Tops",
-        "importPath": "enums.categories",
-        "description": "enums.categories",
+        "importPath": "grailed_api.enums.categories",
+        "description": "grailed_api.enums.categories",
         "isExtraImport": true,
-        "detail": "enums.categories",
+        "detail": "grailed_api.enums.categories",
         "documentation": {}
     },
     {
         "label": "Bottoms",
-        "importPath": "enums.categories",
-        "description": "enums.categories",
+        "importPath": "grailed_api.enums.categories",
+        "description": "grailed_api.enums.categories",
         "isExtraImport": true,
-        "detail": "enums.categories",
+        "detail": "grailed_api.enums.categories",
         "documentation": {}
     },
     {
         "label": "Tops",
-        "importPath": "enums.categories",
-        "description": "enums.categories",
+        "importPath": "grailed_api.enums.categories",
+        "description": "grailed_api.enums.categories",
         "isExtraImport": true,
-        "detail": "enums.categories",
-        "documentation": {}
-    },
-    {
-        "label": "Locations",
-        "importPath": "enums",
-        "description": "enums",
-        "isExtraImport": true,
-        "detail": "enums",
-        "documentation": {}
-    },
-    {
-        "label": "Conditions",
-        "importPath": "enums",
-        "description": "enums",
-        "isExtraImport": true,
-        "detail": "enums",
-        "documentation": {}
-    },
-    {
-        "label": "Markets",
-        "importPath": "enums",
-        "description": "enums",
-        "isExtraImport": true,
-        "detail": "enums",
+        "detail": "grailed_api.enums.categories",
         "documentation": {}
     },
     {
         "label": "ProductsListService",
-        "importPath": "services.products_list_service",
-        "description": "services.products_list_service",
+        "importPath": "grailed_api.services.products_list_service",
+        "description": "grailed_api.services.products_list_service",
         "isExtraImport": true,
-        "detail": "services.products_list_service",
+        "detail": "grailed_api.services.products_list_service",
         "documentation": {}
     },
     {
         "label": "ProductsRetrieveService",
-        "importPath": "services.products_retrieve_service",
-        "description": "services.products_retrieve_service",
+        "importPath": "grailed_api.services.products_retrieve_service",
+        "description": "grailed_api.services.products_retrieve_service",
         "isExtraImport": true,
-        "detail": "services.products_retrieve_service",
+        "detail": "grailed_api.services.products_retrieve_service",
         "documentation": {}
     },
     {
         "label": "HttpError",
-        "importPath": "exceptions.http_error",
-        "description": "exceptions.http_error",
+        "importPath": "grailed_api.exceptions.http_error",
+        "description": "grailed_api.exceptions.http_error",
         "isExtraImport": true,
-        "detail": "exceptions.http_error",
+        "detail": "grailed_api.exceptions.http_error",
         "documentation": {}
     },
     {
         "label": "GrailedSession",
-        "importPath": "session.session",
-        "description": "session.session",
+        "importPath": "grailed_api.session.session",
+        "description": "grailed_api.session.session",
         "isExtraImport": true,
-        "detail": "session.session",
+        "detail": "grailed_api.session.session",
         "documentation": {}
     },
     {
@@ -957,7 +957,7 @@
         "kind": 6,
         "importPath": "tests.test_session",
         "description": "tests.test_session",
-        "peekOfCode": "class TestSession:\n    @patch(\"session.session.Session.request\", return_value=MagicMock(status_code=200))\n    def test_request_calls_super_request(self, super_request: MagicMock):\n        session = GrailedSession()\n        session.request(\"POST\", \"https://url\", verbose=False)\n        super_request.assert_called_once()\n    @patch(\"session.session.Session.request\", return_value=MagicMock(status_code=200))\n    def test_request_adds_headers(self, super_request: MagicMock):\n        session = GrailedSession()\n        session.request(\"POST\", \"https://url\", verbose=False)",
+        "peekOfCode": "class TestSession:\n    @patch(\"grailed_api.session.session.Session.request\", return_value=MagicMock(status_code=200))\n    def test_request_calls_super_request(self, super_request: MagicMock):\n        session = GrailedSession()\n        session.request(\"POST\", \"https://url\", verbose=False)\n        super_request.assert_called_once()\n    @patch(\"grailed_api.session.session.Session.request\", return_value=MagicMock(status_code=200))\n    def test_request_adds_headers(self, super_request: MagicMock):\n        session = GrailedSession()\n        session.request(\"POST\", \"https://url\", verbose=False)",
         "detail": "tests.test_session",
         "documentation": {}
     }

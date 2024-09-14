@@ -1,6 +1,6 @@
 from unittest.mock import MagicMock, patch
-from enums.categories import Bottoms, Tops
-from services.products_list_service import ProductsListService
+from grailed_api.enums.categories import Bottoms, Tops
+from grailed_api.services.products_list_service import ProductsListService
 from grailed_api.settings import SEARCH_URL
 
 
@@ -30,7 +30,7 @@ class TestProductsListService:
         facets = service.get_all_facets()
         assert len(facets) == 9
 
-    @patch("services.products_list_service.warnings.warn")
+    @patch("grailed_api.services.products_list_service.warnings.warn")
     def test_validate_categories_and_sizes_shows_warning_if_size_does_not_match_to_category(
         self, warn: MagicMock
     ):

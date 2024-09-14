@@ -1,7 +1,7 @@
 import pytest
-from client import Client
-from enums.categories import Tops
-from enums import Locations, Conditions, Markets
+from grailed_api.client import Client
+from grailed_api.enums.categories import Tops
+from grailed_api.enums import Locations, Conditions, Markets
 
 
 class TestClient:
