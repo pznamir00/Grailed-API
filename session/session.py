@@ -3,7 +3,7 @@ from pprint import pprint
 from typing import Dict, Optional
 from requests import Response, Session
 from exceptions import HttpError
-from settings import X_ALGOLIA_API_KEY, X_ALGOLIA_APPLICATION_ID
+from settings import X_ALGOLIA_KEYS
 
 
 class GrailedSession(Session):
@@ -60,8 +60,8 @@ class GrailedSession(Session):
             {
                 "accept": "*/*",
                 "content-type": "application/x-www-form-urlencoded",
-                "x-algolia-api-key": X_ALGOLIA_API_KEY,
-                "x-algolia-application-id": X_ALGOLIA_APPLICATION_ID,
+                "x-algolia-api-key": X_ALGOLIA_KEYS["API_KEY"],
+                "x-algolia-application-id": X_ALGOLIA_KEYS["APP_ID"],
                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)\
                       AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
                 "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",

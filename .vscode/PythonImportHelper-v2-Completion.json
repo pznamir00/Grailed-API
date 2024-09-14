@@ -104,30 +104,6 @@
         "documentation": {}
     },
     {
-        "label": "Locations",
-        "importPath": "enums",
-        "description": "enums",
-        "isExtraImport": true,
-        "detail": "enums",
-        "documentation": {}
-    },
-    {
-        "label": "Conditions",
-        "importPath": "enums",
-        "description": "enums",
-        "isExtraImport": true,
-        "detail": "enums",
-        "documentation": {}
-    },
-    {
-        "label": "Markets",
-        "importPath": "enums",
-        "description": "enums",
-        "isExtraImport": true,
-        "detail": "enums",
-        "documentation": {}
-    },
-    {
         "label": "CategoryLabels",
         "importPath": "enums",
         "description": "enums",
@@ -161,6 +137,30 @@
     },
     {
         "label": "Departments",
+        "importPath": "enums",
+        "description": "enums",
+        "isExtraImport": true,
+        "detail": "enums",
+        "documentation": {}
+    },
+    {
+        "label": "Locations",
+        "importPath": "enums",
+        "description": "enums",
+        "isExtraImport": true,
+        "detail": "enums",
+        "documentation": {}
+    },
+    {
+        "label": "Conditions",
+        "importPath": "enums",
+        "description": "enums",
+        "isExtraImport": true,
+        "detail": "enums",
+        "documentation": {}
+    },
+    {
+        "label": "Markets",
         "importPath": "enums",
         "description": "enums",
         "isExtraImport": true,
@@ -208,35 +208,67 @@
         "documentation": {}
     },
     {
-        "label": "Client",
-        "importPath": "client",
-        "description": "client",
+        "label": "X_ALGOLIA_KEYS",
+        "importPath": "settings",
+        "description": "settings",
         "isExtraImport": true,
-        "detail": "client",
+        "detail": "settings",
         "documentation": {}
     },
     {
-        "label": "Tops",
-        "importPath": "enums.categories",
-        "description": "enums.categories",
+        "label": "BRANDS_URL",
+        "importPath": "settings",
+        "description": "settings",
         "isExtraImport": true,
-        "detail": "enums.categories",
+        "detail": "settings",
         "documentation": {}
     },
     {
-        "label": "Bottoms",
-        "importPath": "enums.categories",
-        "description": "enums.categories",
+        "label": "SEARCH_URL",
+        "importPath": "settings",
+        "description": "settings",
         "isExtraImport": true,
-        "detail": "enums.categories",
+        "detail": "settings",
         "documentation": {}
     },
     {
-        "label": "Tops",
-        "importPath": "enums.categories",
-        "description": "enums.categories",
+        "label": "LISTINGS_API",
+        "importPath": "settings",
+        "description": "settings",
         "isExtraImport": true,
-        "detail": "enums.categories",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "X_ALGOLIA_KEYS",
+        "importPath": "settings",
+        "description": "settings",
+        "isExtraImport": true,
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "BRANDS_URL",
+        "importPath": "settings",
+        "description": "settings",
+        "isExtraImport": true,
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "SEARCH_URL",
+        "importPath": "settings",
+        "description": "settings",
+        "isExtraImport": true,
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "LISTINGS_API",
+        "importPath": "settings",
+        "description": "settings",
+        "isExtraImport": true,
+        "detail": "settings",
         "documentation": {}
     },
     {
@@ -474,70 +506,6 @@
         "documentation": {}
     },
     {
-        "label": "BRANDS_URL",
-        "importPath": "settings",
-        "description": "settings",
-        "isExtraImport": true,
-        "detail": "settings",
-        "documentation": {}
-    },
-    {
-        "label": "SEARCH_URL",
-        "importPath": "settings",
-        "description": "settings",
-        "isExtraImport": true,
-        "detail": "settings",
-        "documentation": {}
-    },
-    {
-        "label": "LISTINGS_API",
-        "importPath": "settings",
-        "description": "settings",
-        "isExtraImport": true,
-        "detail": "settings",
-        "documentation": {}
-    },
-    {
-        "label": "BRANDS_URL",
-        "importPath": "settings",
-        "description": "settings",
-        "isExtraImport": true,
-        "detail": "settings",
-        "documentation": {}
-    },
-    {
-        "label": "SEARCH_URL",
-        "importPath": "settings",
-        "description": "settings",
-        "isExtraImport": true,
-        "detail": "settings",
-        "documentation": {}
-    },
-    {
-        "label": "LISTINGS_API",
-        "importPath": "settings",
-        "description": "settings",
-        "isExtraImport": true,
-        "detail": "settings",
-        "documentation": {}
-    },
-    {
-        "label": "X_ALGOLIA_API_KEY",
-        "importPath": "settings",
-        "description": "settings",
-        "isExtraImport": true,
-        "detail": "settings",
-        "documentation": {}
-    },
-    {
-        "label": "X_ALGOLIA_APPLICATION_ID",
-        "importPath": "settings",
-        "description": "settings",
-        "isExtraImport": true,
-        "detail": "settings",
-        "documentation": {}
-    },
-    {
         "label": "warnings",
         "kind": 6,
         "isExtraImport": true,
@@ -547,7 +515,31 @@
         "documentation": {}
     },
     {
+        "label": "pprint",
+        "importPath": "pprint",
+        "description": "pprint",
+        "isExtraImport": true,
+        "detail": "pprint",
+        "documentation": {}
+    },
+    {
+        "label": "HttpError",
+        "importPath": "exceptions",
+        "description": "exceptions",
+        "isExtraImport": true,
+        "detail": "exceptions",
+        "documentation": {}
+    },
+    {
         "label": "MagicMock",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "patch",
         "importPath": "unittest.mock",
         "description": "unittest.mock",
         "isExtraImport": true,
@@ -603,6 +595,47 @@
         "documentation": {}
     },
     {
+        "label": "pytest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytest",
+        "description": "pytest",
+        "detail": "pytest",
+        "documentation": {}
+    },
+    {
+        "label": "Client",
+        "importPath": "client",
+        "description": "client",
+        "isExtraImport": true,
+        "detail": "client",
+        "documentation": {}
+    },
+    {
+        "label": "Tops",
+        "importPath": "enums.categories",
+        "description": "enums.categories",
+        "isExtraImport": true,
+        "detail": "enums.categories",
+        "documentation": {}
+    },
+    {
+        "label": "Bottoms",
+        "importPath": "enums.categories",
+        "description": "enums.categories",
+        "isExtraImport": true,
+        "detail": "enums.categories",
+        "documentation": {}
+    },
+    {
+        "label": "Tops",
+        "importPath": "enums.categories",
+        "description": "enums.categories",
+        "isExtraImport": true,
+        "detail": "enums.categories",
+        "documentation": {}
+    },
+    {
         "label": "ProductsListService",
         "importPath": "services.products_list_service",
         "description": "services.products_list_service",
@@ -616,31 +649,6 @@
         "description": "services.products_retrieve_service",
         "isExtraImport": true,
         "detail": "services.products_retrieve_service",
-        "documentation": {}
-    },
-    {
-        "label": "pprint",
-        "importPath": "pprint",
-        "description": "pprint",
-        "isExtraImport": true,
-        "detail": "pprint",
-        "documentation": {}
-    },
-    {
-        "label": "HttpError",
-        "importPath": "exceptions",
-        "description": "exceptions",
-        "isExtraImport": true,
-        "detail": "exceptions",
-        "documentation": {}
-    },
-    {
-        "label": "pytest",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "pytest",
-        "description": "pytest",
-        "detail": "pytest",
         "documentation": {}
     },
     {
@@ -664,17 +672,8 @@
         "kind": 6,
         "importPath": "client.client",
         "description": "client.client",
-        "peekOfCode": "class Client:\n    \"\"\"\n    Main Client class that is interface of whole system. It\n    provides all functionalities for looking for products and brands\n    \"\"\"\n    __products_list_service = ProductsListService()\n    __products_retrieve_service = ProductsRetrieveService()\n    __brands_list_service = BrandsListService()\n    def find_brands(self, query: str, verbose=False):\n        \"\"\"Finds brands by provided query keyword",
+        "peekOfCode": "class Client:\n    \"\"\"\n    Main Client class that is interface of whole system. It\n    provides all functionalities for looking for products and brands\n    \"\"\"\n    __products_list_service = ProductsListService()\n    __products_retrieve_service = ProductsRetrieveService()\n    __brands_list_service = BrandsListService()\n    def __init__(self, x_algolia_api_key: str, x_algolia_app_id: str):\n        X_ALGOLIA_KEYS.update(",
         "detail": "client.client",
-        "documentation": {}
-    },
-    {
-        "label": "TestClient",
-        "kind": 6,
-        "importPath": "client.test_client",
-        "description": "client.test_client",
-        "peekOfCode": "class TestClient:\n    def test_find_brands_returns_brands_matching_query(self):\n        client = Client()\n        brands = client.find_brands(query=\"elem\")\n        assert brands\n        matching = [\"e\" in brand[\"value\"].lower() for brand in brands]\n        assert all(matching)\n    def test_find_product_by_id_returns_product_with_id(self):\n        client = Client()\n        product = client.find_product_by_id(id=\"66849368\")",
-        "detail": "client.test_client",
         "documentation": {}
     },
     {
@@ -912,33 +911,6 @@
         "documentation": {}
     },
     {
-        "label": "TestBrandsListService",
-        "kind": 6,
-        "importPath": "services.test_brands_list_service",
-        "description": "services.test_brands_list_service",
-        "peekOfCode": "class TestBrandsListService:\n    def test_parse_response_returns_hits(self):\n        response = MagicMock(json=lambda: {\"facetHits\": [{\"facet\": 1}]})\n        service = BrandsListService()\n        data = service.parse_response(response)\n        assert data == [{\"facet\": 1}]\n    def test_send_request_calls_session_post(self):\n        service = BrandsListService()\n        service._session.post = MagicMock(  # pylint: disable=protected-access\n            return_value=None",
-        "detail": "services.test_brands_list_service",
-        "documentation": {}
-    },
-    {
-        "label": "TestProductsListService",
-        "kind": 6,
-        "importPath": "services.test_products_list_service",
-        "description": "services.test_products_list_service",
-        "peekOfCode": "class TestProductsListService:\n    def test_parse_response_returns_hits(self):\n        response = MagicMock(\n            json=lambda: {\n                \"results\": [{\"hits\": [{\"hit\": 1}, {\"hit\": 2}]}, {\"hits\": [{\"hit\": 3}]}]\n            }\n        )\n        service = ProductsListService()\n        data = service.parse_response(response)\n        assert data == [{\"hit\": 1}, {\"hit\": 2}, {\"hit\": 3}]",
-        "detail": "services.test_products_list_service",
-        "documentation": {}
-    },
-    {
-        "label": "TestProductsRetrieveService",
-        "kind": 6,
-        "importPath": "services.test_products_retrieve_service",
-        "description": "services.test_products_retrieve_service",
-        "peekOfCode": "class TestProductsRetrieveService:\n    def test_parse_response_returns_data(self):\n        response = MagicMock(json=lambda: {\"data\": {\"product\": {}}})\n        service = ProductsRetrieveService()\n        data = service.parse_response(response)\n        assert data == {\"product\": {}}\n    def test_send_request_calls_session_get(self):\n        service = ProductsRetrieveService()\n        service._session.get = MagicMock(  # pylint: disable=protected-access\n            return_value=None",
-        "detail": "services.test_products_retrieve_service",
-        "documentation": {}
-    },
-    {
         "label": "GrailedSession",
         "kind": 6,
         "importPath": "session.session",
@@ -948,12 +920,57 @@
         "documentation": {}
     },
     {
+        "label": "pytest_addoption",
+        "kind": 2,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "def pytest_addoption(parser):\n    parser.addoption(\"--x_algolia_api_key\", action=\"store\")\n    parser.addoption(\"--x_algolia_app_id\", action=\"store\")",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "TestBrandsListService",
+        "kind": 6,
+        "importPath": "tests.test_brands_list_service",
+        "description": "tests.test_brands_list_service",
+        "peekOfCode": "class TestBrandsListService:\n    def test_parse_response_returns_hits(self):\n        response = MagicMock(json=lambda: {\"facetHits\": [{\"facet\": 1}]})\n        service = BrandsListService()\n        data = service.parse_response(response)\n        assert data == [{\"facet\": 1}]\n    def test_send_request_calls_session_post(self):\n        service = BrandsListService()\n        with patch.object(\n            service._session,  # pylint: disable=protected-access",
+        "detail": "tests.test_brands_list_service",
+        "documentation": {}
+    },
+    {
+        "label": "TestClient",
+        "kind": 6,
+        "importPath": "tests.test_client",
+        "description": "tests.test_client",
+        "peekOfCode": "class TestClient:\n    @pytest.fixture(scope=\"session\")\n    def x_alg_api_key(self, pytestconfig):\n        return pytestconfig.getoption(\"x_algolia_api_key\")\n    @pytest.fixture(scope=\"session\")\n    def x_alg_app_id(self, pytestconfig):\n        return pytestconfig.getoption(\"x_algolia_app_id\")\n    def test_find_brands_returns_brands_matching_query(\n        self, x_alg_api_key: str, x_alg_app_id: str\n    ):",
+        "detail": "tests.test_client",
+        "documentation": {}
+    },
+    {
+        "label": "TestProductsListService",
+        "kind": 6,
+        "importPath": "tests.test_products_list_service",
+        "description": "tests.test_products_list_service",
+        "peekOfCode": "class TestProductsListService:\n    def test_parse_response_returns_hits(self):\n        response = MagicMock(\n            json=lambda: {\n                \"results\": [{\"hits\": [{\"hit\": 1}, {\"hit\": 2}]}, {\"hits\": [{\"hit\": 3}]}]\n            }\n        )\n        service = ProductsListService()\n        data = service.parse_response(response)\n        assert data == [{\"hit\": 1}, {\"hit\": 2}, {\"hit\": 3}]",
+        "detail": "tests.test_products_list_service",
+        "documentation": {}
+    },
+    {
+        "label": "TestProductsRetrieveService",
+        "kind": 6,
+        "importPath": "tests.test_products_retrieve_service",
+        "description": "tests.test_products_retrieve_service",
+        "peekOfCode": "class TestProductsRetrieveService:\n    def test_parse_response_returns_data(self):\n        response = MagicMock(json=lambda: {\"data\": {\"product\": {}}})\n        service = ProductsRetrieveService()\n        data = service.parse_response(response)\n        assert data == {\"product\": {}}\n    def test_send_request_calls_session_get(self):\n        service = ProductsRetrieveService()\n        service._session.get = MagicMock(  # pylint: disable=protected-access\n            return_value=None",
+        "detail": "tests.test_products_retrieve_service",
+        "documentation": {}
+    },
+    {
         "label": "TestSession",
         "kind": 6,
-        "importPath": "session.test_session",
-        "description": "session.test_session",
+        "importPath": "tests.test_session",
+        "description": "tests.test_session",
         "peekOfCode": "class TestSession:\n    @patch(\"session.session.Session.request\", return_value=MagicMock(status_code=200))\n    def test_request_calls_super_request(self, super_request: MagicMock):\n        session = GrailedSession()\n        session.request(\"POST\", \"https://url\", verbose=False)\n        super_request.assert_called_once()\n    @patch(\"session.session.Session.request\", return_value=MagicMock(status_code=200))\n    def test_request_adds_headers(self, super_request: MagicMock):\n        session = GrailedSession()\n        session.request(\"POST\", \"https://url\", verbose=False)",
-        "detail": "session.test_session",
+        "detail": "tests.test_session",
         "documentation": {}
     },
     {
@@ -961,7 +978,7 @@
         "kind": 5,
         "importPath": "settings",
         "description": "settings",
-        "peekOfCode": "SEARCH_URL = \"https://mnrwefss2q-1.algolianet.com/1/indexes/*/queries?x-algolia-agent=Algolia%20for%20JavaScript%20(4.14.3)%3B%20Browser%3B%20JS%20Helper%20(3.11.3)%3B%20react%20(18.2.0)%3B%20react-instantsearch%20(6.39.1)\"\nBRANDS_URL = \"https://mnrwefss2q-1.algolianet.com/1/indexes/Listing_production/facets/designers.name/query?x-algolia-agent=Algolia%20for%20JavaScript%20(4.14.3)%3B%20Browser%3B%20JS%20Helper%20(3.11.3)%3B%20react%20(18.2.0)%3B%20react-instantsearch%20(6.39.1)\"\nLISTINGS_API = \"https://www.grailed.com/api/listings\"\nX_ALGOLIA_API_KEY = \"\"\nX_ALGOLIA_APPLICATION_ID = \"\"",
+        "peekOfCode": "SEARCH_URL = \"https://mnrwefss2q-1.algolianet.com/1/indexes/*/queries?x-algolia-agent=Algolia%20for%20JavaScript%20(4.14.3)%3B%20Browser%3B%20JS%20Helper%20(3.11.3)%3B%20react%20(18.2.0)%3B%20react-instantsearch%20(6.39.1)\"\nBRANDS_URL = \"https://mnrwefss2q-1.algolianet.com/1/indexes/Listing_production/facets/designers.name/query?x-algolia-agent=Algolia%20for%20JavaScript%20(4.14.3)%3B%20Browser%3B%20JS%20Helper%20(3.11.3)%3B%20react%20(18.2.0)%3B%20react-instantsearch%20(6.39.1)\"\nLISTINGS_API = \"https://www.grailed.com/api/listings\"\nX_ALGOLIA_KEYS = {\n    \"API_KEY\": \"\",\n    \"APP_ID\": \"\",\n}",
         "detail": "settings",
         "documentation": {}
     },
@@ -970,7 +987,7 @@
         "kind": 5,
         "importPath": "settings",
         "description": "settings",
-        "peekOfCode": "BRANDS_URL = \"https://mnrwefss2q-1.algolianet.com/1/indexes/Listing_production/facets/designers.name/query?x-algolia-agent=Algolia%20for%20JavaScript%20(4.14.3)%3B%20Browser%3B%20JS%20Helper%20(3.11.3)%3B%20react%20(18.2.0)%3B%20react-instantsearch%20(6.39.1)\"\nLISTINGS_API = \"https://www.grailed.com/api/listings\"\nX_ALGOLIA_API_KEY = \"\"\nX_ALGOLIA_APPLICATION_ID = \"\"",
+        "peekOfCode": "BRANDS_URL = \"https://mnrwefss2q-1.algolianet.com/1/indexes/Listing_production/facets/designers.name/query?x-algolia-agent=Algolia%20for%20JavaScript%20(4.14.3)%3B%20Browser%3B%20JS%20Helper%20(3.11.3)%3B%20react%20(18.2.0)%3B%20react-instantsearch%20(6.39.1)\"\nLISTINGS_API = \"https://www.grailed.com/api/listings\"\nX_ALGOLIA_KEYS = {\n    \"API_KEY\": \"\",\n    \"APP_ID\": \"\",\n}",
         "detail": "settings",
         "documentation": {}
     },
@@ -979,25 +996,16 @@
         "kind": 5,
         "importPath": "settings",
         "description": "settings",
-        "peekOfCode": "LISTINGS_API = \"https://www.grailed.com/api/listings\"\nX_ALGOLIA_API_KEY = \"\"\nX_ALGOLIA_APPLICATION_ID = \"\"",
+        "peekOfCode": "LISTINGS_API = \"https://www.grailed.com/api/listings\"\nX_ALGOLIA_KEYS = {\n    \"API_KEY\": \"\",\n    \"APP_ID\": \"\",\n}",
         "detail": "settings",
         "documentation": {}
     },
     {
-        "label": "X_ALGOLIA_API_KEY",
+        "label": "X_ALGOLIA_KEYS",
         "kind": 5,
         "importPath": "settings",
         "description": "settings",
-        "peekOfCode": "X_ALGOLIA_API_KEY = \"\"\nX_ALGOLIA_APPLICATION_ID = \"\"",
-        "detail": "settings",
-        "documentation": {}
-    },
-    {
-        "label": "X_ALGOLIA_APPLICATION_ID",
-        "kind": 5,
-        "importPath": "settings",
-        "description": "settings",
-        "peekOfCode": "X_ALGOLIA_APPLICATION_ID = \"\"",
+        "peekOfCode": "X_ALGOLIA_KEYS = {\n    \"API_KEY\": \"\",\n    \"APP_ID\": \"\",\n}",
         "detail": "settings",
         "documentation": {}
     }
