@@ -1,4 +1,4 @@
-from unittest.mock import MagicMock
+from unittest.mock import MagicMock, patch
 from services.brands_list_service import BrandsListService
 from settings import BRANDS_URL
 
@@ -12,10 +12,12 @@ class TestBrandsListService:
 
     def test_send_request_calls_session_post(self):
         service = BrandsListService()
-        service._session.post = MagicMock(  # pylint: disable=protected-access
-            return_value=None
-        )
-        service.send_request(query="q", verbose=True)
-        service._session.post.assert_called_with(  # pylint: disable=protected-access
-            BRANDS_URL, data={"facetQuery": "q"}, verbose=True
-        )
+        with patch.object(
+            service._session,  # pylint: disable=protected-access
+            "post",
+            MagicMock(return_value=None),
+        ) as post:
+            service.send_request(query="q", verbose=True)
+            post.assert_called_with(  # pylint: disable=protected-access
+                BRANDS_URL, data={"facetQuery": "q"}, verbose=True
+            )
