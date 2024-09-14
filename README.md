@@ -21,6 +21,7 @@ Once you have installed the package you have to provide both `X_ALGOLIA_API_KEY`
 - in sidebar, click "Network"
 - find keywords "objects?x-algolia-agent" (if you can't find it, refresh the browser)
 - in headers of the request, you should find both keys
+
 Save this keys for authentication (not every method requires them)
 
 ## How to use
@@ -57,7 +58,7 @@ Then you are ready to use searching functions
         - `locations` (Iterable[Locations], optional): filter by locations. Defaults to ().
         - `max_values_per_facet` (int, optional): Defaults to 100.
         - `facets` (Iterable[Facets], optional): Defaults to all facets.
-        - `verbose` (bool, optional): show htp request. Defaults to False.
+        - `verbose` (bool, optional): show http request. Defaults to False.
     - Description:
         For parameters `department`, `categories`, `sizes`, `conditions`, `markets`, `locations`, `facets` use builtin enums that are available in `enums.categories` module. There are following categories: `Tops`, `Bottoms`, `Outerwear`, `Footwear`, `Tailoring`, `Accessories` available under `enums.categories` module.
 
@@ -84,7 +85,7 @@ Then you are ready to use searching functions
 - `find_product_by_id` - find one product with provided id. If product doesn't exist, an error will be thrown
     - Parameters:
         - `id` (str): product id
-        - `verbose` (bool, optional): show htp request. Defaults to False.
+        - `verbose` (bool, optional): show http request. Defaults to False.
     - Example:
         ```python
         product = client.find_product_by_id(id='123456789')
@@ -93,7 +94,7 @@ Then you are ready to use searching functions
 - `find_brands` - find brands that match to query search
     - Parameters:
         - `query` (str): keyword to search a brand
-        - `verbose` (bool, optional): show htp request. Defaults to False.
+        - `verbose` (bool, optional): show http request. Defaults to False.
     - Example:
         ```python
         brands = client.find_brands(query='levis')

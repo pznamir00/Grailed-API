@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "grailed_api"
-version = "0.1.2"
+version = "0.1.3"
 description = "API exposes most important Grailed API endpoints"
 authors = ["pznamir00 <pznamir00@gmail.com>"]
 readme = "README.md"
