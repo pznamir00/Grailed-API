@@ -1,6 +1,7 @@
 import warnings
 from typing import Any, Dict, Iterable, List
 import requests
+from aenum._enum import EnumType
 from grailed_api.enums import Markets, Conditions, Locations, Departments
 from grailed_api.facets import Facets
 from grailed_api.settings import SEARCH_URL
@@ -40,6 +41,27 @@ class ProductsListService(ApiService):
         )
 
     def validate_categories_and_sizes(self, categories: Iterable, sizes: Iterable):
+        self.__validate_categories_and_sizes_are_enum_props(categories, sizes)
+        self.__validate_categories_and_sizes_match(categories, sizes)
+
+    def __validate_categories_and_sizes_are_enum_props(self, categories: Iterable, sizes: Iterable):
+        """Checks if categories and sizes are fields of enums rather than just enums.
+        This validation is needed for prevent a user provide categories e.g just 'Tops'
+
+        Args:
+            categories (Iterable[Category]): categories list
+            sizes (Iterable[Size]): sizes list
+        """
+        for category in categories:
+            if type(category) is EnumType:
+                raise TypeError(f"All categories must be fields of category enums, not {type(category)}")
+
+        for size in sizes:
+            if type(size) is EnumType:
+                raise TypeError(f"All sizes must be fields of size enums, not {type(size)}")
+            
+
+    def __validate_categories_and_sizes_match(self, categories: Iterable, sizes: Iterable):
         """Checks if user provided sizes that match to categories and shows a warning.
         If some size's category is not found in provided categories,
         this size won't be affected.

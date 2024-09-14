@@ -467,6 +467,14 @@
         "documentation": {}
     },
     {
+        "label": "EnumType",
+        "importPath": "aenum._enum",
+        "description": "aenum._enum",
+        "isExtraImport": true,
+        "detail": "aenum._enum",
+        "documentation": {}
+    },
+    {
         "label": "pprint",
         "importPath": "pprint",
         "description": "pprint",
