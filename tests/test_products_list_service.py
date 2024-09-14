@@ -1,7 +1,7 @@
 from unittest.mock import MagicMock, patch
 from enums.categories import Bottoms, Tops
 from services.products_list_service import ProductsListService
-from settings import SEARCH_URL
+from grailed_api.settings import SEARCH_URL
 
 
 class TestProductsListService:

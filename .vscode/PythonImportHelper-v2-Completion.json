@@ -73,202 +73,178 @@
     },
     {
         "label": "Departments",
-        "importPath": "enums",
-        "description": "enums",
+        "importPath": "grailed_api.enums",
+        "description": "grailed_api.enums",
         "isExtraImport": true,
-        "detail": "enums",
+        "detail": "grailed_api.enums",
         "documentation": {}
     },
     {
         "label": "Conditions",
-        "importPath": "enums",
-        "description": "enums",
+        "importPath": "grailed_api.enums",
+        "description": "grailed_api.enums",
         "isExtraImport": true,
-        "detail": "enums",
+        "detail": "grailed_api.enums",
         "documentation": {}
     },
     {
         "label": "Locations",
-        "importPath": "enums",
-        "description": "enums",
+        "importPath": "grailed_api.enums",
+        "description": "grailed_api.enums",
         "isExtraImport": true,
-        "detail": "enums",
+        "detail": "grailed_api.enums",
         "documentation": {}
     },
     {
         "label": "Markets",
-        "importPath": "enums",
-        "description": "enums",
+        "importPath": "grailed_api.enums",
+        "description": "grailed_api.enums",
         "isExtraImport": true,
-        "detail": "enums",
+        "detail": "grailed_api.enums",
         "documentation": {}
     },
     {
         "label": "CategoryLabels",
-        "importPath": "enums",
-        "description": "enums",
+        "importPath": "grailed_api.enums",
+        "description": "grailed_api.enums",
         "isExtraImport": true,
-        "detail": "enums",
+        "detail": "grailed_api.enums",
         "documentation": {}
     },
     {
         "label": "Markets",
-        "importPath": "enums",
-        "description": "enums",
+        "importPath": "grailed_api.enums",
+        "description": "grailed_api.enums",
         "isExtraImport": true,
-        "detail": "enums",
+        "detail": "grailed_api.enums",
         "documentation": {}
     },
     {
         "label": "Conditions",
-        "importPath": "enums",
-        "description": "enums",
+        "importPath": "grailed_api.enums",
+        "description": "grailed_api.enums",
         "isExtraImport": true,
-        "detail": "enums",
+        "detail": "grailed_api.enums",
         "documentation": {}
     },
     {
         "label": "Locations",
-        "importPath": "enums",
-        "description": "enums",
+        "importPath": "grailed_api.enums",
+        "description": "grailed_api.enums",
         "isExtraImport": true,
-        "detail": "enums",
+        "detail": "grailed_api.enums",
         "documentation": {}
     },
     {
         "label": "Departments",
-        "importPath": "enums",
-        "description": "enums",
+        "importPath": "grailed_api.enums",
+        "description": "grailed_api.enums",
         "isExtraImport": true,
-        "detail": "enums",
-        "documentation": {}
-    },
-    {
-        "label": "Locations",
-        "importPath": "enums",
-        "description": "enums",
-        "isExtraImport": true,
-        "detail": "enums",
-        "documentation": {}
-    },
-    {
-        "label": "Conditions",
-        "importPath": "enums",
-        "description": "enums",
-        "isExtraImport": true,
-        "detail": "enums",
-        "documentation": {}
-    },
-    {
-        "label": "Markets",
-        "importPath": "enums",
-        "description": "enums",
-        "isExtraImport": true,
-        "detail": "enums",
+        "detail": "grailed_api.enums",
         "documentation": {}
     },
     {
         "label": "Facets",
-        "importPath": "facets",
-        "description": "facets",
+        "importPath": "grailed_api.facets",
+        "description": "grailed_api.facets",
         "isExtraImport": true,
-        "detail": "facets",
+        "detail": "grailed_api.facets",
         "documentation": {}
     },
     {
         "label": "Facets",
-        "importPath": "facets",
-        "description": "facets",
+        "importPath": "grailed_api.facets",
+        "description": "grailed_api.facets",
         "isExtraImport": true,
-        "detail": "facets",
+        "detail": "grailed_api.facets",
         "documentation": {}
     },
     {
         "label": "ProductsListService",
-        "importPath": "services",
-        "description": "services",
+        "importPath": "grailed_api.services",
+        "description": "grailed_api.services",
         "isExtraImport": true,
-        "detail": "services",
+        "detail": "grailed_api.services",
         "documentation": {}
     },
     {
         "label": "ProductsRetrieveService",
-        "importPath": "services",
-        "description": "services",
+        "importPath": "grailed_api.services",
+        "description": "grailed_api.services",
         "isExtraImport": true,
-        "detail": "services",
+        "detail": "grailed_api.services",
         "documentation": {}
     },
     {
         "label": "BrandsListService",
-        "importPath": "services",
-        "description": "services",
+        "importPath": "grailed_api.services",
+        "description": "grailed_api.services",
         "isExtraImport": true,
-        "detail": "services",
+        "detail": "grailed_api.services",
         "documentation": {}
     },
     {
         "label": "X_ALGOLIA_KEYS",
-        "importPath": "settings",
-        "description": "settings",
+        "importPath": "grailed_api.settings",
+        "description": "grailed_api.settings",
         "isExtraImport": true,
-        "detail": "settings",
+        "detail": "grailed_api.settings",
         "documentation": {}
     },
     {
         "label": "BRANDS_URL",
-        "importPath": "settings",
-        "description": "settings",
+        "importPath": "grailed_api.settings",
+        "description": "grailed_api.settings",
         "isExtraImport": true,
-        "detail": "settings",
+        "detail": "grailed_api.settings",
         "documentation": {}
     },
     {
         "label": "SEARCH_URL",
-        "importPath": "settings",
-        "description": "settings",
+        "importPath": "grailed_api.settings",
+        "description": "grailed_api.settings",
         "isExtraImport": true,
-        "detail": "settings",
+        "detail": "grailed_api.settings",
         "documentation": {}
     },
     {
         "label": "LISTINGS_API",
-        "importPath": "settings",
-        "description": "settings",
+        "importPath": "grailed_api.settings",
+        "description": "grailed_api.settings",
         "isExtraImport": true,
-        "detail": "settings",
+        "detail": "grailed_api.settings",
         "documentation": {}
     },
     {
         "label": "X_ALGOLIA_KEYS",
-        "importPath": "settings",
-        "description": "settings",
+        "importPath": "grailed_api.settings",
+        "description": "grailed_api.settings",
         "isExtraImport": true,
-        "detail": "settings",
+        "detail": "grailed_api.settings",
         "documentation": {}
     },
     {
         "label": "BRANDS_URL",
-        "importPath": "settings",
-        "description": "settings",
+        "importPath": "grailed_api.settings",
+        "description": "grailed_api.settings",
         "isExtraImport": true,
-        "detail": "settings",
+        "detail": "grailed_api.settings",
         "documentation": {}
     },
     {
         "label": "SEARCH_URL",
-        "importPath": "settings",
-        "description": "settings",
+        "importPath": "grailed_api.settings",
+        "description": "grailed_api.settings",
         "isExtraImport": true,
-        "detail": "settings",
+        "detail": "grailed_api.settings",
         "documentation": {}
     },
     {
         "label": "LISTINGS_API",
-        "importPath": "settings",
-        "description": "settings",
+        "importPath": "grailed_api.settings",
+        "description": "grailed_api.settings",
         "isExtraImport": true,
-        "detail": "settings",
+        "detail": "grailed_api.settings",
         "documentation": {}
     },
     {
@@ -317,54 +293,6 @@
         "description": "aenum",
         "isExtraImport": true,
         "detail": "aenum",
-        "documentation": {}
-    },
-    {
-        "label": "AccessorySizes",
-        "importPath": "enums.sizes",
-        "description": "enums.sizes",
-        "isExtraImport": true,
-        "detail": "enums.sizes",
-        "documentation": {}
-    },
-    {
-        "label": "BottomSizes",
-        "importPath": "enums.sizes",
-        "description": "enums.sizes",
-        "isExtraImport": true,
-        "detail": "enums.sizes",
-        "documentation": {}
-    },
-    {
-        "label": "FootwearSizes",
-        "importPath": "enums.sizes",
-        "description": "enums.sizes",
-        "isExtraImport": true,
-        "detail": "enums.sizes",
-        "documentation": {}
-    },
-    {
-        "label": "OuterwearSizes",
-        "importPath": "enums.sizes",
-        "description": "enums.sizes",
-        "isExtraImport": true,
-        "detail": "enums.sizes",
-        "documentation": {}
-    },
-    {
-        "label": "TailoringSizes",
-        "importPath": "enums.sizes",
-        "description": "enums.sizes",
-        "isExtraImport": true,
-        "detail": "enums.sizes",
-        "documentation": {}
-    },
-    {
-        "label": "TopSizes",
-        "importPath": "enums.sizes",
-        "description": "enums.sizes",
-        "isExtraImport": true,
-        "detail": "enums.sizes",
         "documentation": {}
     },
     {
@@ -499,10 +427,10 @@
     },
     {
         "label": "GrailedSession",
-        "importPath": "session",
-        "description": "session",
+        "importPath": "grailed_api.session",
+        "description": "grailed_api.session",
         "isExtraImport": true,
-        "detail": "session",
+        "detail": "grailed_api.session",
         "documentation": {}
     },
     {
@@ -524,10 +452,10 @@
     },
     {
         "label": "HttpError",
-        "importPath": "exceptions",
-        "description": "exceptions",
+        "importPath": "grailed_api.exceptions",
+        "description": "grailed_api.exceptions",
         "isExtraImport": true,
-        "detail": "exceptions",
+        "detail": "grailed_api.exceptions",
         "documentation": {}
     },
     {
@@ -636,6 +564,30 @@
         "documentation": {}
     },
     {
+        "label": "Locations",
+        "importPath": "enums",
+        "description": "enums",
+        "isExtraImport": true,
+        "detail": "enums",
+        "documentation": {}
+    },
+    {
+        "label": "Conditions",
+        "importPath": "enums",
+        "description": "enums",
+        "isExtraImport": true,
+        "detail": "enums",
+        "documentation": {}
+    },
+    {
+        "label": "Markets",
+        "importPath": "enums",
+        "description": "enums",
+        "isExtraImport": true,
+        "detail": "enums",
+        "documentation": {}
+    },
+    {
         "label": "ProductsListService",
         "importPath": "services.products_list_service",
         "description": "services.products_list_service",
@@ -670,253 +622,289 @@
     {
         "label": "Client",
         "kind": 6,
-        "importPath": "client.client",
-        "description": "client.client",
+        "importPath": "grailed_api.client.client",
+        "description": "grailed_api.client.client",
         "peekOfCode": "class Client:\n    \"\"\"\n    Main Client class that is interface of whole system. It\n    provides all functionalities for looking for products and brands\n    \"\"\"\n    __products_list_service = ProductsListService()\n    __products_retrieve_service = ProductsRetrieveService()\n    __brands_list_service = BrandsListService()\n    def __init__(self, x_algolia_api_key: str, x_algolia_app_id: str):\n        X_ALGOLIA_KEYS.update(",
-        "detail": "client.client",
+        "detail": "grailed_api.client.client",
         "documentation": {}
     },
     {
         "label": "BaseCategory",
         "kind": 6,
-        "importPath": "enums.base_category",
-        "description": "enums.base_category",
+        "importPath": "grailed_api.enums.base_category",
+        "description": "grailed_api.enums.base_category",
         "peekOfCode": "class BaseCategory(BaseEntity):\n    sizes = nonmember(None)",
-        "detail": "enums.base_category",
+        "detail": "grailed_api.enums.base_category",
         "documentation": {}
     },
     {
         "label": "BaseEntity",
         "kind": 6,
-        "importPath": "enums.base_entity",
-        "description": "enums.base_entity",
+        "importPath": "grailed_api.enums.base_entity",
+        "description": "grailed_api.enums.base_entity",
         "peekOfCode": "class BaseEntity:\n    category_label = nonmember(None)\n    def __new__(cls, value):\n        obj = object.__new__(cls)\n        obj._value_ = f\"{cls.category_label.value}.{value}\"  # type: ignore\n        return obj",
-        "detail": "enums.base_entity",
+        "detail": "grailed_api.enums.base_entity",
         "documentation": {}
     },
     {
         "label": "BaseSize",
         "kind": 6,
-        "importPath": "enums.base_size",
-        "description": "enums.base_size",
+        "importPath": "grailed_api.enums.base_size",
+        "description": "grailed_api.enums.base_size",
         "peekOfCode": "class BaseSize(BaseEntity):\n    pass",
-        "detail": "enums.base_size",
+        "detail": "grailed_api.enums.base_size",
         "documentation": {}
     },
     {
         "label": "Tops",
         "kind": 6,
-        "importPath": "enums.categories",
-        "description": "enums.categories",
+        "importPath": "grailed_api.enums.categories",
+        "description": "grailed_api.enums.categories",
         "peekOfCode": "class Tops(BaseCategory, Enum):  # type: ignore\n    BUTTON_UPS = \"button_ups\"\n    JERSEYS = \"jerseys\"\n    LONG_SLEEVE_SHIRTS = \"long_sleeve_shirts\"\n    POLOS = \"polos\"\n    SHORT_SLEEVE_SHIRTS = \"short_sleeve_shirts\"\n    SLEEVELESS = \"sleeveless\"\n    SWEATERS_KNITWEAR = \"sweaters_knitwear\"\n    SWEATSHIRTS = \"sweatshirts_hoodies\"\n    category_label = nonmember(CategoryLabels.TOPS)",
-        "detail": "enums.categories",
+        "detail": "grailed_api.enums.categories",
         "documentation": {}
     },
     {
         "label": "Bottoms",
         "kind": 6,
-        "importPath": "enums.categories",
-        "description": "enums.categories",
+        "importPath": "grailed_api.enums.categories",
+        "description": "grailed_api.enums.categories",
         "peekOfCode": "class Bottoms(BaseCategory, Enum):  # type: ignore\n    CASUAL_PANTS = \"casual_pants\"\n    CROPPED_PANTS = \"cropped_pants\"\n    DENIM = \"denim\"\n    JUMPSUITS = \"jumpsuits\"\n    LEGGINGS = \"leggings\"\n    SHORTS = \"shorts\"\n    SWEATPANTS_JOGGERS = \"sweatpants_joggers\"\n    SWIMWEAR = \"swimwear\"\n    category_label = nonmember(CategoryLabels.BOTTOMS)",
-        "detail": "enums.categories",
+        "detail": "grailed_api.enums.categories",
         "documentation": {}
     },
     {
         "label": "Outerwear",
         "kind": 6,
-        "importPath": "enums.categories",
-        "description": "enums.categories",
+        "importPath": "grailed_api.enums.categories",
+        "description": "grailed_api.enums.categories",
         "peekOfCode": "class Outerwear(BaseCategory, Enum):  # type: ignore\n    BOMBERS = \"bombers\"\n    CLOAKS_CAPES = \"cloaks_capes\"\n    DENIM_JACKETS = \"denim_jackets\"\n    HEAVY_COATS = \"heavy_coats\"\n    LEATHER_JACKETS = \"leather_jackets\"\n    LIGHT_JACKETS = \"light_jackets\"\n    PARKAS = \"parkas\"\n    RAINCOATS = \"raincoats\"\n    VESTS = \"vests\"",
-        "detail": "enums.categories",
+        "detail": "grailed_api.enums.categories",
         "documentation": {}
     },
     {
         "label": "Footwear",
         "kind": 6,
-        "importPath": "enums.categories",
-        "description": "enums.categories",
+        "importPath": "grailed_api.enums.categories",
+        "description": "grailed_api.enums.categories",
         "peekOfCode": "class Footwear(BaseCategory, Enum):  # type: ignore\n    BOOTS = \"boots\"\n    FORMAL_SHOES = \"formal_shoes\"\n    HITOP_SNEAKERS = \"hitop_sneakers\"\n    LEATHER = \"leather\"\n    LOWTOP_SNEAKERS = \"lowtop_sneakers\"\n    SANDALS = \"sandals\"\n    SLIP_ONS = \"slip_ons\"\n    category_label = nonmember(CategoryLabels.FOOTWEAR)\n    sizes = nonmember(FootwearSizes)",
-        "detail": "enums.categories",
+        "detail": "grailed_api.enums.categories",
         "documentation": {}
     },
     {
         "label": "Tailoring",
         "kind": 6,
-        "importPath": "enums.categories",
-        "description": "enums.categories",
+        "importPath": "grailed_api.enums.categories",
+        "description": "grailed_api.enums.categories",
         "peekOfCode": "class Tailoring(BaseCategory, Enum):  # type: ignore\n    BLAZERS = \"blazers\"\n    FORMAL_SHIRTING = \"formal_shirting\"\n    FORMAL_TROUSERS = \"formal_trousers\"\n    SUITS = \"suits\"\n    TUXEDOS = \"tuxedos\"\n    VESTS = \"vests\"\n    category_label = nonmember(CategoryLabels.TAILORING)\n    sizes = nonmember(TailoringSizes)\nclass Accessories(BaseCategory, Enum):  # type: ignore",
-        "detail": "enums.categories",
+        "detail": "grailed_api.enums.categories",
         "documentation": {}
     },
     {
         "label": "Accessories",
         "kind": 6,
-        "importPath": "enums.categories",
-        "description": "enums.categories",
+        "importPath": "grailed_api.enums.categories",
+        "description": "grailed_api.enums.categories",
         "peekOfCode": "class Accessories(BaseCategory, Enum):  # type: ignore\n    BAGS_LUGGAGE = \"bags_luggage\"\n    BELTS = \"belts\"\n    GLASSES = \"glasses\"\n    GLOVES_SCARVES = \"gloves_scarves\"\n    HATS = \"hats\"\n    JEWELRY_WATCHES = \"jewelry_watches\"\n    MISC = \"misc\"\n    PERIODICALS = \"periodicals\"\n    SOCKS_UNDERWEAR = \"socks_underwear\"",
-        "detail": "enums.categories",
+        "detail": "grailed_api.enums.categories",
         "documentation": {}
     },
     {
         "label": "Conditions",
         "kind": 6,
-        "importPath": "enums.conditions",
-        "description": "enums.conditions",
+        "importPath": "grailed_api.enums.conditions",
+        "description": "grailed_api.enums.conditions",
         "peekOfCode": "class Conditions(Enum):\n    IS_NEW = \"is_new\"\n    IS_GENTLY_USED = \"is_gently_used\"\n    IS_USED = \"is_used\"\n    IS_WORN = \"is_worn\"\n    IS_NOT_SPECIFIED = \"is_not_specified\"",
-        "detail": "enums.conditions",
+        "detail": "grailed_api.enums.conditions",
         "documentation": {}
     },
     {
         "label": "Departments",
         "kind": 6,
-        "importPath": "enums.departments",
-        "description": "enums.departments",
+        "importPath": "grailed_api.enums.departments",
+        "description": "grailed_api.enums.departments",
         "peekOfCode": "class Departments(Enum):\n    MENSWEAR = \"menswear\"\n    WOMENSWEAR = \"womenswear\"",
-        "detail": "enums.departments",
+        "detail": "grailed_api.enums.departments",
         "documentation": {}
     },
     {
         "label": "CategoryLabels",
         "kind": 6,
-        "importPath": "enums.labels",
-        "description": "enums.labels",
+        "importPath": "grailed_api.enums.labels",
+        "description": "grailed_api.enums.labels",
         "peekOfCode": "class CategoryLabels(Enum):\n    TOPS = \"tops\"\n    BOTTOMS = \"bottoms\"\n    OUTERWEAR = \"outerwear\"\n    FOOTWEAR = \"footwear\"\n    TAILORING = \"tailoring\"\n    ACCESSORIES = \"accessories\"",
-        "detail": "enums.labels",
+        "detail": "grailed_api.enums.labels",
         "documentation": {}
     },
     {
         "label": "Locations",
         "kind": 6,
-        "importPath": "enums.locations",
-        "description": "enums.locations",
+        "importPath": "grailed_api.enums.locations",
+        "description": "grailed_api.enums.locations",
         "peekOfCode": "class Locations(Enum):\n    AUSTRALIA_NZ = \"Australia/NZ\"\n    UK = \"United Kingdom\"\n    US = \"United States\"\n    ASIA = \"Asia\"\n    EUROPE = \"Europe\"\n    CANADA = \"Canada\"\n    OTHER = \"Other\"",
-        "detail": "enums.locations",
+        "detail": "grailed_api.enums.locations",
         "documentation": {}
     },
     {
         "label": "Markets",
         "kind": 6,
-        "importPath": "enums.markets",
-        "description": "enums.markets",
+        "importPath": "grailed_api.enums.markets",
+        "description": "grailed_api.enums.markets",
         "peekOfCode": "class Markets(Enum):\n    BASIC = \"basic\"\n    GRAILED = \"grailed\"\n    HYPE = \"hype\"\n    SARTORIAL = \"sartorial\"",
-        "detail": "enums.markets",
+        "detail": "grailed_api.enums.markets",
         "documentation": {}
     },
     {
         "label": "TopSizes",
         "kind": 6,
-        "importPath": "enums.sizes",
-        "description": "enums.sizes",
+        "importPath": "grailed_api.enums.sizes",
+        "description": "grailed_api.enums.sizes",
         "peekOfCode": "class TopSizes(BaseSize, Enum):  # type: ignore\n    XXS = \"xxs\"\n    XS = \"xs\"\n    S = \"s\"\n    M = \"m\"\n    L = \"l\"\n    XL = \"xl\"\n    XXL = \"xxl\"\n    category_label = nonmember(CategoryLabels.TOPS)\nclass OuterwearSizes(BaseSize, Enum):  # type: ignore",
-        "detail": "enums.sizes",
+        "detail": "grailed_api.enums.sizes",
         "documentation": {}
     },
     {
         "label": "OuterwearSizes",
         "kind": 6,
-        "importPath": "enums.sizes",
-        "description": "enums.sizes",
+        "importPath": "grailed_api.enums.sizes",
+        "description": "grailed_api.enums.sizes",
         "peekOfCode": "class OuterwearSizes(BaseSize, Enum):  # type: ignore\n    XXS = \"xxs\"\n    XS = \"xs\"\n    S = \"s\"\n    M = \"m\"\n    L = \"l\"\n    XL = \"xl\"\n    XXL = \"xxl\"\n    category_label = nonmember(CategoryLabels.OUTERWEAR)\nclass BottomSizes(BaseSize, Enum):  # type: ignore",
-        "detail": "enums.sizes",
+        "detail": "grailed_api.enums.sizes",
         "documentation": {}
     },
     {
         "label": "BottomSizes",
         "kind": 6,
-        "importPath": "enums.sizes",
-        "description": "enums.sizes",
+        "importPath": "grailed_api.enums.sizes",
+        "description": "grailed_api.enums.sizes",
         "peekOfCode": "class BottomSizes(BaseSize, Enum):  # type: ignore\n    _26 = \"26\"\n    _27 = \"27\"\n    _28 = \"28\"\n    _29 = \"29\"\n    _30 = \"30\"\n    _31 = \"31\"\n    _32 = \"32\"\n    _33 = \"33\"\n    _34 = \"34\"",
-        "detail": "enums.sizes",
+        "detail": "grailed_api.enums.sizes",
         "documentation": {}
     },
     {
         "label": "FootwearSizes",
         "kind": 6,
-        "importPath": "enums.sizes",
-        "description": "enums.sizes",
+        "importPath": "grailed_api.enums.sizes",
+        "description": "grailed_api.enums.sizes",
         "peekOfCode": "class FootwearSizes(BaseSize, Enum):  # type: ignore\n    _5 = \"5\"\n    _5_5 = \"5.5\"\n    _6 = \"6\"\n    _6_5 = \"6.5\"\n    _7 = \"7\"\n    _7_5 = \"7.5\"\n    _8 = \"8\"\n    _8_5 = \"8.5\"\n    _9 = \"9\"",
-        "detail": "enums.sizes",
+        "detail": "grailed_api.enums.sizes",
         "documentation": {}
     },
     {
         "label": "TailoringSizes",
         "kind": 6,
-        "importPath": "enums.sizes",
-        "description": "enums.sizes",
+        "importPath": "grailed_api.enums.sizes",
+        "description": "grailed_api.enums.sizes",
         "peekOfCode": "class TailoringSizes(BaseSize, Enum):  # type: ignore\n    _34S = \"34s\"\n    _34R = \"34r\"\n    _36S = \"36s\"\n    _36R = \"36r\"\n    _38S = \"38s\"\n    _38R = \"38r\"\n    _38L = \"38l\"\n    _40S = \"40s\"\n    _40R = \"40r\"",
-        "detail": "enums.sizes",
+        "detail": "grailed_api.enums.sizes",
         "documentation": {}
     },
     {
         "label": "AccessorySizes",
         "kind": 6,
-        "importPath": "enums.sizes",
-        "description": "enums.sizes",
+        "importPath": "grailed_api.enums.sizes",
+        "description": "grailed_api.enums.sizes",
         "peekOfCode": "class AccessorySizes(BaseSize, Enum):  # type: ignore\n    OS = \"os\"\n    _26 = \"26\"\n    _28 = \"28\"\n    _30 = \"30\"\n    _32 = \"32\"\n    _34 = \"34\"\n    _36 = \"36\"\n    _38 = \"38\"\n    _40 = \"40\"",
-        "detail": "enums.sizes",
+        "detail": "grailed_api.enums.sizes",
         "documentation": {}
     },
     {
         "label": "HttpError",
         "kind": 6,
-        "importPath": "exceptions.http_error",
-        "description": "exceptions.http_error",
+        "importPath": "grailed_api.exceptions.http_error",
+        "description": "grailed_api.exceptions.http_error",
         "peekOfCode": "class HttpError(Exception):\n    def __init__(self, response: Response):\n        code = response.status_code\n        try:\n            # format content string as json object if possible\n            content = json.dumps(response.json(), indent=4)\n        except JSONDecodeError:\n            content = response.content\n        super().__init__(f\"Http returned an error. Status {code}; Content: {content}\")",
-        "detail": "exceptions.http_error",
+        "detail": "grailed_api.exceptions.http_error",
         "documentation": {}
     },
     {
         "label": "Facets",
         "kind": 6,
-        "importPath": "facets.facets",
-        "description": "facets.facets",
+        "importPath": "grailed_api.facets.facets",
+        "description": "grailed_api.facets.facets",
         "peekOfCode": "class Facets(Enum):\n    CATEGORY_PATH = \"category_path\"\n    DEPARTMENT = \"department\"\n    CATEGORY_SIZE = \"category_size\"\n    DESIGNERS_NAME = \"designers.name\"\n    PRICE_I = \"price_i\"\n    CONDITION = \"condition\"\n    LOCATION = \"location\"\n    BADGES = \"badges\"\n    STRATA = \"strata\"",
-        "detail": "facets.facets",
+        "detail": "grailed_api.facets.facets",
         "documentation": {}
     },
     {
         "label": "ApiService",
         "kind": 6,
-        "importPath": "services.api_service",
-        "description": "services.api_service",
+        "importPath": "grailed_api.services.api_service",
+        "description": "grailed_api.services.api_service",
         "peekOfCode": "class ApiService(ABC):\n    _session = GrailedSession()\n    \"\"\"\n    Base Service class that defines http utils\n    \"\"\"\n    @abstractmethod\n    def send_request(self, *args, verbose: bool, **kwargs) -> Response:\n        \"\"\"Sends http requests and returns Response object\n        Returns:\n            Response: request result",
-        "detail": "services.api_service",
+        "detail": "grailed_api.services.api_service",
         "documentation": {}
     },
     {
         "label": "BrandsListService",
         "kind": 6,
-        "importPath": "services.brands_list_service",
-        "description": "services.brands_list_service",
+        "importPath": "grailed_api.services.brands_list_service",
+        "description": "grailed_api.services.brands_list_service",
         "peekOfCode": "class BrandsListService(ApiService):\n    \"\"\"\n    Brands service that provides brands list http lookup utils\n    \"\"\"\n    def parse_response(self, response: Response) -> List:\n        return super().parse_response(response)[\"facetHits\"]\n    def send_request(  # pylint: disable=arguments-differ\n        self, query: str, verbose: bool\n    ) -> Response:\n        return self._session.post(",
-        "detail": "services.brands_list_service",
+        "detail": "grailed_api.services.brands_list_service",
         "documentation": {}
     },
     {
         "label": "ProductsListService",
         "kind": 6,
-        "importPath": "services.products_list_service",
-        "description": "services.products_list_service",
+        "importPath": "grailed_api.services.products_list_service",
+        "description": "grailed_api.services.products_list_service",
         "peekOfCode": "class ProductsListService(ApiService):\n    \"\"\"\n    List service that provides products list http lookup utils\n    \"\"\"\n    def send_request(\n        self, data: Any, verbose: bool\n    ):  # pylint: disable=arguments-differ\n        return self._session.post(SEARCH_URL, data=data, verbose=verbose)\n    def parse_response(self, response: requests.Response):\n        content = super().parse_response(response)",
-        "detail": "services.products_list_service",
+        "detail": "grailed_api.services.products_list_service",
         "documentation": {}
     },
     {
         "label": "ProductsRetrieveService",
         "kind": 6,
-        "importPath": "services.products_retrieve_service",
-        "description": "services.products_retrieve_service",
+        "importPath": "grailed_api.services.products_retrieve_service",
+        "description": "grailed_api.services.products_retrieve_service",
         "peekOfCode": "class ProductsRetrieveService(ApiService):\n    \"\"\"\n    Retrieve service that provides single product lookup utils\n    \"\"\"\n    def send_request(self, key: str, verbose: bool):  # pylint: disable=arguments-differ\n        return self._session.get(f\"{LISTINGS_API}/{key}\", verbose=verbose)\n    def parse_response(self, response: requests.Response):\n        return super().parse_response(response)[\"data\"]",
-        "detail": "services.products_retrieve_service",
+        "detail": "grailed_api.services.products_retrieve_service",
         "documentation": {}
     },
     {
         "label": "GrailedSession",
         "kind": 6,
-        "importPath": "session.session",
-        "description": "session.session",
+        "importPath": "grailed_api.session.session",
+        "description": "grailed_api.session.session",
         "peekOfCode": "class GrailedSession(Session):\n    def get(self, *args, verbose=False, **kwargs):\n        kwargs[\"verbose\"] = verbose\n        return super().get(*args, **kwargs)\n    def post(self, *args, verbose=False, **kwargs):\n        kwargs[\"verbose\"] = verbose\n        return super().post(*args, **kwargs)\n    def request(self, method, url, *args, **kwargs):\n        headers, data = kwargs.get(\"headers\", {}), kwargs.get(\"data\")\n        kwargs.update(",
-        "detail": "session.session",
+        "detail": "grailed_api.session.session",
+        "documentation": {}
+    },
+    {
+        "label": "SEARCH_URL",
+        "kind": 5,
+        "importPath": "grailed_api.settings",
+        "description": "grailed_api.settings",
+        "peekOfCode": "SEARCH_URL = \"https://mnrwefss2q-1.algolianet.com/1/indexes/*/queries?x-algolia-agent=Algolia%20for%20JavaScript%20(4.14.3)%3B%20Browser%3B%20JS%20Helper%20(3.11.3)%3B%20react%20(18.2.0)%3B%20react-instantsearch%20(6.39.1)\"\nBRANDS_URL = \"https://mnrwefss2q-1.algolianet.com/1/indexes/Listing_production/facets/designers.name/query?x-algolia-agent=Algolia%20for%20JavaScript%20(4.14.3)%3B%20Browser%3B%20JS%20Helper%20(3.11.3)%3B%20react%20(18.2.0)%3B%20react-instantsearch%20(6.39.1)\"\nLISTINGS_API = \"https://www.grailed.com/api/listings\"\nX_ALGOLIA_KEYS = {\n    \"API_KEY\": \"\",\n    \"APP_ID\": \"\",\n}",
+        "detail": "grailed_api.settings",
+        "documentation": {}
+    },
+    {
+        "label": "BRANDS_URL",
+        "kind": 5,
+        "importPath": "grailed_api.settings",
+        "description": "grailed_api.settings",
+        "peekOfCode": "BRANDS_URL = \"https://mnrwefss2q-1.algolianet.com/1/indexes/Listing_production/facets/designers.name/query?x-algolia-agent=Algolia%20for%20JavaScript%20(4.14.3)%3B%20Browser%3B%20JS%20Helper%20(3.11.3)%3B%20react%20(18.2.0)%3B%20react-instantsearch%20(6.39.1)\"\nLISTINGS_API = \"https://www.grailed.com/api/listings\"\nX_ALGOLIA_KEYS = {\n    \"API_KEY\": \"\",\n    \"APP_ID\": \"\",\n}",
+        "detail": "grailed_api.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LISTINGS_API",
+        "kind": 5,
+        "importPath": "grailed_api.settings",
+        "description": "grailed_api.settings",
+        "peekOfCode": "LISTINGS_API = \"https://www.grailed.com/api/listings\"\nX_ALGOLIA_KEYS = {\n    \"API_KEY\": \"\",\n    \"APP_ID\": \"\",\n}",
+        "detail": "grailed_api.settings",
+        "documentation": {}
+    },
+    {
+        "label": "X_ALGOLIA_KEYS",
+        "kind": 5,
+        "importPath": "grailed_api.settings",
+        "description": "grailed_api.settings",
+        "peekOfCode": "X_ALGOLIA_KEYS = {\n    \"API_KEY\": \"\",\n    \"APP_ID\": \"\",\n}",
+        "detail": "grailed_api.settings",
         "documentation": {}
     },
     {
@@ -971,42 +959,6 @@
         "description": "tests.test_session",
         "peekOfCode": "class TestSession:\n    @patch(\"session.session.Session.request\", return_value=MagicMock(status_code=200))\n    def test_request_calls_super_request(self, super_request: MagicMock):\n        session = GrailedSession()\n        session.request(\"POST\", \"https://url\", verbose=False)\n        super_request.assert_called_once()\n    @patch(\"session.session.Session.request\", return_value=MagicMock(status_code=200))\n    def test_request_adds_headers(self, super_request: MagicMock):\n        session = GrailedSession()\n        session.request(\"POST\", \"https://url\", verbose=False)",
         "detail": "tests.test_session",
-        "documentation": {}
-    },
-    {
-        "label": "SEARCH_URL",
-        "kind": 5,
-        "importPath": "settings",
-        "description": "settings",
-        "peekOfCode": "SEARCH_URL = \"https://mnrwefss2q-1.algolianet.com/1/indexes/*/queries?x-algolia-agent=Algolia%20for%20JavaScript%20(4.14.3)%3B%20Browser%3B%20JS%20Helper%20(3.11.3)%3B%20react%20(18.2.0)%3B%20react-instantsearch%20(6.39.1)\"\nBRANDS_URL = \"https://mnrwefss2q-1.algolianet.com/1/indexes/Listing_production/facets/designers.name/query?x-algolia-agent=Algolia%20for%20JavaScript%20(4.14.3)%3B%20Browser%3B%20JS%20Helper%20(3.11.3)%3B%20react%20(18.2.0)%3B%20react-instantsearch%20(6.39.1)\"\nLISTINGS_API = \"https://www.grailed.com/api/listings\"\nX_ALGOLIA_KEYS = {\n    \"API_KEY\": \"\",\n    \"APP_ID\": \"\",\n}",
-        "detail": "settings",
-        "documentation": {}
-    },
-    {
-        "label": "BRANDS_URL",
-        "kind": 5,
-        "importPath": "settings",
-        "description": "settings",
-        "peekOfCode": "BRANDS_URL = \"https://mnrwefss2q-1.algolianet.com/1/indexes/Listing_production/facets/designers.name/query?x-algolia-agent=Algolia%20for%20JavaScript%20(4.14.3)%3B%20Browser%3B%20JS%20Helper%20(3.11.3)%3B%20react%20(18.2.0)%3B%20react-instantsearch%20(6.39.1)\"\nLISTINGS_API = \"https://www.grailed.com/api/listings\"\nX_ALGOLIA_KEYS = {\n    \"API_KEY\": \"\",\n    \"APP_ID\": \"\",\n}",
-        "detail": "settings",
-        "documentation": {}
-    },
-    {
-        "label": "LISTINGS_API",
-        "kind": 5,
-        "importPath": "settings",
-        "description": "settings",
-        "peekOfCode": "LISTINGS_API = \"https://www.grailed.com/api/listings\"\nX_ALGOLIA_KEYS = {\n    \"API_KEY\": \"\",\n    \"APP_ID\": \"\",\n}",
-        "detail": "settings",
-        "documentation": {}
-    },
-    {
-        "label": "X_ALGOLIA_KEYS",
-        "kind": 5,
-        "importPath": "settings",
-        "description": "settings",
-        "peekOfCode": "X_ALGOLIA_KEYS = {\n    \"API_KEY\": \"\",\n    \"APP_ID\": \"\",\n}",
-        "detail": "settings",
         "documentation": {}
     }
 ]

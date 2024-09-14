@@ -1,8 +1,8 @@
 from typing import Iterable
-from enums import Departments, Conditions, Locations, Markets
-from facets import Facets
-from services import ProductsListService, ProductsRetrieveService, BrandsListService
-from settings import X_ALGOLIA_KEYS
+from grailed_api.enums import Departments, Conditions, Locations, Markets
+from grailed_api.facets import Facets
+from grailed_api.services import ProductsListService, ProductsRetrieveService, BrandsListService
+from grailed_api.settings import X_ALGOLIA_KEYS
 
 
 class Client:

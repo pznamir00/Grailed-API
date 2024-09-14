@@ -2,8 +2,8 @@ import json
 from pprint import pprint
 from typing import Dict, Optional
 from requests import Response, Session
-from exceptions import HttpError
-from settings import X_ALGOLIA_KEYS
+from grailed_api.exceptions import HttpError
+from grailed_api.settings import X_ALGOLIA_KEYS
 
 
 class GrailedSession(Session):

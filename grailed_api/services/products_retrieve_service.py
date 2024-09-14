@@ -1,5 +1,5 @@
 import requests
-from settings import LISTINGS_API
+from grailed_api.settings import LISTINGS_API
 from .api_service import ApiService
 
 

@@ -1,6 +1,6 @@
 from typing import List
 from requests import Response
-from settings import BRANDS_URL
+from grailed_api.settings import BRANDS_URL
 from .api_service import ApiService
 
 

@@ -1,6 +1,6 @@
 from unittest.mock import MagicMock
 from services.products_retrieve_service import ProductsRetrieveService
-from settings import LISTINGS_API
+from grailed_api.settings import LISTINGS_API
 
 
 class TestProductsRetrieveService:

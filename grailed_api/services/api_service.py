@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import Any
 from requests import Response
-from session import GrailedSession
+from grailed_api.session import GrailedSession
 
 
 class ApiService(ABC):

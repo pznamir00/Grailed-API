@@ -1,5 +1,5 @@
 from aenum import Enum, nonmember
-from enums import CategoryLabels
+from grailed_api.enums import CategoryLabels
 from .base_size import BaseSize
 
 

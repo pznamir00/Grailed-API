@@ -1,9 +1,9 @@
 import warnings
 from typing import Any, Dict, Iterable, List
 import requests
-from enums import Markets, Conditions, Locations, Departments
-from facets import Facets
-from settings import SEARCH_URL
+from grailed_api.enums import Markets, Conditions, Locations, Departments
+from grailed_api.facets import Facets
+from grailed_api.settings import SEARCH_URL
 from .api_service import ApiService
 
 
