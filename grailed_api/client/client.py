@@ -1,6 +1,7 @@
-from typing import Iterable
+from typing import Iterable, List
 from grailed_api.enums import Departments, Conditions, Locations, Markets
 from grailed_api.facets import Facets
+from grailed_api.models import Brand, Product, ProductDetails
 from grailed_api.services import (
     ProductsListService,
     ProductsRetrieveService,
@@ -18,7 +19,7 @@ class Client:
     __products_retrieve_service = ProductsRetrieveService()
     __brands_list_service = BrandsListService()
 
-    def find_brands(self, query: str, verbose=False):
+    def find_brands(self, query: str, verbose=False) -> List[Brand]:
         """Finds brands by provided query keyword
         and returns them in a list
 
@@ -30,12 +31,9 @@ class Client:
             List: list with brand objects
         """
         response = self.__brands_list_service.send_request(query, verbose)
-        brands = self.__brands_list_service.parse_response(response)
-        return brands
+        return self.__brands_list_service.parse_response(response)
 
-    def find_product_by_id(
-        self, id: str, verbose=False
-    ):  # pylint: disable=redefined-builtin
+    def find_product_by_id(self, id: str, verbose=False) -> ProductDetails:
         """searches a product by provided id
 
         Args:
@@ -46,8 +44,7 @@ class Client:
             Object: product object
         """
         response = self.__products_retrieve_service.send_request(id, verbose)
-        data = self.__products_retrieve_service.parse_response(response)
-        return data
+        return self.__products_retrieve_service.parse_response(response)
 
     def find_products(  # pylint: disable=too-many-locals, disable=too-many-arguments
         self,
@@ -69,7 +66,7 @@ class Client:
         max_values_per_facet=100,
         facets: Iterable[Facets] = __products_list_service.get_all_facets(),
         verbose=False,
-    ):
+    ) -> List[Product]:
         """Searches list of products with specified filters. Returns a list
         of this products.
 
@@ -122,5 +119,4 @@ class Client:
         response = self.__products_list_service.send_request(
             {"requests": _requests}, verbose
         )
-        products = self.__products_list_service.parse_response(response)
-        return products
+        return self.__products_list_service.parse_response(response)

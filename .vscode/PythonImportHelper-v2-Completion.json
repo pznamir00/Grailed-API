@@ -8,6 +8,14 @@
         "documentation": {}
     },
     {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Dict",
         "importPath": "typing",
         "description": "typing",
@@ -25,6 +33,182 @@
     },
     {
         "label": "Type",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "TypedDict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "TypedDict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "TypedDict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "TypedDict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "TypedDict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "TypedDict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "TypedDict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "TypedDict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "TypedDict",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -205,6 +389,54 @@
         "description": "grailed_api.facets",
         "isExtraImport": true,
         "detail": "grailed_api.facets",
+        "documentation": {}
+    },
+    {
+        "label": "Brand",
+        "importPath": "grailed_api.models",
+        "description": "grailed_api.models",
+        "isExtraImport": true,
+        "detail": "grailed_api.models",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "grailed_api.models",
+        "description": "grailed_api.models",
+        "isExtraImport": true,
+        "detail": "grailed_api.models",
+        "documentation": {}
+    },
+    {
+        "label": "ProductDetails",
+        "importPath": "grailed_api.models",
+        "description": "grailed_api.models",
+        "isExtraImport": true,
+        "detail": "grailed_api.models",
+        "documentation": {}
+    },
+    {
+        "label": "Brand",
+        "importPath": "grailed_api.models",
+        "description": "grailed_api.models",
+        "isExtraImport": true,
+        "detail": "grailed_api.models",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "grailed_api.models",
+        "description": "grailed_api.models",
+        "isExtraImport": true,
+        "detail": "grailed_api.models",
+        "documentation": {}
+    },
+    {
+        "label": "ProductDetails",
+        "importPath": "grailed_api.models",
+        "description": "grailed_api.models",
+        "isExtraImport": true,
+        "detail": "grailed_api.models",
         "documentation": {}
     },
     {
@@ -688,7 +920,7 @@
         "kind": 6,
         "importPath": "grailed_api.client.client",
         "description": "grailed_api.client.client",
-        "peekOfCode": "class Client:\n    \"\"\"\n    Main Client class that is interface of whole system. It\n    provides all functionalities for looking for products and brands\n    \"\"\"\n    __products_list_service = ProductsListService()\n    __products_retrieve_service = ProductsRetrieveService()\n    __brands_list_service = BrandsListService()\n    def find_brands(self, query: str, verbose=False):\n        \"\"\"Finds brands by provided query keyword",
+        "peekOfCode": "class Client:\n    \"\"\"\n    Main Client class that is interface of whole system. It\n    provides all functionalities for looking for products and brands\n    \"\"\"\n    __products_list_service = ProductsListService()\n    __products_retrieve_service = ProductsRetrieveService()\n    __brands_list_service = BrandsListService()\n    def find_brands(self, query: str, verbose=False) -> List[Brand]:\n        \"\"\"Finds brands by provided query keyword",
         "detail": "grailed_api.client.client",
         "documentation": {}
     },
@@ -909,6 +1141,204 @@
         "documentation": {}
     },
     {
+        "label": "Brand",
+        "kind": 6,
+        "importPath": "grailed_api.models.brand",
+        "description": "grailed_api.models.brand",
+        "peekOfCode": "class Brand(TypedDict):\n    value: str\n    highlighted: str\n    count: int",
+        "detail": "grailed_api.models.brand",
+        "documentation": {}
+    },
+    {
+        "label": "Designer",
+        "kind": 6,
+        "importPath": "grailed_api.models.designer",
+        "description": "grailed_api.models.designer",
+        "peekOfCode": "class Designer(TypedDict):\n    id: int\n    name: str\nclass ExtendedDesigner(Designer):\n    departments: List[str]\n    slug: str\n    logo_url: Optional[str]",
+        "detail": "grailed_api.models.designer",
+        "documentation": {}
+    },
+    {
+        "label": "ExtendedDesigner",
+        "kind": 6,
+        "importPath": "grailed_api.models.designer",
+        "description": "grailed_api.models.designer",
+        "peekOfCode": "class ExtendedDesigner(Designer):\n    departments: List[str]\n    slug: str\n    logo_url: Optional[str]",
+        "detail": "grailed_api.models.designer",
+        "documentation": {}
+    },
+    {
+        "label": "HighlightResultField",
+        "kind": 6,
+        "importPath": "grailed_api.models.highlight_result",
+        "description": "grailed_api.models.highlight_result",
+        "peekOfCode": "class HighlightResultField(TypedDict):\n    value: str\n    matchLevel: str\n    matchedWords: List[Any]\nclass HighlightResultDesigner(TypedDict):\n    name: HighlightResultField\nclass HighlightResultSellerScore(TypedDict):\n    rating_average: HighlightResultField\n    rating_count: HighlightResultField\nclass HighlightResultUser(TypedDict):",
+        "detail": "grailed_api.models.highlight_result",
+        "documentation": {}
+    },
+    {
+        "label": "HighlightResultDesigner",
+        "kind": 6,
+        "importPath": "grailed_api.models.highlight_result",
+        "description": "grailed_api.models.highlight_result",
+        "peekOfCode": "class HighlightResultDesigner(TypedDict):\n    name: HighlightResultField\nclass HighlightResultSellerScore(TypedDict):\n    rating_average: HighlightResultField\n    rating_count: HighlightResultField\nclass HighlightResultUser(TypedDict):\n    id: HighlightResultField\n    username: HighlightResultField\n    aggregate_feedback_count: HighlightResultField\n    total_bought_and_sold: HighlightResultField",
+        "detail": "grailed_api.models.highlight_result",
+        "documentation": {}
+    },
+    {
+        "label": "HighlightResultSellerScore",
+        "kind": 6,
+        "importPath": "grailed_api.models.highlight_result",
+        "description": "grailed_api.models.highlight_result",
+        "peekOfCode": "class HighlightResultSellerScore(TypedDict):\n    rating_average: HighlightResultField\n    rating_count: HighlightResultField\nclass HighlightResultUser(TypedDict):\n    id: HighlightResultField\n    username: HighlightResultField\n    aggregate_feedback_count: HighlightResultField\n    total_bought_and_sold: HighlightResultField\n    avatar_url: HighlightResultField\n    seller_score: HighlightResultSellerScore",
+        "detail": "grailed_api.models.highlight_result",
+        "documentation": {}
+    },
+    {
+        "label": "HighlightResultUser",
+        "kind": 6,
+        "importPath": "grailed_api.models.highlight_result",
+        "description": "grailed_api.models.highlight_result",
+        "peekOfCode": "class HighlightResultUser(TypedDict):\n    id: HighlightResultField\n    username: HighlightResultField\n    aggregate_feedback_count: HighlightResultField\n    total_bought_and_sold: HighlightResultField\n    avatar_url: HighlightResultField\n    seller_score: HighlightResultSellerScore\nclass HighlightResult(TypedDict):\n    category: HighlightResultField\n    color: HighlightResultField",
+        "detail": "grailed_api.models.highlight_result",
+        "documentation": {}
+    },
+    {
+        "label": "HighlightResult",
+        "kind": 6,
+        "importPath": "grailed_api.models.highlight_result",
+        "description": "grailed_api.models.highlight_result",
+        "peekOfCode": "class HighlightResult(TypedDict):\n    category: HighlightResultField\n    color: HighlightResultField\n    designers: List[HighlightResultDesigner]\n    hashtags: List[HighlightResultField]\n    location: HighlightResultField\n    size: HighlightResultField\n    title: HighlightResultField\n    user: HighlightResultUser",
+        "detail": "grailed_api.models.highlight_result",
+        "documentation": {}
+    },
+    {
+        "label": "Photo",
+        "kind": 6,
+        "importPath": "grailed_api.models.photo",
+        "description": "grailed_api.models.photo",
+        "peekOfCode": "class Photo(TypedDict):\n    id: int\n    url: str\n    width: int\n    height: int\n    rotate: int\n    created_at: str\nclass ExtendedPhoto(Photo):\n    listing_id: int\n    image: Optional[str]",
+        "detail": "grailed_api.models.photo",
+        "documentation": {}
+    },
+    {
+        "label": "ExtendedPhoto",
+        "kind": 6,
+        "importPath": "grailed_api.models.photo",
+        "description": "grailed_api.models.photo",
+        "peekOfCode": "class ExtendedPhoto(Photo):\n    listing_id: int\n    image: Optional[str]\n    updated_at: str\n    photoable_id: int\n    photoable_type: str\n    position: int\n    image_url: str",
+        "detail": "grailed_api.models.photo",
+        "documentation": {}
+    },
+    {
+        "label": "Trait",
+        "kind": 6,
+        "importPath": "grailed_api.models.product",
+        "description": "grailed_api.models.product",
+        "peekOfCode": "class Trait(TypedDict):\n    name: str\n    value: str\nclass RankingInfo(TypedDict):\n    nbTypos: int\n    firstMatchedWord: int\n    proximityDistance: int\n    userScore: int\n    geoDistance: int\n    geoPrecision: int",
+        "detail": "grailed_api.models.product",
+        "documentation": {}
+    },
+    {
+        "label": "RankingInfo",
+        "kind": 6,
+        "importPath": "grailed_api.models.product",
+        "description": "grailed_api.models.product",
+        "peekOfCode": "class RankingInfo(TypedDict):\n    nbTypos: int\n    firstMatchedWord: int\n    proximityDistance: int\n    userScore: int\n    geoDistance: int\n    geoPrecision: int\n    nbExactWords: int\n    words: int\n    filters: int",
+        "detail": "grailed_api.models.product",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "kind": 6,
+        "importPath": "grailed_api.models.product",
+        "description": "grailed_api.models.product",
+        "peekOfCode": "class Product(TypedDict):\n    badges: List[str]\n    bumped_at: str\n    buynow: bool\n    category_path_size: str\n    category_path: str\n    category_size: str\n    category: str\n    color: str\n    condition: str",
+        "detail": "grailed_api.models.product",
+        "documentation": {}
+    },
+    {
+        "label": "Measurement",
+        "kind": 6,
+        "importPath": "grailed_api.models.product_details",
+        "description": "grailed_api.models.product_details",
+        "peekOfCode": "class Measurement(TypedDict):\n    inches: float\n    measurement_type_id: int\n    department_mapping_id: int\nclass ProductDetails(TypedDict):\n    id: int\n    title: str\n    true_created_at: str\n    created_at: str\n    price_updated_at: str",
+        "detail": "grailed_api.models.product_details",
+        "documentation": {}
+    },
+    {
+        "label": "ProductDetails",
+        "kind": 6,
+        "importPath": "grailed_api.models.product_details",
+        "description": "grailed_api.models.product_details",
+        "peekOfCode": "class ProductDetails(TypedDict):\n    id: int\n    title: str\n    true_created_at: str\n    created_at: str\n    price_updated_at: str\n    sold: bool\n    sold_at: Optional[str]\n    sold_price: int\n    sold_shipping_price: Optional[int]",
+        "detail": "grailed_api.models.product_details",
+        "documentation": {}
+    },
+    {
+        "label": "SellerScore",
+        "kind": 6,
+        "importPath": "grailed_api.models.seller_score",
+        "description": "grailed_api.models.seller_score",
+        "peekOfCode": "class SellerScore(TypedDict):\n    rating_average: Optional[float]\n    rating_count: Optional[int]\nclass ExtendedSellerScore(SellerScore):\n    sold_count: int\n    tag_list: List[str]",
+        "detail": "grailed_api.models.seller_score",
+        "documentation": {}
+    },
+    {
+        "label": "ExtendedSellerScore",
+        "kind": 6,
+        "importPath": "grailed_api.models.seller_score",
+        "description": "grailed_api.models.seller_score",
+        "peekOfCode": "class ExtendedSellerScore(SellerScore):\n    sold_count: int\n    tag_list: List[str]",
+        "detail": "grailed_api.models.seller_score",
+        "documentation": {}
+    },
+    {
+        "label": "ShippingField",
+        "kind": 6,
+        "importPath": "grailed_api.models.shipping",
+        "description": "grailed_api.models.shipping",
+        "peekOfCode": "class ShippingField(TypedDict):\n    amount: int\n    enabled: bool\nclass Shipping(TypedDict):\n    us: ShippingField\n    ca: ShippingField\n    uk: ShippingField\n    eu: ShippingField\n    asia: ShippingField\n    au: ShippingField",
+        "detail": "grailed_api.models.shipping",
+        "documentation": {}
+    },
+    {
+        "label": "Shipping",
+        "kind": 6,
+        "importPath": "grailed_api.models.shipping",
+        "description": "grailed_api.models.shipping",
+        "peekOfCode": "class Shipping(TypedDict):\n    us: ShippingField\n    ca: ShippingField\n    uk: ShippingField\n    eu: ShippingField\n    asia: ShippingField\n    au: ShippingField\n    other: ShippingField",
+        "detail": "grailed_api.models.shipping",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "grailed_api.models.user",
+        "description": "grailed_api.models.user",
+        "peekOfCode": "class User(TypedDict):\n    id: int\n    username: str\n    aggregate_feedback_count: int\n    total_bought_and_sold: int\n    avatar_url: Optional[str]\n    seller_score: SellerScore\n    trusted_seller: bool\nclass BuyerScore(TypedDict):\n    purchase_count: int",
+        "detail": "grailed_api.models.user",
+        "documentation": {}
+    },
+    {
+        "label": "BuyerScore",
+        "kind": 6,
+        "importPath": "grailed_api.models.user",
+        "description": "grailed_api.models.user",
+        "peekOfCode": "class BuyerScore(TypedDict):\n    purchase_count: int\n    would_sell_to_again_count: int\nclass Seller(User):\n    bio: str\n    created_at: str\n    height: Optional[int]\n    weight: Optional[int]\n    location: str\n    location_abbreviation: str",
+        "detail": "grailed_api.models.user",
+        "documentation": {}
+    },
+    {
+        "label": "Seller",
+        "kind": 6,
+        "importPath": "grailed_api.models.user",
+        "description": "grailed_api.models.user",
+        "peekOfCode": "class Seller(User):\n    bio: str\n    created_at: str\n    height: Optional[int]\n    weight: Optional[int]\n    location: str\n    location_abbreviation: str\n    buyer_score: BuyerScore\n    seller_score: ExtendedSellerScore\n    seller_rating: ExtendedSellerScore",
+        "detail": "grailed_api.models.user",
+        "documentation": {}
+    },
+    {
         "label": "ApiService",
         "kind": 6,
         "importPath": "grailed_api.services.api_service",
@@ -922,7 +1352,7 @@
         "kind": 6,
         "importPath": "grailed_api.services.brands_list_service",
         "description": "grailed_api.services.brands_list_service",
-        "peekOfCode": "class BrandsListService(ApiService):\n    \"\"\"\n    Brands service that provides brands list http lookup utils\n    \"\"\"\n    def parse_response(self, response: Response) -> List:\n        return super().parse_response(response)[\"facetHits\"]\n    def send_request(  # pylint: disable=arguments-differ\n        self, query: str, verbose: bool\n    ) -> Response:\n        return self._session.post(",
+        "peekOfCode": "class BrandsListService(ApiService):\n    \"\"\"\n    Brands service that provides brands list http lookup utils\n    \"\"\"\n    def parse_response(self, response: Response) -> List[Brand]:\n        return super().parse_response(response)[\"facetHits\"]\n    def send_request(  # pylint: disable=arguments-differ\n        self, query: str, verbose: bool\n    ) -> Response:\n        return self._session.post(",
         "detail": "grailed_api.services.brands_list_service",
         "documentation": {}
     },
@@ -931,7 +1361,7 @@
         "kind": 6,
         "importPath": "grailed_api.services.products_list_service",
         "description": "grailed_api.services.products_list_service",
-        "peekOfCode": "class ProductsListService(ApiService):\n    \"\"\"\n    List service that provides products list http lookup utils\n    \"\"\"\n    def send_request(\n        self, data: Any, verbose: bool\n    ):  # pylint: disable=arguments-differ\n        return self._session.post(SEARCH_URL, data=data, verbose=verbose)\n    def parse_response(self, response: requests.Response):\n        content = super().parse_response(response)",
+        "peekOfCode": "class ProductsListService(ApiService):\n    \"\"\"\n    List service that provides products list http lookup utils\n    \"\"\"\n    def send_request(\n        self, data: Any, verbose: bool\n    ):  # pylint: disable=arguments-differ\n        return self._session.post(SEARCH_URL, data=data, verbose=verbose)\n    def parse_response(self, response: requests.Response) -> List[Product]:\n        content = super().parse_response(response)",
         "detail": "grailed_api.services.products_list_service",
         "documentation": {}
     },
@@ -940,7 +1370,7 @@
         "kind": 6,
         "importPath": "grailed_api.services.products_retrieve_service",
         "description": "grailed_api.services.products_retrieve_service",
-        "peekOfCode": "class ProductsRetrieveService(ApiService):\n    \"\"\"\n    Retrieve service that provides single product lookup utils\n    \"\"\"\n    def send_request(self, key: str, verbose: bool):  # pylint: disable=arguments-differ\n        return self._session.get(f\"{LISTINGS_API}/{key}\", verbose=verbose)\n    def parse_response(self, response: requests.Response):\n        return super().parse_response(response)[\"data\"]",
+        "peekOfCode": "class ProductsRetrieveService(ApiService):\n    \"\"\"\n    Retrieve service that provides single product lookup utils\n    \"\"\"\n    def send_request(self, key: str, verbose: bool):  # pylint: disable=arguments-differ\n        return self._session.get(f\"{LISTINGS_API}/{key}\", verbose=verbose)\n    def parse_response(self, response: requests.Response) -> ProductDetails:\n        return super().parse_response(response)[\"data\"]",
         "detail": "grailed_api.services.products_retrieve_service",
         "documentation": {}
     },

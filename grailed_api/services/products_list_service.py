@@ -5,6 +5,7 @@ from aenum._enum import EnumType
 from grailed_api.enums import Markets, Conditions, Locations, Departments
 from grailed_api.exceptions import WrongCategoryTypeError, WrongSizeTypeError
 from grailed_api.facets import Facets
+from grailed_api.models import Product
 from grailed_api.settings import SEARCH_URL
 from .api_service import ApiService
 
@@ -19,7 +20,7 @@ class ProductsListService(ApiService):
     ):  # pylint: disable=arguments-differ
         return self._session.post(SEARCH_URL, data=data, verbose=verbose)
 
-    def parse_response(self, response: requests.Response):
+    def parse_response(self, response: requests.Response) -> List[Product]:
         content = super().parse_response(response)
         return [j for i in content["results"] for j in i["hits"]]
 
